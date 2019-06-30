@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 import logo from '../../images/logo-psdb.png';
 
-const Login = () => (
+const Cadastro = () => (
   <div className="container">
     <div className="row">
       <div className="col-sm-12">
@@ -15,8 +15,8 @@ const Login = () => (
                 <a href="index.html" className="text-success">
                   <span
                     ><img
-                      alt=""
                       src={logo}
+                      alt=""
                       height="150"
                   /></span>
                 </a>
@@ -25,6 +25,19 @@ const Login = () => (
             </div>
             <div className="account-content">
               <form className="form-horizontal" action="#">
+                <div className="form-group m-b-25">
+                  <div className="col-12">
+                    <label htmlFor="username">Nome</label>
+                    <input
+                      className="form-control input-lg"
+                      type="email"
+                      id="username"
+                      required=""
+                      placeholder="Nome do usuário"
+                    />
+                  </div>
+                </div>
+
                 <div className="form-group m-b-25">
                   <div className="col-12">
                     <label htmlFor="emailaddress">Email</label>
@@ -40,10 +53,6 @@ const Login = () => (
 
                 <div className="form-group m-b-25">
                   <div className="col-12">
-                    <Link
-                      to="/relembrar"
-                      className="text-muted float-right"
-                    >Esqueceu a senha?</Link>
                     <label htmlFor="password">Senha</label>
                     <input
                       className="form-control input-lg"
@@ -61,12 +70,12 @@ const Login = () => (
                       <input
                         type="checkbox"
                         className="custom-control-input"
-                        id="remembercheck"
+                        id="termscheck"
                       />
-                      <label
-                        className="custom-control-label"
-                        htmlFor="remembercheck"
-                        >Lembrar</label
+                      <label className="custom-control-label" for="termscheck"
+                        >Eu aceito os
+                        {' '}
+                        <a href="#this">Termos de uso</a></label
                       >
                     </div>
                   </div>
@@ -74,17 +83,12 @@ const Login = () => (
 
                 <div className="form-group account-btn text-center m-t-10">
                   <div className="col-12">
-                    {/* <button
+                    <button
+                      className="btn w-lg btn-rounded btn-lg btn-primary waves-effect waves-light"
                       type="submit"
-                      className="btn w-lg btn-rounded btn-lg btn-primary waves-effect waves-light"
                     >
-                      Entrar
-                    </button> */}
-
-                    <Link
-                      to="/cadastrar"
-                      className="btn w-lg btn-rounded btn-lg btn-primary waves-effect waves-light"
-                    >Entrar</Link>
+                      Cadastrar
+                    </button>
                   </div>
                 </div>
               </form>
@@ -97,11 +101,11 @@ const Login = () => (
           <div className="row m-t-50">
             <div className="col-sm-12 text-center">
               <p className="text-muted">
-                Não tem uma conta?
+                Já tem uma conta?
                 <Link
-                  to="/cadastrar"
+                  to="/"
                   className="text-dark m-l-5"
-                >Cadastrar</Link>
+                >Login</Link>
               </p>
             </div>
           </div>
@@ -112,4 +116,4 @@ const Login = () => (
   </div>
 );
 
-export default Login;
+export default Cadastro;
