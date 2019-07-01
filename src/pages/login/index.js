@@ -12,14 +12,17 @@ const Login = () => (
           <div className="m-t-40 account-pages">
             <div className="text-center account-logo-box">
               <h2 className="text-uppercase">
-                <a href="index.html" className="text-success">
+                <Link
+                  to="/"
+                  className="text-success"
+                >
                   <span
                     ><img
-                      alt=""
                       src={logo}
+                      alt=""
                       height="150"
                   /></span>
-                </a>
+                </Link>
               </h2>
               {/* <!--<h4 className="text-uppercase font-bold m-b-0">Sign In</h4>--> */}
             </div>

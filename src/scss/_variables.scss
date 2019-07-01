@@ -1,7 +1,9 @@
 
 @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700');
 
-$custom: #348cd4;
+$custom: #004c94;
+$custom-claro: #008bd7;
+$custom-escuro: #162878;
 
 
 // Color variables
@@ -9,7 +11,7 @@ $custom: #348cd4;
 $white: #ffffff;
 
 $default: #dae6ec;
-$primary: #3456d4;
+$primary: #004c94;
 $success: #78c350;
 $info: #45bbe0;
 $warning: #ff9800;
@@ -27,7 +29,7 @@ $shadow: 0 0 24px 0 rgba(0, 0, 0, 0.06), 0 1px 0 0 rgba(0, 0, 0, 0.02);
 
 //Background left-sidebar
 $bg-leftbar: #ffffff;
-$bg-topbar: #348cd4;
+$bg-topbar: #008bd7;
 
 // Width variables
 $width: 100%;

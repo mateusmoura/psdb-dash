@@ -4,6 +4,8 @@ import { Link } from 'react-router-dom';
 
 import logo from '../../images/logo-psdb.png';
 
+import './index.scss';
+
 const Cadastro = () => (
   <div className="container">
     <div className="row">
@@ -12,14 +14,17 @@ const Cadastro = () => (
           <div className="m-t-40 account-pages">
             <div className="text-center account-logo-box">
               <h2 className="text-uppercase">
-                <a href="index.html" className="text-success">
+                <Link
+                  to="/"
+                  className="text-success"
+                >
                   <span
                     ><img
                       src={logo}
                       alt=""
                       height="150"
                   /></span>
-                </a>
+                </Link>
               </h2>
               {/* <!--<h4 className="text-uppercase font-bold m-b-0">Sign In</h4>--> */}
             </div>
@@ -72,7 +77,7 @@ const Cadastro = () => (
                         className="custom-control-input"
                         id="termscheck"
                       />
-                      <label className="custom-control-label" for="termscheck"
+                      <label className="custom-control-label" htmlFor="termscheck"
                         >Eu aceito os
                         {' '}
                         <a href="#this">Termos de uso</a></label

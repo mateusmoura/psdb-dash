@@ -12,6 +12,7 @@ import {
 import Login from '../pages/login';
 import Cadastrar from '../pages/cadastro';
 import Relembrar from '../pages/relembrar';
+import Dashboard from '../pages/dashboard';
 
 import css from './index.scss';
 
@@ -28,6 +29,7 @@ const Routes = ({ location }) => (
             <Route path="/" exact component={Login} />
             <Route path="/relembrar" exact component={Relembrar} />
             <Route path="/cadastrar" exact component={Cadastrar} />
+            <Route path="/dashboard" exact component={Dashboard} />
           </Switch>
         </Router>
       </section>
