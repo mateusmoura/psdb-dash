@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/psdb-dash/static/css/main.ab4c6f1c.chunk.css",
+    "main.js": "/psdb-dash/static/js/main.d9f3d0d4.chunk.js",
+    "main.js.map": "/psdb-dash/static/js/main.d9f3d0d4.chunk.js.map",
+    "runtime~main.js": "/psdb-dash/static/js/runtime~main.d71cb806.js",
+    "runtime~main.js.map": "/psdb-dash/static/js/runtime~main.d71cb806.js.map",
+    "static/js/2.b5980e50.chunk.js": "/psdb-dash/static/js/2.b5980e50.chunk.js",
+    "static/js/2.b5980e50.chunk.js.map": "/psdb-dash/static/js/2.b5980e50.chunk.js.map",
+    "index.html": "/psdb-dash/index.html",
+    "precache-manifest.20805ed1a7e161564eba0522bd75713e.js": "/psdb-dash/precache-manifest.20805ed1a7e161564eba0522bd75713e.js",
+    "service-worker.js": "/psdb-dash/service-worker.js",
+    "static/css/main.ab4c6f1c.chunk.css.map": "/psdb-dash/static/css/main.ab4c6f1c.chunk.css.map",
+    "static/media/index.scss": "/psdb-dash/static/media/bg-countdown.a572e46b.jpg",
+    "static/media/icons.css": "/psdb-dash/static/media/materialdesignicons-webfont.a17753cd.svg",
+    "static/media/logo-psdb.png": "/psdb-dash/static/media/logo-psdb.275ec7a7.png"
+  }
+}
