@@ -18,10 +18,10 @@ const Dashboard = () => (
           <div className="row">
             <div className="col-12">
               <div className="page-title-box">
-                <h4 className="page-title">Welcome John !</h4>
+                <h4 className="page-title">Bem Vindo!</h4>
                 <ol className="breadcrumb p-0 m-0">
                   <li>
-                      <a href="#">Codefox</a>
+                      <a href="#">PSDB</a>
                   </li>
                   {/* <!--<li>-->
                       <!--<a href="#">Dashboard</a>-->
