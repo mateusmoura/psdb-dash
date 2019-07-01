@@ -42,7 +42,7 @@ const BarraTopo = () => (
           </li>
 
           <li className="d-none d-sm-block lang-option">
-            <select
+            {/* <select
               className="selectpicker form-control"
               title=""
               data-width="110px"
@@ -51,7 +51,7 @@ const BarraTopo = () => (
               <option> French </option>
               <option> Germany </option>
               <option> Spanish</option>
-            </select>
+            </select> */}
           </li>
         </ul>
 
@@ -61,7 +61,7 @@ const BarraTopo = () => (
             <form role="search" className="app-search">
               <input
                 type="text"
-                placeholder="Search..."
+                placeholder="Buscar..."
                 className="form-control"
               />
               <a href=""><i className="fa fa-search"></i></a>
@@ -91,18 +91,17 @@ const BarraTopo = () => (
                         </div>
                         <div className="media-body">
                           <h5 className="media-heading">
-                            A new order has been placed A new order has been
-                            placed
+                            Nova mensagem
                           </h5>
                           <p className="m-0">
-                            There are new settings available
+                            Texto
                           </p>
                         </div>
                       </div>
                     </a>
 
                     {/* <!-- list item--> */}
-                    <a href="javascript:void(0);" className="list-group-item">
+                    {/* <a href="javascript:void(0);" className="list-group-item">
                       <div className="media">
                         <div className="media-left p-r-10">
                           <em className="fa fa-cog bg-warning"></em>
@@ -114,10 +113,10 @@ const BarraTopo = () => (
                           </p>
                         </div>
                       </div>
-                    </a>
+                    </a> */}
 
                     {/* <!-- list item--> */}
-                    <a href="javascript:void(0);" className="list-group-item">
+                    {/* <a href="javascript:void(0);" className="list-group-item">
                       <div className="media">
                         <div className="media-left p-r-10">
                           <em className="fa fa-bell-o bg-custom"></em>
@@ -131,10 +130,10 @@ const BarraTopo = () => (
                           </p>
                         </div>
                       </div>
-                    </a>
+                    </a> */}
 
                     {/* <!-- list item--> */}
-                    <a href="javascript:void(0);" className="list-group-item">
+                    {/* <a href="javascript:void(0);" className="list-group-item">
                       <div className="media">
                         <div className="media-left p-r-10">
                           <em className="fa fa-user-plus bg-danger"></em>
@@ -146,10 +145,10 @@ const BarraTopo = () => (
                           </p>
                         </div>
                       </div>
-                    </a>
+                    </a> */}
 
                     {/* <!-- list item--> */}
-                    <a href="javascript:void(0);" className="list-group-item">
+                    {/* <a href="javascript:void(0);" className="list-group-item">
                       <div className="media">
                         <div className="media-left p-r-10">
                           <em className="fa fa-diamond bg-primary"></em>
@@ -164,10 +163,10 @@ const BarraTopo = () => (
                           </p>
                         </div>
                       </div>
-                    </a>
+                    </a> */}
 
                     {/* <!-- list item--> */}
-                    <a href="javascript:void(0);" className="list-group-item">
+                    {/* <a href="javascript:void(0);" className="list-group-item">
                       <div className="media">
                         <div className="media-left p-r-10">
                           <em className="fa fa-cog bg-warning"></em>
@@ -179,7 +178,7 @@ const BarraTopo = () => (
                           </p>
                         </div>
                       </div>
-                    </a>
+                    </a> */}
                   </div>
                 </li>
                 {/* <!-- end notification list --> */}
@@ -195,7 +194,7 @@ const BarraTopo = () => (
               aria-expanded="true"
             >
               <img
-                src="assets/images/users/avatar-1.jpg"
+                src="https://i.pravatar.cc/200"
                 alt="user-img"
                 className="rounded-circle user-img"
               />

@@ -17,7 +17,7 @@ const Sidebar = () => (
             >
           </li>
 
-          <li>
+          {/* <li>
             <a href="javascript: void(0);"
               ><i className="fi-briefcase"></i><span>UI Kit</span>
               <span className="menu-arrow"></span
@@ -193,7 +193,7 @@ const Sidebar = () => (
                 </ul>
               </li>
             </ul>
-          </li>
+          </li> */}
         </ul>
       </div>
       {/* <!-- Sidebar --> */}
