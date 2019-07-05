@@ -1,6 +1,7 @@
 import React from 'react';
 
-import logo from '../../images/logo-psdb.png';
+import logo from '../../images/logo_psdb_branca.svg';
+import '../../pages-js/metisMenu.min.js';
 
 const BarraTopo = () => (
   <div className="topbar">
@@ -15,10 +16,10 @@ const BarraTopo = () => (
       */}
       <a href="index.html" className="logo">
         <span>
-          <img src={logo} alt="" height="70" />
+          <img src={logo} alt="" height="40" />
         </span>
         <i>
-          <img src={logo} alt="" height="70" />
+          <img src={logo} alt="" height="40" />
         </i>
       </a>
     </div>
@@ -64,13 +65,13 @@ const BarraTopo = () => (
                 placeholder="Buscar..."
                 className="form-control"
               />
-              <a href=""><i className="fa fa-search"></i></a>
+              <a href="#this"><i className="fa fa-search"></i></a>
             </form>
           </li>
           <li className="list-inline-item">
             <div className="dropdown">
               <a
-                href="#"
+                href="#this"
                 className="right-menu-item dropdown-toggle"
                 data-toggle="dropdown"
               >
@@ -84,7 +85,7 @@ const BarraTopo = () => (
                 <li className="list-group notification-list m-b-0">
                   <div className="slimscroll">
                     {/* <!-- list item--> */}
-                    <a href="javascript:void(0);" className="list-group-item">
+                    <a href="#this" className="list-group-item">
                       <div className="media">
                         <div className="media-left p-r-10">
                           <em className="fa fa-diamond bg-primary"></em>
@@ -188,7 +189,7 @@ const BarraTopo = () => (
 
           <li className="dropdown user-box list-inline-item">
             <a
-              href=""
+              href="#this"
               className="dropdown-toggle waves-effect user-link"
               data-toggle="dropdown"
               aria-expanded="true"
@@ -204,23 +205,23 @@ const BarraTopo = () => (
               className="dropdown-menu dropdown-menu-right arrow-dropdown-menu arrow-menu-right user-list notify-list"
             >
               <li>
-                <a href="javascript:void(0)" className="dropdown-item">Profile</a>
+                <a href="#this" className="dropdown-item">Profile</a>
               </li>
               <li>
-                <a href="javascript:void(0)" className="dropdown-item"
+                <a href="#this" className="dropdown-item"
                   ><span className="badge badge-pill badge-info float-right"
                     >4</span
                   >Settings</a
                 >
               </li>
               <li>
-                <a href="javascript:void(0)" className="dropdown-item"
+                <a href="#this" className="dropdown-item"
                   >Lock screen</a
                 >
               </li>
               <li className="dropdown-divider"></li>
               <li>
-                <a href="javascript:void(0)" className="dropdown-item">Logout</a>
+                <a href="#this" className="dropdown-item">Logout</a>
               </li>
             </ul>
           </li>

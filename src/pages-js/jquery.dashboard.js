@@ -1,3 +1,4 @@
+/* eslint-disable no-sequences */
 /**
  * Theme: Codefox - Bootstrap 4 Admin Template
  * Author: Coderthemes
@@ -6,8 +7,6 @@
 
 // eslint-disable-next-line no-unused-expressions
 !function($) {
-  
-
   var Dashboard = function() {};
 
   // eslint-disable-next-line no-unused-expressions
@@ -95,7 +94,8 @@
     });
     
   },
-      $.Dashboard = new Dashboard(), $.Dashboard.Constructor = Dashboard
+  
+  $.Dashboard = new Dashboard(), $.Dashboard.Constructor = Dashboard
 
 }(window.jQuery),
 

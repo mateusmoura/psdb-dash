@@ -1,5 +1,7 @@
 import React from 'react';
 
+import { Link } from 'react-router-dom';
+
 const Sidebar = () => (
   <div className="left side-menu">
     <div className="slimscroll-menu" id="remove-scroll">
@@ -7,14 +9,90 @@ const Sidebar = () => (
       <div id="sidebar-menu">
         {/* <!-- Left Menu Start --> */}
         <ul className="metismenu list-unstyled" id="side-menu">
-          <li className="menu-title">Navigation</li>
+          <li className="menu-title">Navegação</li>
 
           <li>
-            <a href="index.html"
-              ><i className="fi-air-play"></i
-              ><span className="badge badge-pill badge-success float-right">1</span
-              ><span>Dashboard</span></a
+            {/* <Link
+              to='/dashboard'
             >
+              <i className="fi-air-play"></i
+              ><span></span>
+            </Link> */}
+            <Link
+              to='/filiados'
+            >
+              <i className="fa fa-users"></i
+              ><span>Filiados</span>
+            </Link>
+
+            <ul className="nav-second-level nav" aria-expanded="false">
+              <li><Link to="filiados/todos">Todos filiados</Link></li>
+              <li><Link to="filiados/pedidos">Pedidos/Pendências</Link></li>
+              <li><Link to="filiados/cadastro">Cadastro</Link></li>
+              <li><Link to="filiados/relatorios">Relatórios</Link></li>
+            </ul>
+          </li>
+
+          <li>
+            <Link
+              to='/organizacao'
+            >
+              <i className="fa fa-folder-open"></i
+              ><span>Organização Partidária</span>
+            </Link>
+
+            <ul className="nav-second-level nav" aria-expanded="false">
+              <li><Link to="organizacao/todos">Todos os diretórios</Link></li>
+              <li><Link to="organizacao/mandatos">Todos os mandatos</Link></li>
+              <li><Link to="organizacao/cadastro">Cadastro</Link></li>
+              <li><Link to="organizacao/documentacao">Documentação</Link></li>
+            </ul>
+          </li>
+
+          <li>
+            <Link
+              to='/eleicoes'
+            >
+              <i className="fa fa-gavel"></i
+              ><span>Eleições</span>
+            </Link>
+
+            <ul className="nav-second-level nav" aria-expanded="false">
+              <li><Link to="eleicoes/consulta">Consulta dados</Link></li>
+              <li><Link to="eleicoes/relatorios">Relatórios</Link></li>
+            </ul>
+          </li>
+
+          <li>
+            <Link
+              to='/comunicacao'
+            >
+              <i className="fa fa-gavel"></i
+              ><span>Comunicação</span>
+            </Link>
+
+            <ul className="nav-second-level nav" aria-expanded="false">
+              <li><Link to="comunicacao/consulta">Todas Redes Sociais</Link></li>
+              <li><Link to="comunicacao/campanhas">Campanhas</Link></li>
+              <li><Link to="comunicacao/relatorios">Relatórios</Link></li>
+            </ul>
+          </li>
+
+          <li className="menu-title">Administrativo</li>
+
+          <li>
+            <Link
+              to='/perfil'
+            >
+              <i className="fa fa-gavel"></i
+              ><span>Perfil</span>
+            </Link>
+
+            <ul className="nav-second-level nav" aria-expanded="false">
+              <li><Link to="perfil/consulta">Editar dados</Link></li>
+              <li><Link to="perfil/campanhas">Gerenciar usuários</Link></li>
+              <li><Link to="perfil/relatorios">Configurações</Link></li>
+            </ul>
           </li>
 
           {/* <li>
