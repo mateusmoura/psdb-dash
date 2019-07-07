@@ -75,7 +75,9 @@
         initActiveMenu();
     }
 
-    init();
+    setTimeout(() => {
+        init();
+    }, 1000)
 
 })(jQuery)
 

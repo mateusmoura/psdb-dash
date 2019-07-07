@@ -5,8 +5,6 @@
  * Module/App: Main Js
  */
 
-import jQuery from 'jquery';
-
 (function ($) {
 
     function initSlimscrollMenu() {
@@ -35,8 +33,9 @@ import jQuery from 'jquery';
     }
 
     function initLeftMenuCollapse() {
+        console.log($('.button-menu-mobile'), window.jQuery('.button-menu-mobile'))
         // Left menu collapse
-        $('.button-menu-mobile').on('click', function (event) {
+        window.jQuery('.button-menu-mobile').on('click', function (event) {
             event.preventDefault();
             $("body").toggleClass("enlarged");
         });
@@ -75,7 +74,10 @@ import jQuery from 'jquery';
         initActiveMenu();
     }
 
-    init();
+    setTimeout(() => {
+        console.log('asdfasdf');
+      init();
+    }, 2000 )
 
-})(jQuery)
+})(window.jQuery)
 

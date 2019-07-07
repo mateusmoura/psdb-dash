@@ -19,7 +19,7 @@ const BarraTopo = () => (
           <img src={logo} alt="" height="40" />
         </span>
         <i>
-          <img src={logo} alt="" height="40" />
+          <img src={logo} alt="" height="30" />
         </i>
       </a>
     </div>

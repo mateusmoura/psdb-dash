@@ -12,6 +12,8 @@
   // eslint-disable-next-line no-unused-expressions
   Dashboard.prototype.init = function () {
 
+    console.log(window.c3)
+
     //combined chart
     window.c3.generate({
       bindto: '#combine-chart',
@@ -102,5 +104,7 @@
 //initializing
     function($) {
       
-      $.Dashboard.init()
+      setTimeout(() => {
+        $.Dashboard.init()
+      }, 1000);
     }(window.jQuery);

@@ -18,12 +18,11 @@ const Sidebar = () => (
               <i className="fi-air-play"></i
               ><span></span>
             </Link> */}
-            <Link
-              to='/filiados'
-            >
+
+            <a href="#this">
               <i className="fa fa-users"></i
               ><span>Filiados</span>
-            </Link>
+              <span className="menu-arrow"></span></a>
 
             <ul className="nav-second-level nav" aria-expanded="false">
               <li><Link to="filiados/todos">Todos filiados</Link></li>
