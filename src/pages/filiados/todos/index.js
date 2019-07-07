@@ -80,7 +80,7 @@ const FiliadosTodos = () => (
                       </div>
                     </div>
 
-                    <div class="row">
+                    <div className="row">
                       <div className="col-lg-4">
                         <div className="form-group">
                           <label className="col-md-3 control-label">Situação</label>
@@ -90,7 +90,7 @@ const FiliadosTodos = () => (
                         </div>
                       </div>
 
-                      <div class="col-lg-4">
+                      <div className="col-lg-4">
                         <div className="form-group">
                           <label htmlFor="text" className="col-md-12 control-label">Município</label>
                           <div className="col-md-12">
@@ -99,7 +99,7 @@ const FiliadosTodos = () => (
                         </div>
                       </div>
 
-                      <div class="col-lg-4">
+                      <div className="col-lg-4">
                         <div className="form-group">
                           <label htmlFor="text" className="col-md-12 control-label">Unidade Federativa (UF)</label>
                           <div className="col-md-12">
@@ -109,7 +109,7 @@ const FiliadosTodos = () => (
                       </div>
                     </div>
 
-                    <div class="row">
+                    <div className="row">
                       <div className="col-lg-12">
                         <div className="form-group">
                           <label htmlFor="text" className="col-md-12 control-label">Data de Cadastro</label>
@@ -121,7 +121,7 @@ const FiliadosTodos = () => (
                    </div>
 
                    <div className="p-3 overflow-hidden">
-                     <button type="button" class="btn float-right btn-primary waves-effect w-md waves-light">Pesquisar</button>
+                     <button type="button" className="btn float-right btn-primary waves-effect w-md waves-light">Pesquisar</button>
                    </div>
                   </form>
                 </div>
