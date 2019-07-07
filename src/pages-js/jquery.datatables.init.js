@@ -6,7 +6,7 @@
  */
 var handleDataTableButtons = function() {
         "use strict";
-        0 !== $("#datatable-buttons").length && $("#datatable-buttons").DataTable({
+        0 !== window.jQuery("#datatable-buttons").length && window.jQuery("#datatable-buttons").DataTable({
             dom: "Bfrtip",
             buttons: [{
                 extend: "copy",
@@ -37,25 +37,25 @@ var handleDataTableButtons = function() {
     }();
 
 
-$(document).ready(function () {
-    $('#datatable').dataTable();
-    $('#datatable-keytable').DataTable({keys: true});
-    $('#datatable-responsive').DataTable();
-    $('#datatable-colvid').DataTable({
+window.jQuery(document).ready(function () {
+    window.jQuery('#datatable').dataTable();
+    window.jQuery('#datatable-keytable').DataTable({keys: true});
+    window.jQuery('#datatable-responsive').DataTable();
+    window.jQuery('#datatable-colvid').DataTable({
         "dom": 'C<"clear">lfrtip',
         "colVis": {
             "buttonText": "Change columns"
         }
     });
-    $('#datatable-scroller').DataTable({
+    window.jQuery('#datatable-scroller').DataTable({
         ajax: "../plugins/datatables/json/scroller-demo.json",
         deferRender: true,
         scrollY: 380,
         scrollCollapse: true,
         scroller: true
     });
-    var table = $('#datatable-fixed-header').DataTable({fixedHeader: true});
-    var table = $('#datatable-fixed-col').DataTable({
+    var table = window.jQuery('#datatable-fixed-header').DataTable({fixedHeader: true});
+    var table = window.jQuery('#datatable-fixed-col').DataTable({
         scrollY: "300px",
         scrollX: true,
         scrollCollapse: true,
@@ -66,4 +66,7 @@ $(document).ready(function () {
         }
     });
 });
-TableManageButtons.init();
+
+setTimeout( function() {
+    TableManageButtons.init();
+}, 1000);

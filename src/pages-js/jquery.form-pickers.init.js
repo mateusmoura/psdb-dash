@@ -3,69 +3,69 @@
  * Author: Coderthemes
  * Form Pickers
  */
-jQuery(document).ready(function () {
+window.jQuery(document).ready(function () {
 
     // Time Picker
-    jQuery('#timepicker').timepicker({
+    window.jQuery('#timepicker').timepicker({
         defaultTIme: false
     });
-    jQuery('#timepicker2').timepicker({
+    window.jQuery('#timepicker2').timepicker({
         showMeridian: false
     });
-    jQuery('#timepicker3').timepicker({
+    window.jQuery('#timepicker3').timepicker({
         minuteStep: 15
     });
 
     //colorpicker start
 
-    $('.colorpicker-default').colorpicker({
+    window.jQuery('.colorpicker-default').colorpicker({
         format: 'hex'
     });
-    $('.colorpicker-rgba').colorpicker();
+    window.jQuery('.colorpicker-rgba').colorpicker();
 
     // Date Picker
-    jQuery('#datepicker').datepicker();
-    jQuery('#datepicker-autoclose').datepicker({
+    window.jQuery('#datepicker').datepicker();
+    window.jQuery('#datepicker-autoclose').datepicker({
         autoclose: true,
         todayHighlight: true
     });
-    jQuery('#datepicker-inline').datepicker();
-    jQuery('#datepicker-multiple-date').datepicker({
+    window.jQuery('#datepicker-inline').datepicker();
+    window.jQuery('#datepicker-multiple-date').datepicker({
         format: "mm/dd/yyyy",
         clearBtn: true,
         multidate: true,
         multidateSeparator: ","
     });
-    jQuery('#date-range').datepicker({
+    window.jQuery('#date-range').datepicker({
         toggleActive: true
     });
 
     //Clock Picker
-    $('.clockpicker').clockpicker({
+    window.jQuery('.clockpicker').clockpicker({
         donetext: 'Done'
     });
 
-    $('#single-input').clockpicker({
+    window.jQuery('#single-input').clockpicker({
         placement: 'bottom',
         align: 'left',
         autoclose: true,
         'default': 'now'
     });
-    $('#check-minutes').click(function (e) {
+    window.jQuery('#check-minutes').click(function (e) {
         // Have to stop propagation here
         e.stopPropagation();
-        $("#single-input").clockpicker('show')
+        window.jQuery("#single-input").clockpicker('show')
             .clockpicker('toggleView', 'minutes');
     });
 
 
     //Date range picker
-    $('.input-daterange-datepicker').daterangepicker({
+    window.jQuery('.input-daterange-datepicker').daterangepicker({
         buttonClasses: ['btn', 'btn-sm'],
         applyClass: 'btn-success',
         cancelClass: 'btn-secondary'
     });
-    $('.input-daterange-timepicker').daterangepicker({
+    window.jQuery('.input-daterange-timepicker').daterangepicker({
         timePicker: true,
         timePickerIncrement: 30,
         locale: {
@@ -75,7 +75,7 @@ jQuery(document).ready(function () {
         applyClass: 'btn-success',
         cancelClass: 'btn-secondary'
     });
-    $('.input-limit-datepicker').daterangepicker({
+    window.jQuery('.input-limit-datepicker').daterangepicker({
         format: 'MM/DD/YYYY',
         minDate: '06/01/2015',
         maxDate: '06/30/2015',
@@ -87,12 +87,12 @@ jQuery(document).ready(function () {
         }
     });
 
-    $('#reportrange span').html(moment().subtract(29, 'days').format('MMMM D, YYYY') + ' - ' + moment().format('MMMM D, YYYY'));
+    window.jQuery('#reportrange span').html(window.moment().subtract(29, 'days').format('MMMM D, YYYY') + ' - ' + window.moment().format('MMMM D, YYYY'));
 
-    $('#reportrange').daterangepicker({
+    window.jQuery('#reportrange').daterangepicker({
         format: 'MM/DD/YYYY',
-        startDate: moment().subtract(29, 'days'),
-        endDate: moment(),
+        startDate: window.moment().subtract(29, 'days'),
+        endDate: window.moment(),
         minDate: '01/01/2012',
         maxDate: '12/31/2015',
         dateLimit: {
@@ -104,12 +104,12 @@ jQuery(document).ready(function () {
         timePickerIncrement: 1,
         timePicker12Hour: true,
         ranges: {
-            'Today': [moment(), moment()],
-            'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
-            'Last 7 Days': [moment().subtract(6, 'days'), moment()],
-            'Last 30 Days': [moment().subtract(29, 'days'), moment()],
-            'This Month': [moment().startOf('month'), moment().endOf('month')],
-            'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
+            'Today': [window.moment(), window.moment()],
+            'Yesterday': [window.moment().subtract(1, 'days'), window.moment().subtract(1, 'days')],
+            'Last 7 Days': [window.moment().subtract(6, 'days'), window.moment()],
+            'Last 30 Days': [window.moment().subtract(29, 'days'), window.moment()],
+            'This Month': [window.moment().startOf('month'), window.moment().endOf('month')],
+            'Last Month': [window.moment().subtract(1, 'month').startOf('month'), window.moment().subtract(1, 'month').endOf('month')]
         },
         opens: 'left',
         drops: 'down',
@@ -129,7 +129,7 @@ jQuery(document).ready(function () {
         }
     }, function (start, end, label) {
         console.log(start.toISOString(), end.toISOString(), label);
-        $('#reportrange span').html(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'));
+        window.jQuery('#reportrange span').html(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'));
     });
 
 });
