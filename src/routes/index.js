@@ -13,6 +13,7 @@ import Login from '../pages/login';
 import Cadastrar from '../pages/cadastro';
 import Relembrar from '../pages/relembrar';
 import Dashboard from '../pages/dashboard';
+import FiliadosTodos from '../pages/filiados/todos';
 
 import css from './index.scss';
 
@@ -30,6 +31,7 @@ const Routes = ({ location }) => (
             <Route path="/relembrar" exact component={Relembrar} />
             <Route path="/cadastrar" exact component={Cadastrar} />
             <Route path="/dashboard" exact component={Dashboard} />
+            <Route path="/filiados/todos" exact component={FiliadosTodos} />
           </Switch>
         </Router>
       </section>
