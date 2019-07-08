@@ -17,6 +17,7 @@ import FiliadosTodos from '../pages/filiados/todos';
 import FiliadosCadastro from '../pages/filiados/cadastro';
 import Diretorios from 'pages/organizacao/diretorios';
 import EleicoesConsutarDados from 'pages/eleicoes/consultar-dados';
+import EleicoesCadastro from 'pages/eleicoes/cadastro';
 
 import css from './index.scss';
 
@@ -40,6 +41,7 @@ const Routes = ({ location }) => (
             <Route path="/organizacao/diretorios" exact component={Diretorios} />
             <Route path="/eleicoes" exact component={EleicoesConsutarDados} />
             <Route path="/eleicoes/consultar-dados" exact component={EleicoesConsutarDados} />
+            <Route path="/eleicoes/cadastro" exact component={EleicoesCadastro} />
           </Switch>
         </Router>
       </section>

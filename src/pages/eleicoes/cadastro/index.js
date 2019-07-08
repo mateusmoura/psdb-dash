@@ -5,7 +5,7 @@ import ResponsiveTable from "../../../components/responsive-table";
 import Select2 from "../../../components/select-2";
 import DateRangePicker from "../../../components/date-range-picker";
 
-const EleicaoConsutarDados = () => (
+const EleicaoCadastro = () => (
   <div id="wrapper">
     <BarraTopo />
 
@@ -18,12 +18,12 @@ const EleicaoConsutarDados = () => (
           <div className="row">
             <div className="col-12">
               <div className="page-title-box">
-                <h4 className="page-title">Pedidos de filiação</h4>
+                <h4 className="page-title">Cadastro de Pré-candidatos PSDB</h4>
                 <ol className="breadcrumb p-0 m-0">
                   <li>
                     <a href="#this">PSDB</a>
                   </li>
-                  <li className="active">Dashboard</li>
+                  <li className="active">Cadastro de Pré-candidatos</li>
                 </ol>
                 <div className="clearfix" />
               </div>
@@ -45,7 +45,7 @@ const EleicaoConsutarDados = () => (
                     <div className="row">
                       <div className="col-lg-4">
                         <div className="form-group">
-                          <label htmlFor="text" className="col-md-12 control-label">Nome do pré-candidato</label>
+                          <label htmlFor="text" className="col-md-12 control-label">Nome ou título do filiado</label>
                           <div className="col-md-12">
                             <input
                               type="text"
@@ -75,6 +75,44 @@ const EleicaoConsutarDados = () => (
                       </div>
                     </div>
 
+                    <div className="row">
+                      <div className="col-lg-3">
+                        <div className="form-group">
+                          <label htmlFor="text" className="col-md-12 control-label">Faixa Etária</label>
+                          <div className="col-md-12">
+                            <Select2 />
+                          </div>
+                        </div>
+                      </div>
+
+                      <div className="col-lg-3">
+                        <div className="form-group">
+                          <label htmlFor="text" className="col-md-12 control-label">Faixa de eleitorado</label>
+                          <div className="col-md-12">
+                            <Select2 />
+                          </div>
+                        </div>
+                      </div>
+
+                      <div className="col-lg-3">
+                        <div className="form-group">
+                          <label htmlFor="text" className="col-md-12 control-label">Sexo</label>
+                          <div className="col-md-12">
+                            <Select2 />
+                          </div>
+                        </div>
+                      </div>
+
+                      <div className="col-lg-3">
+                        <div className="form-group">
+                          <label htmlFor="text" className="col-md-12 control-label">Situação da filiação</label>
+                          <div className="col-md-12">
+                            <Select2 />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
                    <div className="p-3 overflow-hidden">
                      <button type="button" class="btn float-right btn-primary waves-effect w-md waves-light">Pesquisar</button>
                    </div>
@@ -95,4 +133,4 @@ const EleicaoConsutarDados = () => (
   </div>
 );
 
-export default EleicaoConsutarDados;
+export default EleicaoCadastro;
