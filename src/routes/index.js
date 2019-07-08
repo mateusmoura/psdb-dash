@@ -9,11 +9,12 @@ import {
   BrowserRouter as Router,
 } from 'react-router-dom';
 
-import Login from 'pages/login';
-import Cadastrar from 'pages/cadastro';
-import Relembrar from 'pages/relembrar';
-import Dashboard from 'pages/dashboard';
-import FiliadosTodos from 'pages/filiados/todos';
+import Login from '../pages/login';
+import Cadastrar from '../pages/cadastro';
+import Relembrar from '../pages/relembrar';
+import Dashboard from '../pages/dashboard';
+import FiliadosTodos from '../pages/filiados/todos';
+import FiliadosCadastro from '../pages/filiados/cadastro';
 import Diretorios from 'pages/organizacao/diretorios';
 
 import css from './index.scss';
@@ -32,7 +33,9 @@ const Routes = ({ location }) => (
             <Route path="/relembrar" exact component={Relembrar} />
             <Route path="/cadastrar" exact component={Cadastrar} />
             <Route path="/dashboard" exact component={Dashboard} />
+            <Route path="/filiados" exact component={FiliadosTodos} />
             <Route path="/filiados/todos" exact component={FiliadosTodos} />
+            <Route path="/filiados/cadastro" exact component={FiliadosCadastro} />
             <Route path="/organizacao/diretorios" exact component={Diretorios} />
           </Switch>
         </Router>
