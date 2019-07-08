@@ -1,9 +1,9 @@
 import React from "react";
-import Sidebar from "../../../components/sidebar";
-import BarraTopo from "../../../components/barra-topo";
+import Sidebar from "components/sidebar";
+import BarraTopo from "components/barra-topo";
 
-import Select2 from "../../../components/select-2";
-import DateRangePicker from "../../../components/date-range-picker";
+import Select2 from "components/select-2";
+import DateRangePicker from "components/date-range-picker";
 
 const FiliadosCadastro = () => (
   <div id="wrapper">
@@ -39,13 +39,13 @@ const FiliadosCadastro = () => (
                   <div className="row">
                     <div className="col-lg-6">
                         <div className="form-group">
-                          <label for="field-1" className="control-label">Nome</label>
+                          <label htmlFor="field-1" className="control-label">Nome</label>
                           <input type="text" className="form-control" id="example-name" />
                         </div>
                      </div>
                     <div className="col-lg-6">
                         <div className="form-group">
-                          <label for="field-1" className="control-label">CPF</label>
+                          <label htmlFor="field-1" className="control-label">CPF</label>
                           <input type="text" className="form-control" id="example-cpf"  />
                         </div>
                      </div>
@@ -54,13 +54,13 @@ const FiliadosCadastro = () => (
                   <div className="row">
                     <div className="col-lg-6">
                         <div className="form-group">
-                          <label for="field-1" className="control-label">Data de Nascimento</label>
+                          <label htmlFor="field-1" className="control-label">Data de Nascimento</label>
                           <input type="text" className="form-control" id="example-name" />
                         </div>
                      </div>
                     <div className="col-lg-6">
                         <div className="form-group">
-                          <label for="field-1" className="control-label">Sexo</label>
+                          <label htmlFor="field-1" className="control-label">Sexo</label>
                           <Select2 />
                         </div>
                      </div>
@@ -71,13 +71,13 @@ const FiliadosCadastro = () => (
                   <div className="row">
                     <div className="col-lg-6">
                         <div className="form-group">
-                          <label for="field-1" className="control-label">Nome da Mãe</label>
+                          <label htmlFor="field-1" className="control-label">Nome da Mãe</label>
                           <input type="text" className="form-control" id="example-name" />
                         </div>
                      </div>
                     <div className="col-lg-6">
                         <div className="form-group">
-                          <label for="field-1" className="control-label">Nome do Pai</label>
+                          <label htmlFor="field-1" className="control-label">Nome do Pai</label>
                           <input type="text" className="form-control" id="example-name" />
                         </div>
                      </div>
@@ -88,19 +88,19 @@ const FiliadosCadastro = () => (
                   <div className="row">
                     <div className="col-lg-8">
                         <div className="form-group">
-                          <label for="field-1" className="control-label">Título Eleitoral</label>
+                          <label htmlFor="field-1" className="control-label">Título Eleitoral</label>
                           <input type="text" className="form-control" id="example-titulo" />
                         </div>
                      </div>
                     <div className="col-lg-2">
                         <div className="form-group">
-                          <label for="field-1" className="control-label">Seção</label>
+                          <label htmlFor="field-1" className="control-label">Seção</label>
                           <input type="text" className="form-control" id="example-zona"  />
                         </div>
                      </div>
                     <div className="col-lg-2">
                         <div className="form-group">
-                          <label for="field-1" className="control-label">Zona</label>
+                          <label htmlFor="field-1" className="control-label">Zona</label>
                           <input type="text" className="form-control" id="example-zona"  />
                         </div>
                      </div>
@@ -109,19 +109,19 @@ const FiliadosCadastro = () => (
                   <div className="row">
                     <div className="col-lg-2">
                         <div className="form-group">
-                          <label for="field-1" className="control-label">UF</label>
+                          <label htmlFor="field-1" className="control-label">UF</label>
                           <Select2 />
                         </div>
                      </div>
                     <div className="col-lg-6">
                         <div className="form-group">
-                          <label for="field-1" className="control-label">Município</label>
+                          <label htmlFor="field-1" className="control-label">Município</label>
                           <Select2 />
                         </div>
                      </div>
                     <div className="col-lg-4">
                         <div className="form-group">
-                          <label for="field-1" className="control-label">Data de filiação</label>
+                          <label htmlFor="field-1" className="control-label">Data de filiação</label>
                           <input type="text" className="form-control" id="example-titulo" />
                         </div>
                      </div>
@@ -133,12 +133,12 @@ const FiliadosCadastro = () => (
                     <div className="col-lg-5 align-self-center">
                       <div className="custom-control custom-checkbox">
                         <input type="checkbox" className="custom-control-input" id="remember3" />
-                        <label className="custom-control-label" for="remember3">Foi indicado por alguém?</label>
+                        <label className="custom-control-label" htmlFor="remember3">Foi indicado por alguém?</label>
                       </div>
                     </div>
                     <div className="col-lg-7">
                         <div className="form-group">
-                          <label for="field-1" className="control-label">Indicado por</label>
+                          <label htmlFor="field-1" className="control-label">Indicado por</label>
                           <input type="text" className="form-control" id="example-titulo" />
                         </div>
                      </div>
@@ -153,20 +153,20 @@ const FiliadosCadastro = () => (
                   <div className="row">
                     <div className="col-lg-4">
                         <div className="form-group">
-                          <label for="field-1" className="control-label">E-mail</label>
+                          <label htmlFor="field-1" className="control-label">E-mail</label>
                           <input type="email" id="example-email" name="example-email" className="form-control" />
                         </div>
                      </div>
                     <div className="col-lg-4">
                         <div className="form-group">
-                          <label for="field-1" className="control-label">Telefone Fixo</label>
-                          <input type="text" placeholder="" data-mask="(999) 999-9999" class="form-control" />
+                          <label htmlFor="field-1" className="control-label">Telefone Fixo</label>
+                          <input type="text" placeholder="" data-mask="(999) 999-9999" className="form-control" />
                         </div>
                      </div>
                     <div className="col-lg-4">
                         <div className="form-group">
-                          <label for="field-1" className="control-label">Telefone Celular</label>
-                          <input type="text" placeholder="" data-mask="(999) 999-9999" class="form-control" />
+                          <label htmlFor="field-1" className="control-label">Telefone Celular</label>
+                          <input type="text" placeholder="" data-mask="(999) 999-9999" className="form-control" />
                         </div>
                      </div>
                   </div>
@@ -190,7 +190,7 @@ const FiliadosCadastro = () => (
                   <div className="row">
                     <div className="col-lg-6">
                         <div className="form-group">
-                          <label for="field-1" className="control-label">CEP</label>
+                          <label htmlFor="field-1" className="control-label">CEP</label>
 
                           <div className="input-group">
                             <input type="email" id="example-input2-group2" name="example-input2-group2" className="form-control"  />
@@ -209,13 +209,13 @@ const FiliadosCadastro = () => (
                   <div className="row">
                     <div className="col-lg-2">
                         <div className="form-group">
-                          <label for="field-1" className="control-label">UF</label>
+                          <label htmlFor="field-1" className="control-label">UF</label>
                           <Select2 />
                         </div>
                      </div>
                     <div className="col-lg-10">
                         <div className="form-group">
-                          <label for="field-1" className="control-label">Município</label>
+                          <label htmlFor="field-1" className="control-label">Município</label>
                           <Select2 />
                         </div>
                      </div>
@@ -224,19 +224,19 @@ const FiliadosCadastro = () => (
                   <div className="row">
                     <div className="col-lg-6">
                         <div className="form-group">
-                          <label for="field-1" className="control-label">Bairro</label>
+                          <label htmlFor="field-1" className="control-label">Bairro</label>
                           <input type="text" className="form-control" id="example-name" />
                         </div>
                      </div>
                     <div className="col-lg-4">
                         <div className="form-group">
-                          <label for="field-1" className="control-label">Logradouro</label>
+                          <label htmlFor="field-1" className="control-label">Logradouro</label>
                           <input type="text" className="form-control" id="example-name" />
                         </div>
                     </div>
                     <div className="col-lg-2">
                       <div className="form-group">
-                        <label for="field-1" className="control-label">Número</label>
+                        <label htmlFor="field-1" className="control-label">Número</label>
                         <input type="text" className="form-control" id="example-name" />
                       </div>
                     </div>
@@ -245,7 +245,7 @@ const FiliadosCadastro = () => (
                   <div className="row">
                     <div className="col-lg-12">
                         <div className="form-group">
-                          <label for="field-1" className="control-label">Complemento</label>
+                          <label htmlFor="field-1" className="control-label">Complemento</label>
                           <input type="text" className="form-control" id="example-name" />
                         </div>
                      </div>
@@ -344,8 +344,8 @@ const FiliadosCadastro = () => (
             </div>
           </div>
 
-          <div class="form-group text-right m-b-0">
-            <button class="btn btn-primary waves-effect waves-light btn-lg" type="submit">Cadastrar</button>
+          <div className="form-group text-right m-b-0">
+            <button className="btn btn-primary waves-effect waves-light btn-lg" type="submit">Cadastrar</button>
           </div>
 
         </div>

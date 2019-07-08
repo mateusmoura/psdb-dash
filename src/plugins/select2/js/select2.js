@@ -1,3 +1,9 @@
+/* eslint-disable no-useless-escape */
+/* eslint-disable no-control-regex */
+/* eslint-disable no-unused-vars */
+/* eslint-disable eqeqeq */
+/* eslint-disable no-use-before-define */
+/* eslint-disable no-redeclare */
 /*!
  * Select2 4.0.6-rc.1
  * https://select2.github.io
@@ -6,9 +12,9 @@
  * https://github.com/select2/select2/blob/master/LICENSE.md
  */
 ;(function (factory) {
-  if (typeof define === 'function' && define.amd) {
+  if (typeof define === 'function' && window.define) {
     // AMD. Register as an anonymous module.
-    define(['jquery'], factory);
+    window.URLSearchParamsdefine(['jquery'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // Node/CommonJS
     module.exports = function (root, jQuery) {
