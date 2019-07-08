@@ -3,6 +3,7 @@ import React from "react";
 import Sidebar from "components/sidebar";
 import BarraTopo from "components/barra-topo";
 import ResponsiveTable from "components/responsive-table";
+import CheckboxSwitchery from 'components/checkbox/switchery';
 
 const Diretorios = () => (
   <div id="wrapper">
@@ -166,6 +167,24 @@ const Diretorios = () => (
                 </div>
 
                 <div className="card-body table-responsive">
+                  <div className="row">
+                    <div className="col-12 col-md-6">
+                      <p className="text-danger">Vigência entre 09/12/2017 e 31/05/2019</p>
+
+                      <div className="custom-control custom-checkbox">
+                        <CheckboxSwitchery id="check-1" />
+                        <label htmlFor="check-1">Apresentar membros com mandatos encerrados</label>
+                      </div>
+                    </div>
+
+                    <div className="col-12 col-md-6">
+                      <button type="button" className="btn btn-warning waves-effect w-md waves-light">Prorrogar Vigência</button>
+                      {' '}
+                      {' '}
+                      <button type="button" className="btn btn-primary waves-effect w-md waves-light">Nova Convenção</button>
+                    </div>
+                  </div>
+
                   <ResponsiveTable />
                 </div>
               </div>
