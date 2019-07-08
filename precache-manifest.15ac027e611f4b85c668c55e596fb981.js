@@ -1,19 +1,19 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "ba41aa5bca7df1fbcde95d8b7df30c2a",
+    "revision": "6b53ff2137a9eefde57b9ad35382b3b1",
     "url": "/psdb-dash/index.html"
   },
   {
-    "revision": "afd344ebdf1436b87180",
-    "url": "/psdb-dash/static/css/main.ab4c6f1c.chunk.css"
+    "revision": "759508773a9155e45e04",
+    "url": "/psdb-dash/static/css/main.76184b9b.chunk.css"
   },
   {
-    "revision": "99d785f12e1443ba98de",
-    "url": "/psdb-dash/static/js/2.b5980e50.chunk.js"
+    "revision": "9d5c86f93ac0aff3fccb",
+    "url": "/psdb-dash/static/js/2.4a1ffbcd.chunk.js"
   },
   {
-    "revision": "afd344ebdf1436b87180",
-    "url": "/psdb-dash/static/js/main.d9f3d0d4.chunk.js"
+    "revision": "759508773a9155e45e04",
+    "url": "/psdb-dash/static/js/main.6b4ddce2.chunk.js"
   },
   {
     "revision": "ba05be9cc0ae6e9a37f0",
@@ -78,6 +78,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "275ec7a7dfccafbe5aa3a39a7b1e6ea2",
     "url": "/psdb-dash/static/media/logo-psdb.275ec7a7.png"
+  },
+  {
+    "revision": "7039f7a94f5116fd3ab9c979e68e8953",
+    "url": "/psdb-dash/static/media/logo_psdb_branca.7039f7a9.svg"
   },
   {
     "revision": "6369b8c2719efb07415e7902b6e40245",

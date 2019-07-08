@@ -1,18 +1,19 @@
 {
   "files": {
-    "main.css": "/psdb-dash/static/css/main.ab4c6f1c.chunk.css",
-    "main.js": "/psdb-dash/static/js/main.d9f3d0d4.chunk.js",
-    "main.js.map": "/psdb-dash/static/js/main.d9f3d0d4.chunk.js.map",
+    "main.css": "/psdb-dash/static/css/main.76184b9b.chunk.css",
+    "main.js": "/psdb-dash/static/js/main.6b4ddce2.chunk.js",
+    "main.js.map": "/psdb-dash/static/js/main.6b4ddce2.chunk.js.map",
     "runtime~main.js": "/psdb-dash/static/js/runtime~main.d71cb806.js",
     "runtime~main.js.map": "/psdb-dash/static/js/runtime~main.d71cb806.js.map",
-    "static/js/2.b5980e50.chunk.js": "/psdb-dash/static/js/2.b5980e50.chunk.js",
-    "static/js/2.b5980e50.chunk.js.map": "/psdb-dash/static/js/2.b5980e50.chunk.js.map",
+    "static/js/2.4a1ffbcd.chunk.js": "/psdb-dash/static/js/2.4a1ffbcd.chunk.js",
+    "static/js/2.4a1ffbcd.chunk.js.map": "/psdb-dash/static/js/2.4a1ffbcd.chunk.js.map",
     "index.html": "/psdb-dash/index.html",
-    "precache-manifest.20805ed1a7e161564eba0522bd75713e.js": "/psdb-dash/precache-manifest.20805ed1a7e161564eba0522bd75713e.js",
+    "precache-manifest.15ac027e611f4b85c668c55e596fb981.js": "/psdb-dash/precache-manifest.15ac027e611f4b85c668c55e596fb981.js",
     "service-worker.js": "/psdb-dash/service-worker.js",
-    "static/css/main.ab4c6f1c.chunk.css.map": "/psdb-dash/static/css/main.ab4c6f1c.chunk.css.map",
+    "static/css/main.76184b9b.chunk.css.map": "/psdb-dash/static/css/main.76184b9b.chunk.css.map",
     "static/media/index.scss": "/psdb-dash/static/media/bg-countdown.a572e46b.jpg",
     "static/media/icons.css": "/psdb-dash/static/media/materialdesignicons-webfont.a17753cd.svg",
-    "static/media/logo-psdb.png": "/psdb-dash/static/media/logo-psdb.275ec7a7.png"
+    "static/media/logo-psdb.png": "/psdb-dash/static/media/logo-psdb.275ec7a7.png",
+    "static/media/logo_psdb_branca.svg": "/psdb-dash/static/media/logo_psdb_branca.7039f7a9.svg"
   }
 }
