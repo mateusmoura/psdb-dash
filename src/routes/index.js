@@ -38,10 +38,25 @@ const Routes = ({ location }) => (
             <Route path="/filiados" exact component={FiliadosTodos} />
             <Route path="/filiados/todos" exact component={FiliadosTodos} />
             <Route path="/filiados/cadastro" exact component={FiliadosCadastro} />
+            {/* TODO: Desenvolver essa tela */}
+            <Route path="/filiados/relatorios" exact component={FiliadosTodos} />
+            {/* TODO: Desenvolver essa tela */}
+            <Route path="/filiados/pedidos" exact component={FiliadosTodos} />
             <Route path="/organizacao/diretorios" exact component={Diretorios} />
+            {/* TODO: Desenvolver essa tela */}
+            <Route path="/organizacao/mandatos" exact component={Diretorios} />
+            {/* TODO: Desenvolver essa tela */}
+            <Route path="/organizacao/cadastro" exact component={Diretorios} />
+            {/* TODO: Desenvolver essa tela */}
+            <Route path="/organizacao/documentacao" exact component={Diretorios} />
             <Route path="/eleicoes" exact component={EleicoesConsutarDados} />
             <Route path="/eleicoes/consultar-dados" exact component={EleicoesConsutarDados} />
             <Route path="/eleicoes/cadastro" exact component={EleicoesCadastro} />
+            {/* TODO: Desenvolver essa tela */}
+            <Route path="/eleicoes/relatorios" exact component={EleicoesConsutarDados} />
+
+
+            <Route path="/dashboard" exact component={Dashboard} />
           </Switch>
         </Router>
       </section>
