@@ -27,9 +27,14 @@ const Diretorios = () => (
 
           <div className="row">
             <div className="col-12">
-              <div className="card">
+
+              <div className="card card-border card-primary">
+                <div className="card-heading">
+                  <h3 className="card-title text-primary">
+                    <i className="fa fa-filter" /> Filtro
+                  </h3>
+                </div>
                 <div className="card-body">
-                  <h4 className="header-title m-t-0">Filtrar Diretórios</h4>
                   <p className="text-muted m-b-20">
                     Possivel filtrar pelo nome, estado, múnicipio.
                   </p>
