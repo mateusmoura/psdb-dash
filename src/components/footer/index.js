@@ -8,15 +8,15 @@ const Footer = () => (
       </div>
       <div className="col-lg-6">
         <div className="button-list float-right">
-          <a href="https://www.facebook.com/Rede45" target="_blank" className="btn btn-facebook waves-effect waves-light">
+          <a href="https://www.facebook.com/Rede45" target="_blank" rel="noopener noreferrer" className="btn btn-facebook waves-effect waves-light">
             <i className="fa fa-facebook"></i>
           </a>
 
-          <a href="https://twitter.com/rede45" target="_blank" className="btn btn-twitter waves-effect waves-light">
+          <a href="https://twitter.com/rede45" target="_blank" rel="noopener noreferrer" className="btn btn-twitter waves-effect waves-light">
             <i className="fa fa-twitter"></i>
           </a>
 
-          <a href="http://www.youtube.com/cenpsdb45" target="_blank" className="btn btn-youtube waves-effect waves-light">
+          <a href="http://www.youtube.com/cenpsdb45" target="_blank" rel="noopener noreferrer" className="btn btn-youtube waves-effect waves-light">
             <i className="fa fa-youtube"></i>
           </a>
         </div>

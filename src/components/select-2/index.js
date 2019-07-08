@@ -1,6 +1,6 @@
 import React from "react";
 
-// import '../../plugins/select2/js/select2.js';
+import '../../plugins/select2/js/select2.js';
 import "../../plugins/select2/css/select2.min.css";
 
 const Select2 = () => (

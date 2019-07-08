@@ -2,6 +2,7 @@ import React from "react";
 
 import Sidebar from "components/sidebar";
 import BarraTopo from "components/barra-topo";
+import ResponsiveTable from "components/responsive-table";
 
 const Diretorios = () => (
   <div id="wrapper">
@@ -63,7 +64,7 @@ const Diretorios = () => (
                             Estado
                           </label>
 
-                          <select id="estado" class="form-control">
+                          <select id="estado" className="form-control">
                             <option value="">Selecione</option>
                             <option value="press">Distrito Federal</option>
                             <option value="net">São Paulo</option>
@@ -79,7 +80,7 @@ const Diretorios = () => (
                             Município
                           </label>
 
-                          <select id="estado" class="form-control">
+                          <select id="estado" className="form-control">
                             <option value="">Selecione</option>
                             <option value="press">Município 1</option>
                             <option value="net">Município 2</option>
@@ -112,11 +113,11 @@ const Diretorios = () => (
 
           <div className="row">
             <div className="col-12">
-              <div class="card card-border card-primary">
-                <div class="card-heading">
-                  <h3 class="card-title text-primary">DIRETÓRIO NACIONAL</h3>
+              <div className="card card-border card-primary">
+                <div className="card-heading">
+                  <h3 className="card-title text-primary">DIRETÓRIO NACIONAL</h3>
                 </div>
-                <div class="card-body">
+                <div className="card-body">
                   <div className="row">
                     <div className="col-12">
                       <h5>Endereço</h5>
@@ -149,9 +150,23 @@ const Diretorios = () => (
 
                   <div className="row">
                     <div className="col-12 text-right">
-                      <button type="button" class="btn btn-primary waves-effect w-md waves-light">Alterar</button>
+                      <button type="button" className="btn btn-primary waves-effect w-md waves-light">Alterar</button>
                     </div>
                   </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="row">
+            <div className="col-sm-12">
+              <div className="card card-border card-primary">
+                <div className="card-heading">
+                  <h3 className="card-title text-primary">Comissão Executiva</h3>
+                </div>
+
+                <div className="card-body table-responsive">
+                  <ResponsiveTable />
                 </div>
               </div>
             </div>
