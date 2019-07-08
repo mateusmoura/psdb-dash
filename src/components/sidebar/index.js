@@ -53,7 +53,7 @@ const Sidebar = () => (
               <span className="menu-arrow"></span></a>
 
             <ul className="nav-second-level nav" aria-expanded="false">
-              <li><Link to="/eleicoes/consulta">Consulta dados</Link></li>
+              <li><Link to="/eleicoes/consultar-dados">Consulta dados</Link></li>
               <li><Link to="/eleicoes/relatorios">Relatórios</Link></li>
             </ul>
           </li>

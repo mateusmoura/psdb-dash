@@ -256,9 +256,7 @@ const FiliadosCadastro = () => (
 
               <div className="card">
                 <div className="card-body">
-                  <h4 className="m-t-0 header-title"><b>Redes Sociais</b></h4>
-
-                  <hr className=" mb-5"/>
+                  <h4 className="m-t-0 header-title mb-4"><b>Redes Sociais</b></h4>
 
                   <div className="row mb-4">
                     <div className="col-lg-6">
@@ -344,7 +342,7 @@ const FiliadosCadastro = () => (
             </div>
           </div>
 
-          <div className="form-group text-right m-b-0">
+          <div className="form-group text-right mb-5">
             <button className="btn btn-primary waves-effect waves-light btn-lg" type="submit">Cadastrar</button>
           </div>
 
