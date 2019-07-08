@@ -48,12 +48,10 @@ const Relembrar = () => (
 
                 <div className="form-group account-btn text-center m-t-10">
                   <div className="col-12">
-                    <button
+                    <Link
+                      to="/dashboard"
                       className="btn w-lg btn-rounded btn-lg btn-primary waves-effect waves-light"
-                      type="submit"
-                    >
-                      Redefinir senha
-                    </button>
+                    >Redefinir senha</Link>
                   </div>
                 </div>
               </form>
