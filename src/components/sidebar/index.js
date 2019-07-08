@@ -25,10 +25,10 @@ const Sidebar = () => (
               <span className="menu-arrow"></span></a>
 
             <ul className="nav-second-level nav" aria-expanded="false">
-              <li><Link to="filiados/todos">Todos filiados</Link></li>
-              <li><Link to="filiados/pedidos">Pedidos/Pendências</Link></li>
-              <li><Link to="filiados/cadastro">Cadastro</Link></li>
-              <li><Link to="filiados/relatorios">Relatórios</Link></li>
+              <li><Link to="/filiados/todos">Todos filiados</Link></li>
+              <li><Link to="/filiados/pedidos">Pedidos/Pendências</Link></li>
+              <li><Link to="/filiados/cadastro">Cadastro</Link></li>
+              <li><Link to="/filiados/relatorios">Relatórios</Link></li>
             </ul>
           </li>
 
@@ -39,10 +39,10 @@ const Sidebar = () => (
               <span className="menu-arrow"></span></a>
 
             <ul className="nav-second-level nav" aria-expanded="false">
-              <li><Link to="organizacao/todos">Todos os diretórios</Link></li>
-              <li><Link to="organizacao/mandatos">Todos os mandatos</Link></li>
-              <li><Link to="organizacao/cadastro">Cadastro</Link></li>
-              <li><Link to="organizacao/documentacao">Documentação</Link></li>
+              <li><Link to="/organizacao/todos">Todos os diretórios</Link></li>
+              <li><Link to="/organizacao/mandatos">Todos os mandatos</Link></li>
+              <li><Link to="/organizacao/cadastro">Cadastro</Link></li>
+              <li><Link to="/organizacao/documentacao">Documentação</Link></li>
             </ul>
           </li>
 
@@ -53,8 +53,8 @@ const Sidebar = () => (
               <span className="menu-arrow"></span></a>
 
             <ul className="nav-second-level nav" aria-expanded="false">
-              <li><Link to="eleicoes/consulta">Consulta dados</Link></li>
-              <li><Link to="eleicoes/relatorios">Relatórios</Link></li>
+              <li><Link to="/eleicoes/consulta">Consulta dados</Link></li>
+              <li><Link to="/eleicoes/relatorios">Relatórios</Link></li>
             </ul>
           </li>
 
@@ -65,9 +65,9 @@ const Sidebar = () => (
               <span className="menu-arrow"></span></a>
 
             <ul className="nav-second-level nav" aria-expanded="false">
-              <li><Link to="comunicacao/consulta">Todas Redes Sociais</Link></li>
-              <li><Link to="comunicacao/campanhas">Campanhas</Link></li>
-              <li><Link to="comunicacao/relatorios">Relatórios</Link></li>
+              <li><Link to="/comunicacao/consulta">Todas Redes Sociais</Link></li>
+              <li><Link to="/comunicacao/campanhas">Campanhas</Link></li>
+              <li><Link to="/comunicacao/relatorios">Relatórios</Link></li>
             </ul>
           </li>
 
@@ -80,9 +80,9 @@ const Sidebar = () => (
               <span className="menu-arrow"></span></a>
 
             <ul className="nav-second-level nav" aria-expanded="false">
-              <li><Link to="perfil/consulta">Editar dados</Link></li>
-              <li><Link to="perfil/campanhas">Gerenciar usuários</Link></li>
-              <li><Link to="perfil/relatorios">Configurações</Link></li>
+              <li><Link to="/perfil/consulta">Editar dados</Link></li>
+              <li><Link to="/perfil/campanhas">Gerenciar usuários</Link></li>
+              <li><Link to="/perfil/relatorios">Configurações</Link></li>
             </ul>
           </li>
         </ul>
