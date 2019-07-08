@@ -2,8 +2,9 @@ import React from 'react';
 
 import CardDados from 'components/card-dados';
 import LineGraph from 'components/line-graph';
-import Sidebar from '../../components/sidebar';
-import BarraTopo from '../../components/barra-topo';
+import Sidebar from 'components/sidebar';
+import BarraTopo from 'components/barra-topo';
+import Footer from 'components/footer';
 
 // import '../../pages-js/jquery.dashboard.js';
 
@@ -82,6 +83,8 @@ const Dashboard = () => (
         </div>
       </div>
     </div>
+
+    <Footer />
   </div>
 );
 

@@ -1,9 +1,10 @@
 import React from "react";
-import Sidebar from "../../../components/sidebar";
-import BarraTopo from "../../../components/barra-topo";
+import Sidebar from "components/sidebar";
+import BarraTopo from "components/barra-topo";
+import Footer from 'components/footer';
 
-import Select2 from "../../../components/select-2";
-import DateRangePicker from "../../../components/date-range-picker";
+import Select2 from "components/select-2";
+import DateRangePicker from "components/date-range-picker";
 
 const FiliadosCadastro = () => (
   <div id="wrapper">
@@ -351,6 +352,8 @@ const FiliadosCadastro = () => (
         </div>
       </div>
     </div>
+
+    <Footer />
   </div>
 );
 

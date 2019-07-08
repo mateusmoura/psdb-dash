@@ -1,10 +1,10 @@
 import React from "react";
-import Sidebar from "../../../components/sidebar";
-import BarraTopo from "../../../components/barra-topo";
-import ResponsiveTable from "../../../components/responsive-table";
-import Select2 from "../../../components/select-2";
-import DateRangePicker from "../../../components/date-range-picker";
-
+import Sidebar from "components/sidebar";
+import BarraTopo from "components/barra-topo";
+import Footer from 'components/footer';
+import ResponsiveTable from "components/responsive-table";
+import Select2 from "components/select-2";
+import DateRangePicker from "components/date-range-picker";
 
 const FiliadosTodos = () => (
   <div id="wrapper">
@@ -122,6 +122,8 @@ const FiliadosTodos = () => (
         </div>
       </div>
     </div>
+
+    <Footer />
   </div>
 );
 
