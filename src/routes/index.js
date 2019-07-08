@@ -9,12 +9,21 @@ import {
   BrowserRouter as Router,
 } from 'react-router-dom';
 
+<<<<<<< HEAD
 import Login from '../pages/login';
 import Cadastrar from '../pages/cadastro';
 import Relembrar from '../pages/relembrar';
 import Dashboard from '../pages/dashboard';
 import FiliadosTodos from '../pages/filiados/todos';
 import FiliadosCadastro from '../pages/filiados/cadastro';
+=======
+import Login from 'pages/login';
+import Cadastrar from 'pages/cadastro';
+import Relembrar from 'pages/relembrar';
+import Dashboard from 'pages/dashboard';
+import FiliadosTodos from 'pages/filiados/todos';
+import Diretorios from 'pages/organizacao/diretorios';
+>>>>>>> ff1d86dd2e67b167a37ccb1c21b3ac711374ef90
 
 import css from './index.scss';
 
@@ -34,7 +43,11 @@ const Routes = ({ location }) => (
             <Route path="/dashboard" exact component={Dashboard} />
             <Route path="/filiados" exact component={FiliadosTodos} />
             <Route path="/filiados/todos" exact component={FiliadosTodos} />
+<<<<<<< HEAD
             <Route path="/filiados/cadastro" exact component={FiliadosCadastro} />
+=======
+            <Route path="/organizacao/diretorios" exact component={Diretorios} />
+>>>>>>> ff1d86dd2e67b167a37ccb1c21b3ac711374ef90
           </Switch>
         </Router>
       </section>
