@@ -114,7 +114,7 @@ const EleicaoCadastro = () => (
                     </div>
 
                    <div className="p-3 overflow-hidden">
-                     <button type="button" class="btn float-right btn-primary waves-effect w-md waves-light">Pesquisar</button>
+                     <button type="button" className="btn float-right btn-primary waves-effect w-md waves-light">Pesquisar</button>
                    </div>
                   </form>
                 </div>
