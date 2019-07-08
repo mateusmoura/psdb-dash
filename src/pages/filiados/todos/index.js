@@ -24,9 +24,36 @@ const FiliadosTodos = () => (
                   <li>
                     <a href="#this">PSDB</a>
                   </li>
-                  <li className="active">Dashboard</li>
+                  <li className="active">Filiados</li>
                 </ol>
                 <div className="clearfix" />
+              </div>
+            </div>
+          </div>
+
+          <div className="row">
+            <div className="col-sm-12">
+              <div className="card">
+                <div className="card-body table-responsive">
+
+                  <div className="row mb-4">
+                    <div className="col-lg-6 align-self-center">
+                      <h4 className="m-t-0 header-title"><b>Todos os filiados</b></h4>
+                    </div>
+
+                    <div className="col-lg-6">
+                      <button type="button" className="btn btn-primary waves-effect float-right" data-toggle="modal" data-target="#con-close-modal"> <i className="fa fa-filter m-r-5"></i> <span>Filtrar</span> </button>
+                    </div>
+                  </div>
+
+                  <div className="card card-border">
+                      <div className="card-body p-3">
+                          <strong className="mr-2">Filtros aplicados:</strong> <button type="button" className="btn btn-secondary waves-effect waves-light"> <span>Nome: blah</span> <i className="fa fa-close"></i> </button>
+                      </div>
+                  </div>
+
+                  <ResponsiveTable />
+                </div>
               </div>
             </div>
           </div>
@@ -35,7 +62,7 @@ const FiliadosTodos = () => (
               <div className="modal-dialog">
                   <div className="modal-content">
                       <div className="modal-header">
-                          <h4 className="modal-title mt-0"><i className="fa fa-filter"></i> Filtro</h4>
+                          <h4 className="modal-title mt-0"><i className="fa fa-filter m-r-5"></i> Filtro</h4>
                           <button type="button" className="close" data-dismiss="modal" aria-label="Close">
                               <span aria-hidden="true">&times;</span>
                           </button>
@@ -90,33 +117,6 @@ const FiliadosTodos = () => (
                       </div>
                   </div>
               </div>
-          </div>
-
-          <div className="row">
-            <div className="col-sm-12">
-              <div className="card">
-                <div className="card-body table-responsive">
-
-                  <div className="row mb-4">
-                    <div className="col-lg-6 align-self-center">
-                      <h4 className="m-t-0 header-title"><b>Todos os filiados</b></h4>
-                    </div>
-
-                    <div className="col-lg-6">
-                      <button type="button" class="btn btn-primary waves-effect float-right" data-toggle="modal" data-target="#con-close-modal"> <i class="fa fa-filter m-r-5"></i> <span>Filtrar</span> </button>
-                    </div>
-                  </div>
-
-                  <div className="card card-border">
-                      <div className="card-body p-3">
-                          <strong className="mr-2">Filtros aplicados:</strong> <button type="button" class="btn btn-secondary waves-effect waves-light"> <span>Nome: blah</span> <i class="fa fa-close"></i> </button>
-                      </div>
-                  </div>
-
-                  <ResponsiveTable />
-                </div>
-              </div>
-            </div>
           </div>
 
         </div>
