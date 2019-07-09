@@ -5,6 +5,8 @@ import BarraTopo from "components/barra-topo";
 import ResponsiveTable from "components/responsive-table";
 import CheckboxSwitchery from 'components/checkbox/switchery';
 
+import './index.scss';
+
 const Diretorios = () => (
   <div id="wrapper">
     <BarraTopo />
@@ -163,7 +165,7 @@ const Diretorios = () => (
             <div className="col-sm-12">
               <div className="card card-border card-primary">
                 <div className="card-heading">
-                  <h3 className="card-title text-primary">Comissão Executiva</h3>
+                  <h3 className="card-title text-primary" style={{ textTransform: 'uppercase' }}>Comissão Executiva</h3>
                 </div>
 
                 <div className="card-body table-responsive">
@@ -171,21 +173,55 @@ const Diretorios = () => (
                     <div className="col-12 col-md-6">
                       <p className="text-danger">Vigência entre 09/12/2017 e 31/05/2019</p>
 
-                      <div className="custom-control custom-checkbox">
+                      <div className="mandatos-encerrados">
                         <CheckboxSwitchery id="check-1" />
                         <label htmlFor="check-1">Apresentar membros com mandatos encerrados</label>
                       </div>
                     </div>
 
-                    <div className="col-12 col-md-6">
+                    <div className="col-12 col-md-6 text-right">
                       <button type="button" className="btn btn-warning waves-effect w-md waves-light">Prorrogar Vigência</button>
-                      {' '}
-                      {' '}
+                      {'   '}
                       <button type="button" className="btn btn-primary waves-effect w-md waves-light">Nova Convenção</button>
                     </div>
                   </div>
 
                   <ResponsiveTable />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="row">
+            <div className="col-sm-12">
+              <div className="card card-border card-primary">
+                <div className="card-heading">
+                  <h3 className="card-title text-primary">ATAS DE CONVENÇÃO</h3>
+                </div>
+
+                <div className="card-body">
+                <div class="table-responsive">
+                  <table class="table mb-0">
+                    <thead class="thead-light">
+                      <tr>
+                        <th scope="col"></th>
+                        <th scope="col">Data</th>
+                        <th scope="col">Ata</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row"></th>
+                        <td>31/01/2018</td>
+                        <td>
+                          <a href="#this" className="text-blue">
+                            ATA_NOVA_CONVENCAO_10695
+                          </a>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
                 </div>
               </div>
             </div>
