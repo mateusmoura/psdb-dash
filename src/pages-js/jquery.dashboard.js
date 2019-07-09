@@ -76,15 +76,13 @@
       bindto: '#donut-chart',
       data: {
         columns: [
-          ['Data1', 46],
-          ['Data2', 24],
-          ['Data3', 48],
-          ['Data4', 18]
+          ['Filiados', 46],
+          ['Desfiliados', 24],
         ],
         type : 'donut'
       },
       donut: {
-        title: "Candidates",
+        title: 70,
         width: 40,
         label: {
           show:false

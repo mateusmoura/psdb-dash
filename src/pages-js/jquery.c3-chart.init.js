@@ -1,7 +1,15 @@
+/* eslint-disable no-unused-expressions */
+/* eslint-disable no-useless-escape */
+/* eslint-disable no-control-regex */
+/* eslint-disable no-unused-vars */
+/* eslint-disable eqeqeq */
+/* eslint-disable no-use-before-define */
+/* eslint-disable no-redeclare */
+
 /**
 * Theme: Codefox - Bootstrap 4 Admin Template
 * Author: Coderthemes
-* Chart c3 page
+* Chart window.c3 page
 */
 
 !function($) {
@@ -11,8 +19,8 @@
 
     ChartC3.prototype.init = function () {
         //generating chart 
-        c3.generate({
-            bindto: '#chart',
+        window.c3.generate({
+            bindto: '#chart-filiacoes',
             bar: {
                 width: {
                     ratio: 0.5 // this makes bar width 50% of length between ticks
@@ -22,9 +30,12 @@
             },
             data: {
                 columns: [
-                    ['data1', 150, 80, 70, 152, 250, 95],
-                    ['data2', 200, 130, 90, 240, 130, 220],
-                    ['data3', 300, 200, 160, 400, 250, 250]
+                    ['Janeiro', 150, 80, 70, 152, 250, 95],
+                    ['Fevereiro', 200, 130, 90, 240, 130, 220],
+                    ['Março', 332, 20, 12, 433, 21, 222],
+                    ['Abril', 981, 23, 444, 221, 311, 250],
+                    ['Junho', 421, 312, 451, 400, 250, 250],
+                    ['Julho', 300, 311, 160, 222, 333, 250]
                 ],
                 type: 'bar',
                 colors: {
@@ -37,7 +48,7 @@
         });
 
         //combined chart
-        c3.generate({
+        window.c3.generate({
             bindto: '#combine-chart',
             data: {
                 columns: [
@@ -73,7 +84,7 @@
         });
         
         //roated chart
-        c3.generate({
+        window.c3.generate({
             bindto: '#roated-chart',
             data: {
                 columns: [
@@ -97,7 +108,7 @@
         });
 
         //stacked chart
-        c3.generate({
+        window.c3.generate({
             bindto: '#chart-stacked',
             data: {
                 columns: [
@@ -117,8 +128,8 @@
         });
         
         //Donut Chart
-        c3.generate({
-             bindto: '#donut-chart',
+        window.c3.generate({
+             bindto: '#donutx-chart',
             data: {
                 columns: [
                     ['data1', 46],
@@ -139,7 +150,7 @@
         });
         
         //Pie Chart
-        c3.generate({
+        window.c3.generate({
              bindto: '#pie-chart',
             data: {
                 columns: [
@@ -160,7 +171,7 @@
         });
         
         //Line regions
-        c3.generate({
+        window.c3.generate({
              bindto: '#line-regions',
             data: {
                 columns: [
@@ -181,7 +192,7 @@
         
         
         //Scatter Plot
-        c3.generate({
+        window.c3.generate({
              bindto: '#scatter-plot',
              data: {
 		        xs: {
@@ -224,7 +235,11 @@
 //initializing 
 function($) {
     "use strict";
+
+    setTimeout( () => {
     $.ChartC3.init()
+
+    }, 2000)
 }(window.jQuery);
 
 

@@ -1,91 +1,204 @@
-import React from 'react';
+import React, { Component } from 'react';
 
 import CardDados from 'components/card-dados';
 import LineGraph from 'components/line-graph';
 import Sidebar from 'components/sidebar';
 import BarraTopo from 'components/barra-topo';
 import Footer from 'components/footer';
+import Select2 from 'components/select-2';
+// import DateRangePicker from "../../../components/date-range-picker";
 
-// import '../../pages-js/jquery.dashboard.js';
+import '../../pages-js/jquery.dashboard.js';
+import '../../pages-js/jquery.c3-chart.init.js';
+import '../../plugins/morris/morris.css';
 
-const Dashboard = () => (
-  <div id="wrapper">
-    <BarraTopo />
+class Dashboard extends Component {
+  componentDidMount() {
+    window.Morris.Area({
+        element: 'morris-area-with-dotted',
+        pointSize: 3,
+        lineWidth: 1,
+        data: [
+            { y: '2009', a: 10},
+            { y: '2010', a: 75},
+            { y: '2011', a: 50},
+            { y: '2012', a: 75},
+            { y: '2013', a: 50},
+            { y: '2014', a: 75},
+            { y: '2015', a: 90 }
+        ],
+        xkey: 'y',
+        ykeys: ['a'],
+        labels: ['Filiados'],
+        hideHover: 'auto',
+        pointFillColors: ['#ffffff'],
+        pointStrokeColors: ['#999999'],
+        resize: true,
+        smooth: false,
+        gridLineColor: '#eef0f2',
+        lineColors: ['#3b3e47', "#bdbdbd"]
+    });
+  }
 
-    <Sidebar />
+  render() {
+    return (
+      <div id="wrapper">
+        <BarraTopo />
 
-    <div className="content-page">
-      {/* <!-- Start content --> */}
-      <div className="content">
-        <div className="container-fluid">
-          <div className="row">
-            <div className="col-12">
-              <div className="page-title-box">
-                <h4 className="page-title">Bem Vindo!</h4>
-                <ol className="breadcrumb p-0 m-0">
-                  <li>
-                      <a href="#this">PSDB</a>
-                  </li>
-                  {/* <!--<li>-->
-                      <!--<a href="#">Dashboard</a>-->
-                  <!--</li>--> */}
-                  <li className="active">
-                      Dashboard
-                  </li>
-                </ol>
-                <div className="clearfix"></div>
+        <Sidebar />
+
+        <div className="content-page">
+          {/* <!-- Start content --> */}
+          <div className="content">
+            <div className="container-fluid">
+              <div className="row">
+                <div className="col-12">
+                  <div className="page-title-box">
+                    <h4 className="page-title">Bem Vindo!</h4>
+                    <ol className="breadcrumb p-0 m-0">
+                      <li>
+                          <a href="#this">PSDB</a>
+                      </li>
+                      {/* <!--<li>-->
+                          <!--<a href="#">Dashboard</a>-->
+                      <!--</li>--> */}
+                      <li className="active">
+                          Dashboard
+                      </li>
+                    </ol>
+                    <div className="clearfix"></div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="row">
+                <div className="col-lg-4">
+                  <CardDados
+                    titulo="Filiações"
+                    descricao="Total nacional"
+                    cor="widget-two-info"
+                    valor={10530}
+                  />
+                </div>
+                <div className="col-lg-4">
+                  <CardDados
+                    titulo="filiações concluídas"
+                    descricao="Total nacional"
+                    cor="widget-two-success"
+                    valor={1232}
+                  />
+                </div>
+                <div className="col-lg-4">
+                  <CardDados
+                    titulo="aguardando confirmação"
+                    descricao="TSE"
+                    cor="widget-two-pink"
+                    valor={231}
+                  />
+                </div>
+              </div>
+
+              <div className="row">
+                <div className="col-lg-6">
+                  <div className="card">
+                     <div className="card-body">
+                       <div className="row">
+                          <div className="col-lg-10 align-self-center">
+                            <h4 className="header-title m-t-0">Histórico de filiação</h4>
+                            <p className="text-muted m-b-30 text-overflow">
+                                Gráfico com a quantidade total de filiados em todos os estados nos últimos anos:
+                            </p>
+                          </div>
+
+                          <div className="col-lg-2">
+                            <button type="button" className="btn btn-primary waves-effect float-right" data-toggle="modal" data-target="#con-close-modal"> <i className="fa fa-cog"></i></button>
+                          </div>
+                       </div>
+
+                       <div id="morris-area-with-dotted" className="morris-chart" style={{height:'320px'}}></div>
+                     </div>
+                  </div>
+                </div>
+
+                <div className="col-lg-6">
+                  <div className="card">
+                    <div className="card-body">
+                      <div className="row">
+                        <div className="col-lg-10 align-self-center">
+                          <h4 className="header-title m-t-0">Pendências</h4>
+                          <p className="text-muted m-b-30 text-overflow">
+                              Quantidade de pendências aguardando confirmação da secretaria
+                          </p>
+                        </div>
+
+                        <div className="col-lg-2">
+                          <button type="button" className="btn btn-primary waves-effect float-right" data-toggle="modal" data-target="#con-close-modal"> <i className="fa fa-cog"></i></button>
+                        </div>
+                      </div>
+
+                      <div className="" style={{height:'320px'}}>
+                          <div id="donut-chart" className="ct-chart ct-golden-section dash-chart"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="row">
+                <div className="col-lg-12">
+                  <div className="card">
+                      <div className="card-body">
+                          <h4 className="header-title m-t-0">Novas Filiações</h4>
+                          <p className="text-muted text-overflow m-b-30">
+                              Gráfico da quantidade de novas filiações nos últimos 6 meses
+                          </p>
+
+                          <div id="chart-filiacoes"></div>
+                      </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-
-          <CardDados
-            titulo="Statistics"
-          />
-          <CardDados />
-
-          <LineGraph />
-
-          <div className="row">
-              <div className="col-xl-4">
-                  <div className="card">
-                      <div className="card-body">
-                          <h4 className="header-title m-t-0 m-b-30">Last 30 days statistics</h4>
-
-                          <div className="">
-                              <div id="donut-chart" className="ct-chart ct-golden-section dash-chart"></div>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-              <div className="col-xl-4">
-                  <div className="card">
-                      <div className="card-body">
-                          <h4 className="header-title m-t-0 m-b-30">Total Revenue share</h4>
-                          <div>
-                              <div id="combine-chart" className="ct-chart ct-golden-section dash-chart"></div>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-
-              <div className="col-xl-4">
-                  <div className="card">
-                      <div className="card-body">
-                          <h4 className="header-title m-t-0 m-b-30">Total Revenue share</h4>
-                          <div className="">
-                              <div id="roated-chart" className="ct-chart ct-golden-section dash-chart"></div>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-          </div>
-          {/* <!-- end row --> */}
         </div>
-      </div>
-    </div>
 
-    <Footer />
-  </div>
-);
+        <div id="con-close-modal" className="modal fade" tabIndex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div className="modal-dialog">
+                <div className="modal-content">
+                    <div className="modal-header">
+                        <h4 className="modal-title mt-0"><i className="fa fa-filter m-r-5"></i> Filtro</h4>
+                        <button type="button" className="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div className="modal-body">
+                        <div className="row">
+                            <div className="col-md-6">
+                                <div className="form-group">
+                                    <label htmlFor="field-5" className="control-label">UF</label>
+                                    <Select2 />
+                                </div>
+                            </div>
+                            <div className="col-md-6">
+                                <div className="form-group">
+                                    <label htmlFor="field-4" className="control-label">Município</label>
+                                    <Select2 />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="modal-footer">
+                        <button type="button" className="btn btn-secondary waves-effect" data-dismiss="modal">Fechar</button>
+                        <button type="button" className="btn btn-info waves-effect waves-light">Aplicar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <Footer />
+      </div>
+    )
+  }
+};
 
 export default Dashboard;

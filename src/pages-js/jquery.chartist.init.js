@@ -1,13 +1,13 @@
 /**
 * Theme: Codefox - Bootstrap 4 Admin Template
 * Author: Coderthemes
-* Chartist chart
+* window.Chartist chart
 */
 
 //smil-animations Chart
 
 
-  var chart = new Chartist.Line('#smil-animations', {
+  var chart = new window.Chartist.Line('#smil-animations', {
   labels: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12'],
   series: [
     [12, 9, 7, 8, 5, 4, 6, 2, 3, 3, 4, 6],
@@ -18,7 +18,7 @@
 }, {
   low: 0,
   plugins: [
-    Chartist.plugins.tooltip()
+    window.Chartist.plugins.tooltip()
   ]
 });
 
@@ -32,7 +32,7 @@ chart.on('created', function() {
   seq = 0;
 });
 
-// On each drawn element by Chartist we use the Chartist.Svg API to trigger SMIL animations
+// On each drawn element by window.Chartist we use the window.Chartist.Svg API to trigger SMIL animations
 chart.on('draw', function(data) {
   seq++;
 
@@ -57,7 +57,7 @@ chart.on('draw', function(data) {
         dur: durations,
         from: data.y + 100,
         to: data.y,
-        // We can specify an easing function from Chartist.Svg.Easing
+        // We can specify an easing function from window.Chartist.Svg.Easing
         easing: 'easeOutQuart'
       }
     });
@@ -140,7 +140,7 @@ chart.on('created', function() {
 
 
 //Simple line chart
-new Chartist.Line('#simple-line-chart', {
+new window.Chartist.Line('#simple-line-chart', {
   labels: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
   series: [
     [12, 9, 7, 8, 5],
@@ -153,7 +153,7 @@ new Chartist.Line('#simple-line-chart', {
     right: 40
   },
   plugins: [
-    Chartist.plugins.tooltip()
+    window.Chartist.plugins.tooltip()
   ]
 });
 
@@ -196,7 +196,7 @@ var responsiveOptions = [
   }]
 ];
 
-new Chartist.Line('#scatter-diagram', data, options, responsiveOptions);
+new window.Chartist.Line('#scatter-diagram', data, options, responsiveOptions);
 
 
 
@@ -204,7 +204,7 @@ new Chartist.Line('#scatter-diagram', data, options, responsiveOptions);
 
 //Line chart with tooltips
 
-new Chartist.Line('#line-chart-tooltips', {
+new window.Chartist.Line('#line-chart-tooltips', {
   labels: ['1', '2', '3', '4', '5', '6'],
   series: [
     {
@@ -219,12 +219,12 @@ new Chartist.Line('#line-chart-tooltips', {
 },
     {
   plugins: [
-    Chartist.plugins.tooltip()
+    window.Chartist.plugins.tooltip()
   ]
 }
 );
 
-var $chart = $('#line-chart-tooltips');
+var $chart = window.jQuery('#line-chart-tooltips');
 
 var $toolTip = $chart
   .append('<div class="tooltip"></div>')
@@ -232,7 +232,7 @@ var $toolTip = $chart
   .hide();
 
 $chart.on('mouseenter', '.ct-point', function() {
-  var $point = $(this),
+  var $point = window.jQuery(this),
     value = $point.attr('ct:value'),
     seriesName = $point.parent().attr('ct:series-name');
   $toolTip.html(seriesName + '<br>' + value).show();
@@ -254,7 +254,7 @@ $chart.on('mousemove', function(event) {
 
 //Line chart with area
 
-new Chartist.Line('#chart-with-area', {
+new window.Chartist.Line('#chart-with-area', {
   labels: [1, 2, 3, 4, 5, 6, 7, 8],
   series: [
     [5, 9, 7, 8, 5, 3, 5, 4]
@@ -263,14 +263,14 @@ new Chartist.Line('#chart-with-area', {
   low: 0,
   showArea: true,
   plugins: [
-    Chartist.plugins.tooltip()
+    window.Chartist.plugins.tooltip()
   ]
 });
 
 
 //Bi-polar Line chart with area only
 
-new Chartist.Line('#bi-polar-line', {
+new window.Chartist.Line('#bi-polar-line', {
   labels: [1, 2, 3, 4, 5, 6, 7, 8],
   series: [
     [1, 2, 3, 1, -2, 0, 1, 0],
@@ -290,7 +290,7 @@ new Chartist.Line('#bi-polar-line', {
     showGrid: false
   },
   plugins: [
-    Chartist.plugins.tooltip()
+    window.Chartist.plugins.tooltip()
   ]
 });
 
@@ -300,7 +300,7 @@ new Chartist.Line('#bi-polar-line', {
 
 //SVG Path animation
 
-var chart = new Chartist.Line('#svg-animation', {
+var chart = new window.Chartist.Line('#svg-animation', {
   labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
   series: [
     [1, 5, 2, 5, 4, 3],
@@ -322,7 +322,7 @@ chart.on('draw', function(data) {
         dur: 2000,
         from: data.path.clone().scale(1, 0).translate(0, data.chartRect.height()).stringify(),
         to: data.path.clone().stringify(),
-        easing: Chartist.Svg.Easing.easeOutQuint
+        easing: window.Chartist.Svg.Easing.easeOutQuint
       }
     });
   }
@@ -334,7 +334,7 @@ chart.on('draw', function(data) {
 
 //Line Interpolation / Smoothing
 
-var chart = new Chartist.Line('#line-smoothing', {
+var chart = new window.Chartist.Line('#line-smoothing', {
   labels: [1, 2, 3, 4, 5],
   series: [
     [1, 5, 10, 0, 1],
@@ -343,7 +343,7 @@ var chart = new Chartist.Line('#line-smoothing', {
 }, {
   // Remove this configuration to see that chart rendered with cardinal spline interpolation
   // Sometimes, on large jumps in data values, it's better to use simple smoothing.
-  lineSmooth: Chartist.Interpolation.simple({
+  lineSmooth: window.Chartist.Interpolation.simple({
     divisor: 2
   }),
   fullWidth: true,
@@ -352,7 +352,7 @@ var chart = new Chartist.Line('#line-smoothing', {
   },
   low: 0,
   plugins: [
-    Chartist.plugins.tooltip()
+    window.Chartist.plugins.tooltip()
   ]
 });
 
@@ -378,11 +378,11 @@ var options = {
     }
   },
   plugins: [
-    Chartist.plugins.tooltip()
+    window.Chartist.plugins.tooltip()
   ]
 };
 
-new Chartist.Bar('#bi-polar-bar', data, options);
+new window.Chartist.Bar('#bi-polar-bar', data, options);
 
 
 
@@ -412,7 +412,7 @@ var responsiveOptions = [
   }]
 ];
 
-new Chartist.Bar('#overlapping-bars', data, options, responsiveOptions);
+new window.Chartist.Bar('#overlapping-bars', data, options, responsiveOptions);
 
 
 
@@ -420,7 +420,7 @@ new Chartist.Bar('#overlapping-bars', data, options, responsiveOptions);
 
 //Multi-line labels
 
-new Chartist.Bar('#multi-line-chart', {
+new window.Chartist.Bar('#multi-line-chart', {
   labels: ['First quarter of the year', 'Second quarter of the year', 'Third quarter of the year', 'Fourth quarter of the year'],
   series: [
     [60000, 40000, 80000, 70000],
@@ -440,7 +440,7 @@ new Chartist.Bar('#multi-line-chart', {
     scaleMinSpace: 15
   },
   plugins: [
-    Chartist.plugins.tooltip()
+    window.Chartist.plugins.tooltip()
   ]
 });
 
@@ -449,7 +449,7 @@ new Chartist.Bar('#multi-line-chart', {
 
 //Stacked bar chart
 
-new Chartist.Bar('#stacked-bar-chart', {
+new window.Chartist.Bar('#stacked-bar-chart', {
   labels: ['Q1', 'Q2', 'Q3', 'Q4'],
   series: [
     [800000, 1200000, 1400000, 1300000],
@@ -464,7 +464,7 @@ new Chartist.Bar('#stacked-bar-chart', {
     }
   },
   plugins: [
-    Chartist.plugins.tooltip()
+    window.Chartist.plugins.tooltip()
   ]
 }).on('draw', function(data) {
   if(data.type === 'bar') {
@@ -481,7 +481,7 @@ new Chartist.Bar('#stacked-bar-chart', {
 
 //Horizontal bar chart
 
-new Chartist.Bar('#horizontal-bar-chart', {
+new window.Chartist.Bar('#horizontal-bar-chart', {
   labels: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
   series: [
     [5, 4, 3, 7, 5, 10, 3],
@@ -495,7 +495,7 @@ new Chartist.Bar('#horizontal-bar-chart', {
     offset: 70
   },
   plugins: [
-    Chartist.plugins.tooltip()
+    window.Chartist.plugins.tooltip()
   ]
 });
 
@@ -505,7 +505,7 @@ new Chartist.Bar('#horizontal-bar-chart', {
 
 // Extreme responsive configuration
 
-new Chartist.Bar('#extreme-chart', {
+new window.Chartist.Bar('#extreme-chart', {
   labels: ['Quarter 1', 'Quarter 2', 'Quarter 3', 'Quarter 4'],
   series: [
     [5, 4, 3, 7],
@@ -528,7 +528,7 @@ new Chartist.Bar('#extreme-chart', {
     offset: 20
   },
   plugins: [
-    Chartist.plugins.tooltip()
+    window.Chartist.plugins.tooltip()
   ]
 }, [
   // Options override for media > 400px
@@ -536,7 +536,7 @@ new Chartist.Bar('#extreme-chart', {
     reverseData: true,
     horizontalBars: true,
     axisX: {
-      labelInterpolationFnc: Chartist.noop
+      labelInterpolationFnc: window.Chartist.noop
     },
     axisY: {
       offset: 60
@@ -560,13 +560,13 @@ new Chartist.Bar('#extreme-chart', {
 
 //Distributed series
 
-new Chartist.Bar('#distributed-series', {
+new window.Chartist.Bar('#distributed-series', {
   labels: ['XS', 'S', 'M', 'L', 'XL', 'XXL', 'XXXL'],
   series: [20, 60, 120, 200, 180, 20, 10]
 }, {
   distributeSeries: true,
   plugins: [
-    Chartist.plugins.tooltip()
+    window.Chartist.plugins.tooltip()
   ]
 });
 
@@ -574,7 +574,7 @@ new Chartist.Bar('#distributed-series', {
 
 //Label placement
 
-new Chartist.Bar('#label-placement-chart', {
+new window.Chartist.Bar('#label-placement-chart', {
   labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
   series: [
     [5, 4, 3, 7, 5, 10, 3],
@@ -590,7 +590,7 @@ new Chartist.Bar('#label-placement-chart', {
     position: 'end'
   },
   plugins: [
-    Chartist.plugins.tooltip()
+    window.Chartist.plugins.tooltip()
   ]
 });
 
@@ -599,14 +599,14 @@ new Chartist.Bar('#label-placement-chart', {
 
 //Animating a Donut with Svg.animate
 
-var chart = new Chartist.Pie('#animating-donut', {
+var chart = new window.Chartist.Pie('#animating-donut', {
   series: [10, 20, 50, 20, 5, 50, 15],
   labels: [1, 2, 3, 4, 5, 6, 7]
 }, {
   donut: true,
   showLabel: false,
   plugins: [
-    Chartist.plugins.tooltip()
+    window.Chartist.plugins.tooltip()
   ]
 });
 
@@ -627,7 +627,7 @@ chart.on('draw', function(data) {
         dur: 1000,
         from: -pathLength + 'px',
         to:  '0px',
-        easing: Chartist.Svg.Easing.easeOutQuint,
+        easing: window.Chartist.Svg.Easing.easeOutQuint,
         // We need to use `fill: 'freeze'` otherwise our animation will fall back to initial (not visible)
         fill: 'freeze'
       }
@@ -669,7 +669,7 @@ var data = {
 
 var sum = function(a, b) { return a + b };
 
-new Chartist.Pie('#simple-pie', data, {
+new window.Chartist.Pie('#simple-pie', data, {
   labelInterpolationFnc: function(value) {
     return Math.round(value / data.series.reduce(sum) * 100) + '%';
   }
@@ -706,13 +706,13 @@ var responsiveOptions = [
   }]
 ];
 
-new Chartist.Pie('#pie-chart', data, options, responsiveOptions);
+new window.Chartist.Pie('#pie-chart', data, options, responsiveOptions);
 
 
 
 //Gauge chart
 
-new Chartist.Pie('#gauge-chart', {
+new window.Chartist.Pie('#gauge-chart', {
   series: [20, 10, 30, 40]
 }, {
   donut: true,
@@ -721,7 +721,7 @@ new Chartist.Pie('#gauge-chart', {
   total: 200,
   showLabel: false,
   plugins: [
-    Chartist.plugins.tooltip()
+    window.Chartist.plugins.tooltip()
   ]
 });
 
@@ -731,7 +731,7 @@ new Chartist.Pie('#gauge-chart', {
 
 // Different configuration for different series
 
-var chart = new Chartist.Line('#different-series', {
+var chart = new window.Chartist.Line('#different-series', {
   labels: ['1', '2', '3', '4', '5', '6', '7', '8'],
   // Naming the series with the series object array notation
   series: [{
@@ -751,10 +751,10 @@ var chart = new Chartist.Line('#different-series', {
   // specific series.
   series: {
     'series-1': {
-      lineSmooth: Chartist.Interpolation.step()
+      lineSmooth: window.Chartist.Interpolation.step()
     },
     'series-2': {
-      lineSmooth: Chartist.Interpolation.simple(),
+      lineSmooth: window.Chartist.Interpolation.simple(),
       showArea: true
     },
     'series-3': {
@@ -762,7 +762,7 @@ var chart = new Chartist.Line('#different-series', {
     }
   },
   plugins: [
-    Chartist.plugins.tooltip()
+    window.Chartist.plugins.tooltip()
   ]
 }, [
   // You can even use responsive configuration overrides to
@@ -770,14 +770,14 @@ var chart = new Chartist.Line('#different-series', {
   ['screen and (max-width: 320px)', {
     series: {
       'series-1': {
-        lineSmooth: Chartist.Interpolation.none()
+        lineSmooth: window.Chartist.Interpolation.none()
       },
       'series-2': {
-        lineSmooth: Chartist.Interpolation.none(),
+        lineSmooth: window.Chartist.Interpolation.none(),
         showArea: false
       },
       'series-3': {
-        lineSmooth: Chartist.Interpolation.none(),
+        lineSmooth: window.Chartist.Interpolation.none(),
         showPoint: true
       }
     }
@@ -789,7 +789,7 @@ var chart = new Chartist.Line('#different-series', {
 
 //SVG Animations chart
 
-var chart = new Chartist.Line('#svg-dot-animation', {
+var chart = new window.Chartist.Line('#svg-dot-animation', {
   labels: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12'],
   series: [
     [12, 4, 2, 8, 5, 4, 6, 2, 3, 3, 4, 6],
@@ -807,7 +807,7 @@ var chart = new Chartist.Line('#svg-dot-animation', {
     offset: 0
   },
   plugins: [
-    Chartist.plugins.tooltip()
+    window.Chartist.plugins.tooltip()
   ]
 });
 
@@ -819,7 +819,7 @@ chart.on('created', function() {
   seq = 0;
 });
 
-// On each drawn element by Chartist we use the Chartist.Svg API to trigger SMIL animations
+// On each drawn element by window.Chartist we use the window.Chartist.Svg API to trigger SMIL animations
 chart.on('draw', function(data) {
   if(data.type === 'point') {
     // If the drawn element is a line we do a simple opacity fade in. This could also be achieved using CSS3 animations.
@@ -839,8 +839,8 @@ chart.on('draw', function(data) {
         dur: 500,
         from: data.x - 100,
         to: data.x,
-        // You can specify an easing function name or use easing functions from Chartist.Svg.Easing directly
-        easing: Chartist.Svg.Easing.easeOutQuart
+        // You can specify an easing function name or use easing functions from window.Chartist.Svg.Easing directly
+        easing: window.Chartist.Svg.Easing.easeOutQuart
       }
     });
   }

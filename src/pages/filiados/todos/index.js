@@ -58,7 +58,7 @@ const FiliadosTodos = () => (
             </div>
           </div>
 
-          <div id="con-close-modal" className="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+          <div id="con-close-modal" className="modal fade" tabIndex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
               <div className="modal-dialog">
                   <div className="modal-content">
                       <div className="modal-header">
@@ -71,13 +71,13 @@ const FiliadosTodos = () => (
                           <div className="row">
                               <div className="col-md-6">
                                   <div className="form-group">
-                                      <label for="field-1" className="control-label">Nome ou Título</label>
+                                      <label htmlFor="field-1" className="control-label">Nome ou Título</label>
                                       <input type="text" className="form-control" id="example-name" placeholder="John" />
                                   </div>
                               </div>
                               <div className="col-md-6">
                                   <div className="form-group">
-                                      <label for="field-2" className="control-label">E-mail</label>
+                                      <label htmlFor="field-2" className="control-label">E-mail</label>
                                       <input type="email" id="example-email" name="example-email" className="form-control" placeholder="Email" />
                                   </div>
                               </div>
@@ -85,13 +85,13 @@ const FiliadosTodos = () => (
                           <div className="row">
                               <div className="col-md-6">
                                   <div className="form-group">
-                                      <label for="field-5" className="control-label">UF</label>
+                                      <label htmlFor="field-5" className="control-label">UF</label>
                                       <Select2 />
                                   </div>
                               </div>
                               <div className="col-md-6">
                                   <div className="form-group">
-                                      <label for="field-4" className="control-label">Município</label>
+                                      <label htmlFor="field-4" className="control-label">Município</label>
                                       <Select2 />
                                   </div>
                               </div>
@@ -99,13 +99,13 @@ const FiliadosTodos = () => (
                           <div className="row">
                               <div className="col-md-6">
                                   <div className="form-group">
-                                      <label for="field-7" className="control-label">Situação</label>
+                                      <label htmlFor="field-7" className="control-label">Situação</label>
                                       <Select2 />
                                   </div>
                               </div>
                               <div className="col-md-6">
                                   <div className="form-group">
-                                      <label for="field-7" className="control-label">Data de Cadastro</label>
+                                      <label htmlFor="field-7" className="control-label">Data de Cadastro</label>
                                       <DateRangePicker />
                                   </div>
                               </div>
