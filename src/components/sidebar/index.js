@@ -19,7 +19,7 @@ const Sidebar = () => (
               ><span></span>
             </Link> */}
 
-            <a href="#this">
+            <a href={() => false}>
               <i className="fa fa-users"></i
               ><span>Filiados</span>
               <span className="menu-arrow"></span></a>
@@ -33,13 +33,13 @@ const Sidebar = () => (
           </li>
 
           <li>
-            <a href="#this">
+            <a href={() => false}>
               <i className="fa fa-folder-open"></i
               ><span>Organização Partidária</span>
               <span className="menu-arrow"></span></a>
 
             <ul className="nav-second-level nav" aria-expanded="false">
-              <li><Link to="/organizacao/todos">Todos os diretórios</Link></li>
+              <li><Link to="/organizacao/diretorios">Todos os diretórios</Link></li>
               <li><Link to="/organizacao/mandatos">Todos os mandatos</Link></li>
               <li><Link to="/organizacao/cadastro">Cadastro</Link></li>
               <li><Link to="/organizacao/documentacao">Documentação</Link></li>
@@ -47,7 +47,7 @@ const Sidebar = () => (
           </li>
 
           <li>
-            <a href="#this">
+            <a href={() => false}>
               <i className="fa fa-gavel"></i
               ><span>Eleições</span>
               <span className="menu-arrow"></span></a>
@@ -60,7 +60,7 @@ const Sidebar = () => (
           </li>
 
           <li>
-            <a href="#this">
+            <a href={() => false}>
               <i className="fa fa-envelope"></i
               ><span>Comunicação</span>
               <span className="menu-arrow"></span></a>
@@ -75,7 +75,7 @@ const Sidebar = () => (
           <li className="menu-title">Administrativo</li>
 
           <li>
-            <a href="#this">
+            <a href={() => false}>
               <i className="fa fa-user"></i
               ><span>Perfil</span>
               <span className="menu-arrow"></span></a>

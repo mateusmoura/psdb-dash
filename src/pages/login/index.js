@@ -85,7 +85,7 @@ const Login = () => (
                     </button> */}
 
                     <Link
-                      to="/cadastrar"
+                      to="/dashboard"
                       className="btn w-lg btn-rounded btn-lg btn-primary waves-effect waves-light"
                     >Entrar</Link>
                   </div>
