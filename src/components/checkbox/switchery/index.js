@@ -1,4 +1,4 @@
-import React, { Component, useState } from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 import 'plugins/switchery/switchery.min.css';
@@ -20,7 +20,6 @@ class CheckboxSwitchery extends Component {
 
   render() {
     const { id } = this.props;
-    
 
     return (
       <div className="switchery-container">
