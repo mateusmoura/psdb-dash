@@ -66,8 +66,6 @@ const FiliadosCadastro = () => (
                      </div>
                   </div>
 
-                  <hr />
-
                   <div className="row">
                     <div className="col-lg-6">
                         <div className="form-group">
@@ -83,7 +81,7 @@ const FiliadosCadastro = () => (
                      </div>
                   </div>
 
-                  <hr />
+                  <hr className="mt-1" />
 
                   <div className="row">
                     <div className="col-lg-8">

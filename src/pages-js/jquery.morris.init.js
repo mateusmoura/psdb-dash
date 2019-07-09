@@ -1,3 +1,10 @@
+/* eslint-disable no-unused-expressions */
+/* eslint-disable no-useless-escape */
+/* eslint-disable no-control-regex */
+/* eslint-disable no-unused-vars */
+/* eslint-disable eqeqeq */
+/* eslint-disable no-use-before-define */
+/* eslint-disable no-redeclare */
 
 /**
 * Theme: Codefox - Bootstrap 4 Admin Template
@@ -12,7 +19,7 @@
 
     //creates line chart
     MorrisCharts.prototype.createLineChart = function(element, data, xkey, ykeys, labels, opacity, Pfillcolor, Pstockcolor, lineColors) {
-        Morris.Line({
+        window.Morris.Line({
           element: element,
           data: data,
           xkey: xkey,
@@ -33,7 +40,7 @@
     },
     //creates area chart
     MorrisCharts.prototype.createAreaChart = function(element, pointSize, lineWidth, data, xkey, ykeys, labels, lineColors) {
-        Morris.Area({
+        window.Morris.Area({
             element: element,
             pointSize: 0,
             lineWidth: 0,
@@ -49,26 +56,11 @@
     },
     //creates area chart with dotted
     MorrisCharts.prototype.createAreaChartDotted = function(element, pointSize, lineWidth, data, xkey, ykeys, labels, Pfillcolor, Pstockcolor, lineColors) {
-        Morris.Area({
-            element: element,
-            pointSize: 3,
-            lineWidth: 1,
-            data: data,
-            xkey: xkey,
-            ykeys: ykeys,
-            labels: labels,
-            hideHover: 'auto',
-            pointFillColors: Pfillcolor,
-            pointStrokeColors: Pstockcolor,
-            resize: true,
-            smooth: false,
-            gridLineColor: '#eef0f2',
-            lineColors: lineColors
-        });
+
     },
     //creates Bar chart
     MorrisCharts.prototype.createBarChart  = function(element, data, xkey, ykeys, labels, lineColors) {
-        Morris.Bar({
+        window.Morris.Bar({
             element: element,
             data: data,
             xkey: xkey,
@@ -84,7 +76,7 @@
     },
     //creates Stacked chart
     MorrisCharts.prototype.createStackedChart  = function(element, data, xkey, ykeys, labels, lineColors) {
-        Morris.Bar({
+        window.Morris.Bar({
             element: element,
             data: data,
             xkey: xkey,
@@ -99,7 +91,7 @@
     },
     //creates Donut chart
     MorrisCharts.prototype.createDonutChart = function(element, data, colors) {
-        Morris.Donut({
+        window.Morris.Donut({
             element: element,
             data: data,
             resize: true, //defaulted to true
@@ -108,79 +100,18 @@
     },
     MorrisCharts.prototype.init = function() {
 
-        //create line chart
-        var $data  = [
-             { y: '2008', a: 50, b: 0 },
-            { y: '2009', a: 75, b: 50 },
-            { y: '2010', a: 30, b: 80 },
-            { y: '2011', a: 50, b: 50 },
-            { y: '2012', a: 75, b: 10 },
-            { y: '2013', a: 50, b: 40 },
-            { y: '2014', a: 75, b: 50 },
-            { y: '2015', a: 100, b: 70 }
-          ];
-        this.createLineChart('morris-line-example', $data, 'y', ['a', 'b'], ['Series A', 'Series B'],['0.1'],['#ffffff'],['#999999'], ['#45bbe0 ', '#f06292']);
-
-        //creating area chart
-        var $areaData = [
-            { y: '2009', a: 10, b: 20 },
-            { y: '2010', a: 75,  b: 65 },
-            { y: '2011', a: 50,  b: 40 },
-            { y: '2012', a: 75,  b: 65 },
-            { y: '2013', a: 50,  b: 40 },
-            { y: '2014', a: 75,  b: 65 },
-            { y: '2015', a: 90, b: 60 }
-        ];
-        this.createAreaChart('morris-area-example', 0, 0, $areaData, 'y', ['a', 'b'], ['Series A', 'Series B'], ['#1ea69a', "#bdbdbd"]);
-
         //creating area chart with dotted
         var $areaDotData = [
-            { y: '2009', a: 10, b: 20 },
-            { y: '2010', a: 75,  b: 65 },
-            { y: '2011', a: 50,  b: 40 },
-            { y: '2012', a: 75,  b: 65 },
-            { y: '2013', a: 50,  b: 40 },
-            { y: '2014', a: 75,  b: 65 },
-            { y: '2015', a: 90, b: 60 }
+            { y: '2009', a: 10},
+            { y: '2010', a: 75},
+            { y: '2011', a: 50},
+            { y: '2012', a: 75},
+            { y: '2013', a: 50},
+            { y: '2014', a: 75},
+            { y: '2015', a: 90 }
         ];
-        this.createAreaChartDotted('morris-area-with-dotted', 0, 0, $areaDotData, 'y', ['a', 'b'], ['Series A', 'Series B'],['#ffffff'],['#999999'], ['#3b3e47', "#bdbdbd"]);
+        this.createAreaChartDotted('morris-area-with-dotted', 0, 0, $areaDotData, 'y', ['a'], ['Filiados'],['#ffffff'],['#999999'], ['#3b3e47', "#bdbdbd"]);
 
-        //creating bar chart
-        var $barData  = [
-            { y: '2009', a: 100, b: 90 , c: 40 },
-            { y: '2010', a: 75,  b: 65 , c: 20 },
-            { y: '2011', a: 50,  b: 40 , c: 50 },
-            { y: '2012', a: 75,  b: 65 , c: 95 },
-            { y: '2013', a: 50,  b: 40 , c: 22 },
-            { y: '2014', a: 75,  b: 65 , c: 56 },
-            { y: '2015', a: 100, b: 90 , c: 60 }
-        ];
-        this.createBarChart('morris-bar-example', $barData, 'y', ['a', 'b', 'c'], ['Series A', 'Series B', 'Series C'], ['#348cd4','#8892d6', '#45bbe0']);
-
-        //creating Stacked chart
-        var $stckedData  = [
-            { y: '2005', a: 45, b: 180, c: 100 },
-            { y: '2006', a: 75,  b: 65, c: 80 },
-            { y: '2007', a: 100, b: 90, c: 56 },
-            { y: '2008', a: 75,  b: 65, c: 89 },
-            { y: '2009', a: 100, b: 90, c: 120 },
-            { y: '2010', a: 75,  b: 65, c: 110 },
-            { y: '2011', a: 50,  b: 40, c: 85 },
-            { y: '2012', a: 75,  b: 65, c: 52 },
-            { y: '2013', a: 50,  b: 40, c: 77 },
-            { y: '2014', a: 75,  b: 65, c: 90 },
-            { y: '2015', a: 100, b: 90, c: 130 },
-            { y: '2016', a: 80, b: 65, c: 95 }
-        ];
-        this.createStackedChart('morris-bar-stacked', $stckedData, 'y', ['a', 'b', 'c'], ['Series A', 'Series B','Series C'], ['#348cd4','#8892d6', '#ebeff2']);
-
-        //creating donut chart
-        var $donutData = [
-                {label: "Electricity", value: 12},
-                {label: "Financial", value: 30},
-                {label: "Markets", value: 20}
-            ];
-        this.createDonutChart('morris-donut-example', $donutData, ['#78c350', '#ebeff2', "#45bbe0"]);
     },
     //init
     $.MorrisCharts = new MorrisCharts, $.MorrisCharts.Constructor = MorrisCharts
@@ -189,5 +120,9 @@
 //initializing 
 function($) {
     "use strict";
+
+    setTimeout( () => {
     $.MorrisCharts.init();
+
+    }, 2000);
 }(window.jQuery);
