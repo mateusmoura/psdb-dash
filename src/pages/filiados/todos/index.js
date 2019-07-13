@@ -56,10 +56,10 @@ const dadosTabela = {
           dataNascimento   = data[4],
           mae              = data[5],
           pai              = data[6],
+          blog             = data[7],
           celular          = data[8],
           endereco         = data[9],
           cep              = data[10],
-          blog             = data[7],
           facebook         = data[11],
           twitter          = data[12],
           dataReferencia   = data[13],
@@ -76,7 +76,6 @@ const dadosTabela = {
                '<li><strong>Nome da mãe:</strong> <span>'+format(mae)+'</span>'+
                '<li><strong>Nome do pai:</strong> <span>'+format(pai)+'</span>'+
                '<li><strong>Celular:</strong> <span>'+format(celular)+'</span>'+
-               '<li><strong>Endereço:</strong> <span>'+format(endereco)+'</span>'+
                '<li><strong>CEP:</strong> <span>'+format(cep)+'</span>'+
                '<li><strong>Blog:</strong> <span>'+format(blog)+'</span>'+
                '<li><strong>Facebook:</strong> <span>'+format(facebook)+'</span>'+
@@ -85,6 +84,8 @@ const dadosTabela = {
                '<li><strong>Data da última movimentação:</strong> <span>'+format(dataMovimentacao)+'</span>'+
                '<li><strong>Indicado por:</strong> <span>'+format(indicacao)+'</span>'+
                '<li><strong>Justificativa do cancelamento:</strong> <span>'+format(justificativa)+'</span>'+
+               '<li><strong>Endereço:</strong> <span>'+format(endereco)+'</span>'+
+               '<li></li>'+
              '</ul>';
     },
     data: [

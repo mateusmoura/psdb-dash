@@ -117,3 +117,34 @@
     }
   }
 }
+
+.table-responsive {
+  .shown {
+    // background: rgba(#454d55, .4) !important;
+    // color: #FFF;
+
+  }
+
+  .additional-info {
+    // background: #6c757d;
+    // color: #FFF;
+  }
+
+  .list-additional-info {
+    padding: 10px;
+    display: inline-grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 100%;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    border-bottom: 1px solid #FFF;
+    border-right: 1px solid #FFF;
+
+    li {
+      padding: 5px;
+      border-top: 1px solid #FFF;
+      border-left: 1px solid #FFF;
+    }
+  }
+}

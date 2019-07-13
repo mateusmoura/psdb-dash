@@ -51,7 +51,7 @@ class TabelaResponsiva extends PureComponent {
               tr.removeClass('shown');
           } else {
               // Open this row
-              row.child(dados.extra.template(dados.extra.data[index])).show();
+              row.child( dados.extra.template(dados.extra.data[index] ), 'additional-info').show();
               tr.addClass('shown');
           }
       });
