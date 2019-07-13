@@ -1,5 +1,7 @@
 import React from 'react';
 
+import { Link } from 'react-router-dom';
+
 import Sidebar from "components/sidebar";
 import BarraTopo from "components/barra-topo";
 import Footer from "components/footer";
@@ -83,14 +85,20 @@ const Campanhas = () => (
                     </div>
 
                     <div className="col-lg-6">
-                      <button
+                      <Link
+                        to="/comunicacao/campanhas/criar"
+                        className="btn btn-primary waves-effect float-right"
+                      >
+                        Criar Nova Campanha
+                      </Link>
+                      {/* <button
                         type="button"
                         className="btn btn-primary waves-effect float-right"
                         data-toggle="modal"
                         data-target="#con-close-modal"
                       >
                         <span>Criar Nova Campanha</span>{" "}
-                      </button>
+                      </button> */}
                     </div>
                   </div>
 

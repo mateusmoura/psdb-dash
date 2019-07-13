@@ -6,7 +6,7 @@ import Footer from "components/footer";
 
 import Select2 from "components/select-2";
 import DateRangePicker from "components/date-range-picker";
-import RedesSociaisTable from 'components/redes-sociais-table';
+import RedesSociaisTable from 'components/tabela-dinamica';
 
 const dadosTabela = {
   head: ['Estado/Segmento', 'Responsável', 'E-mail', 'Telefone', 'Facebook', 'Twitter', 'Instagram', 'YouTube', 'Observações'],

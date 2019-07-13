@@ -7,12 +7,12 @@
  * Released under the MIT license
  */
 (function( factory ) {
-	if ( typeof define === "function" && define.amd ) {
-		define( ["jquery"], factory );
+	if ( typeof define === "function" && window.define && window.define.amd ) {
+		window.define( ["jquery"], factory );
 	} else if (typeof module === "object" && module.exports) {
 		module.exports = factory( require( "jquery" ) );
 	} else {
-		factory( jQuery );
+		factory( window.jQuery );
 	}
 }(function( $ ) {
 

@@ -20,6 +20,7 @@ import EleicoesConsutarDados from 'pages/eleicoes/consultar-dados';
 import EleicoesCadastro from 'pages/eleicoes/cadastro';
 import RedesSociais from 'pages/comunicacao/redes-sociais';
 import Campanhas from 'pages/comunicacao/campanhas';
+import CriarCampanha from 'pages/comunicacao/campanhas/criar';
 
 import css from './index.scss';
 
@@ -59,6 +60,7 @@ const Routes = ({ location }) => (
 
             <Route path="/comunicacao/redes-sociais" exact component={RedesSociais} />
             <Route path="/comunicacao/campanhas" exact component={Campanhas} />
+            <Route path="/comunicacao/campanhas/criar" exact component={CriarCampanha} />
 
 
             <Route path="/dashboard" exact component={Dashboard} />

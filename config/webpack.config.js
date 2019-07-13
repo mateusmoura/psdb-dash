@@ -517,6 +517,14 @@ module.exports = function(webpackEnv) {
           use: 'imports-loader?this=>window',
         },
         {
+          test: require.resolve('../src/plugins/jquery.steps/js/jquery.steps.min.js'),
+          use: 'imports-loader?this=>window',
+        },
+        {
+          test: require.resolve('../src/plugins/jquery-validation/js/jquery.validate.js'),
+          use: 'imports-loader?this=>window',
+        },
+        {
           test: require.resolve('../src/js/jquery.core.js'),
           use: 'imports-loader?this=>window',
         },
