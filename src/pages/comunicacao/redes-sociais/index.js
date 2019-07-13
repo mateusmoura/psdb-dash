@@ -123,12 +123,13 @@ const RedesSociais = () => (
           <div className="row">
             <div className="col-12">
               <div className="page-title-box">
-                <h4 className="page-title">Pedidos de filiação</h4>
+                <h4 className="page-title">Redes Sociais</h4>
                 <ol className="breadcrumb p-0 m-0">
                   <li>
                     <a href="#this">PSDB</a>
                   </li>
-                  <li className="active">Comunicação</li>
+                  <li>Comunicação</li>
+                  <li className="active">Redes Socias</li>
                 </ol>
                 <div className="clearfix" />
               </div>
