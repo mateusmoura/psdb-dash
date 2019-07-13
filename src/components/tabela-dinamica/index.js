@@ -16,6 +16,7 @@ class TabelaResponsiva extends PureComponent {
       buttons: [
         {
           extend: "copy",
+          text: 'Copiar',
           className: "btn-sm"
         },
         {
@@ -32,6 +33,7 @@ class TabelaResponsiva extends PureComponent {
         },
         {
           extend: "print",
+          text: 'Imprimir',
           className: "btn-sm"
         }
       ],
