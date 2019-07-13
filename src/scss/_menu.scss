@@ -594,7 +594,7 @@ body.enlarged.bg-transparent {
   padding: 10px;
 }
 .notification-list {
-  height: 240px;
+  min-height: 240px;
 
   .list-group-item {
     border: 0;

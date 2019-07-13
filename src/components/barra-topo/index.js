@@ -102,84 +102,51 @@ const BarraTopo = () => (
                     </a>
 
                     {/* <!-- list item--> */}
-                    {/* <a href="javascript:void(0);" className="list-group-item">
+                    <a href="#this" className="list-group-item">
                       <div className="media">
                         <div className="media-left p-r-10">
-                          <em className="fa fa-cog bg-warning"></em>
+                          <em className="fa fa-exclamation bg-warning"></em>
                         </div>
                         <div className="media-body">
-                          <h5 className="media-heading">New settings</h5>
+                          <h5 className="media-heading">Atualizar</h5>
                           <p className="m-0">
-                            There are new settings available
+                            Está na hora de atualizar as informações do seu diretório
                           </p>
                         </div>
                       </div>
-                    </a> */}
+                    </a>
 
                     {/* <!-- list item--> */}
-                    {/* <a href="javascript:void(0);" className="list-group-item">
+                    <a href="#this" className="list-group-item">
                       <div className="media">
                         <div className="media-left p-r-10">
                           <em className="fa fa-bell-o bg-custom"></em>
                         </div>
                         <div className="media-body">
-                          <h5 className="media-heading">Updates</h5>
+                          <h5 className="media-heading">Filiados</h5>
                           <p className="m-0">
-                            There are
-                            <span className="text-primary font-600">2</span> new
-                            updates available
+                            Você já tem
+                            <span className="text-primary font-600"> 10</span> novos filiados pendentes
                           </p>
                         </div>
                       </div>
-                    </a> */}
+                    </a>
 
                     {/* <!-- list item--> */}
-                    {/* <a href="javascript:void(0);" className="list-group-item">
+                    <a href="#this" className="list-group-item">
                       <div className="media">
                         <div className="media-left p-r-10">
                           <em className="fa fa-user-plus bg-danger"></em>
                         </div>
                         <div className="media-body">
-                          <h5 className="media-heading">New user registered</h5>
+                          <h5 className="media-heading">Novos pedidos de filiados</h5>
                           <p className="m-0">
-                            You have 10 unread messages
+                            34 novos pedidos de filiação
                           </p>
                         </div>
                       </div>
-                    </a> */}
+                    </a>
 
-                    {/* <!-- list item--> */}
-                    {/* <a href="javascript:void(0);" className="list-group-item">
-                      <div className="media">
-                        <div className="media-left p-r-10">
-                          <em className="fa fa-diamond bg-primary"></em>
-                        </div>
-                        <div className="media-body">
-                          <h5 className="media-heading">
-                            A new order has been placed A new order has been
-                            placed
-                          </h5>
-                          <p className="m-0">
-                            There are new settings available
-                          </p>
-                        </div>
-                      </div>
-                    </a> */}
-
-                    {/* <!-- list item--> */}
-                    {/* <a href="javascript:void(0);" className="list-group-item">
-                      <div className="media">
-                        <div className="media-left p-r-10">
-                          <em className="fa fa-cog bg-warning"></em>
-                        </div>
-                        <div className="media-body">
-                          <h5 className="media-heading">New settings</h5>
-                          <p className="m-0">
-                            There are new settings available
-                          </p>
-                        </div>
-                      </div>
-                    </a> */}
                   </div>
                 </li>
                 {/* <!-- end notification list --> */}
