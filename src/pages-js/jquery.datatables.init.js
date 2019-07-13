@@ -32,7 +32,8 @@ var handleDataTableButtons = function() {
         ],
         responsive: !0,
         language: {
-          url: "//cdn.datatables.net/plug-ins/1.10.19/i18n/Portuguese-Brasil.json"
+          url:
+            "//cdn.datatables.net/plug-ins/1.10.19/i18n/Portuguese-Brasil.json"
         }
       });
   },
@@ -43,6 +44,8 @@ var handleDataTableButtons = function() {
       }
     };
   })();
+
+window.TableDataTable = handleDataTableButtons;
 
 window.jQuery(document).ready(function() {
   window.jQuery("#datatable").dataTable({
@@ -98,6 +101,6 @@ window.jQuery(document).ready(function() {
   });
 });
 
-setTimeout(function() {
-  TableManageButtons.init();
-}, 1000);
+// setTimeout(function() {
+//   TableManageButtons.init();
+// }, 1000);

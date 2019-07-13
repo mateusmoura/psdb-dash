@@ -77,7 +77,7 @@ class Sidebar extends Component {
                   <span className="menu-arrow"></span></a>
 
                 <ul className="nav-second-level nav" aria-expanded="false">
-                  <li><Link to="/comunicacao/consulta">Todas Redes Sociais</Link></li>
+                  <li><Link to="/comunicacao/redes-sociais">Todas Redes Sociais</Link></li>
                   <li><Link to="/comunicacao/campanhas">Campanhas</Link></li>
                   <li><Link to="/comunicacao/relatorios">Relatórios</Link></li>
                 </ul>

@@ -18,6 +18,7 @@ import FiliadosCadastro from '../pages/filiados/cadastro';
 import Diretorios from 'pages/organizacao/diretorios';
 import EleicoesConsutarDados from 'pages/eleicoes/consultar-dados';
 import EleicoesCadastro from 'pages/eleicoes/cadastro';
+import RedesSociais from 'pages/comunicacao/redes-sociais';
 
 import css from './index.scss';
 
@@ -54,6 +55,8 @@ const Routes = ({ location }) => (
             <Route path="/eleicoes/cadastro" exact component={EleicoesCadastro} />
             {/* TODO: Desenvolver essa tela */}
             <Route path="/eleicoes/relatorios" exact component={EleicoesConsutarDados} />
+
+            <Route path="/comunicacao/redes-sociais" exact component={RedesSociais} />
 
 
             <Route path="/dashboard" exact component={Dashboard} />

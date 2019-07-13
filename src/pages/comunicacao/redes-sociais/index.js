@@ -1,13 +1,116 @@
-import React from "react";
+import React from 'react';
 
 import Sidebar from "components/sidebar";
 import BarraTopo from "components/barra-topo";
 import Footer from "components/footer";
-import ResponsiveTable from "components/responsive-table";
+
 import Select2 from "components/select-2";
 import DateRangePicker from "components/date-range-picker";
+import RedesSociaisTable from 'components/redes-sociais-table';
 
-const FiliadosTodos = () => (
+const dadosTabela = {
+  head: ['Estado/Segmento', 'Responsável', 'E-mail', 'Telefone', 'Facebook', 'Twitter', 'Instagram', 'YouTube', 'Observações'],
+  body: [
+    ['DF', 'Mateus Moura', 'mateus@email.com',  '61 9999-9999',
+      `<div class="row" style="display: flex; flex-wrap: wrap">
+        <div class="col-12">
+          <span style="white-space: nowrap;"><i class="fa fa-external-link"></i>: <a href="www.url.com.br" target="_blank">www.url.com.br</a></span>
+        </div>
+      
+        <div class="col-12">
+          <span style="white-space: nowrap;"><i class="fa fa-user-o"></i>: @user.face</span>
+        </div>
+
+        <div class="col-12">
+          <span style="white-space: nowrap;"><i class="fa fa-chain-broken"></i>: email@email.com</span>
+        </div>
+
+        <div class="col-12">
+          <button
+            title="Solicitar senha"
+            type="button"
+            class="btn btn-icon waves-effect waves-light btn-primary btn-xs"
+            data-toggle="modal"
+            data-target="#solicitar-senha-modal"
+          > <i class="fa fa-unlock"></i> </button>
+        </div>
+      </div>`,
+      `<div class="row" style="display: flex; flex-wrap: wrap">
+        <div class="col-12">
+          <span style="white-space: nowrap;"><i class="fa fa-external-link"></i>: <a href="www.url.com.br" target="_blank">www.url.com.br</a></span>
+        </div>
+      
+        <div class="col-12">
+          <span style="white-space: nowrap;"><i class="fa fa-user-o"></i>: @user.face</span>
+        </div>
+
+        <div class="col-12">
+          <span style="white-space: nowrap;"><i class="fa fa-chain-broken"></i>: email@email.com</span>
+        </div>
+
+        <div class="col-12">
+          <button
+            title="Solicitar senha"
+            type="button"
+            class="btn btn-icon waves-effect waves-light btn-primary btn-xs"
+            data-toggle="modal"
+            data-target="#solicitar-senha-modal"
+          > <i class="fa fa-unlock"></i> </button>
+        </div>
+      </div>`
+      ,
+      `<div class="row" style="display: flex; flex-wrap: wrap">
+        <div class="col-12">
+          <span style="white-space: nowrap;"><i class="fa fa-external-link"></i>: <a href="www.url.com.br" target="_blank">www.url.com.br</a></span>
+        </div>
+      
+        <div class="col-12">
+          <span style="white-space: nowrap;"><i class="fa fa-user-o"></i>: @user.face</span>
+        </div>
+
+        <div class="col-12">
+          <span style="white-space: nowrap;"><i class="fa fa-chain-broken"></i>: email@email.com</span>
+        </div>
+
+        <div class="col-12">
+          <button
+            title="Solicitar senha"
+            type="button"
+            class="btn btn-icon waves-effect waves-light btn-primary btn-xs"
+            data-toggle="modal"
+            data-target="#solicitar-senha-modal"
+          > <i class="fa fa-unlock"></i> </button>
+        </div>
+      </div>`
+      ,
+      `<div class="row" style="display: flex; flex-wrap: wrap">
+        <div class="col-12">
+          <span style="white-space: nowrap;"><i class="fa fa-external-link"></i>: <a href="www.url.com.br" target="_blank">www.url.com.br</a></span>
+        </div>
+      
+        <div class="col-12">
+          <span style="white-space: nowrap;"><i class="fa fa-user-o"></i>: @user.face</span>
+        </div>
+
+        <div class="col-12">
+          <span style="white-space: nowrap;"><i class="fa fa-chain-broken"></i>: email@email.com</span>
+        </div>
+
+        <div class="col-12">
+          <button
+            title="Solicitar senha"
+            type="button"
+            class="btn btn-icon waves-effect waves-light btn-primary btn-xs"
+            data-toggle="modal"
+            data-target="#solicitar-senha-modal"
+          > <i class="fa fa-unlock"></i> </button>
+        </div>
+      </div>`
+      , 'N']
+  ]
+}
+
+const RedesSociais = () => (
   <div id="wrapper">
     <BarraTopo />
 
@@ -25,7 +128,7 @@ const FiliadosTodos = () => (
                   <li>
                     <a href="#this">PSDB</a>
                   </li>
-                  <li className="active">Filiados</li>
+                  <li className="active">Comunicação</li>
                 </ol>
                 <div className="clearfix" />
               </div>
@@ -39,7 +142,7 @@ const FiliadosTodos = () => (
                   <div className="row mb-4">
                     <div className="col-lg-6 align-self-center">
                       <h4 className="m-t-0 header-title">
-                        <b>Todos os filiados</b>
+                        <b>Todas Redes Sociais</b>
                       </h4>
                     </div>
 
@@ -72,7 +175,9 @@ const FiliadosTodos = () => (
                     </div>
                   </div>
 
-                  <ResponsiveTable />
+                  <RedesSociaisTable
+                    dados={dadosTabela}
+                  />
                 </div>
               </div>
             </div>
@@ -106,7 +211,7 @@ const FiliadosTodos = () => (
                     <div className="col-md-6">
                       <div className="form-group">
                         <label for="field-1" className="control-label">
-                          Nome ou Título
+                          Nome
                         </label>
                         <input
                           type="text"
@@ -143,27 +248,9 @@ const FiliadosTodos = () => (
                     <div className="col-md-6">
                       <div className="form-group">
                         <label for="field-4" className="control-label">
-                          Município
+                          Rede Social
                         </label>
                         <Select2 />
-                      </div>
-                    </div>
-                  </div>
-                  <div className="row">
-                    <div className="col-md-6">
-                      <div className="form-group">
-                        <label for="field-7" className="control-label">
-                          Situação
-                        </label>
-                        <Select2 />
-                      </div>
-                    </div>
-                    <div className="col-md-6">
-                      <div className="form-group">
-                        <label for="field-7" className="control-label">
-                          Data de Cadastro
-                        </label>
-                        <DateRangePicker />
                       </div>
                     </div>
                   </div>
@@ -192,6 +279,6 @@ const FiliadosTodos = () => (
 
     <Footer />
   </div>
-);
+)
 
-export default FiliadosTodos;
+export default RedesSociais;

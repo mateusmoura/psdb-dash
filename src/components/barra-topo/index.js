@@ -172,23 +172,24 @@ const BarraTopo = () => (
               className="dropdown-menu dropdown-menu-right arrow-dropdown-menu arrow-menu-right user-list notify-list"
             >
               <li>
-                <a href="#this" className="dropdown-item">Profile</a>
+                <a href="#this" className="dropdown-item">Perfil</a>
               </li>
               <li>
                 <a href="#this" className="dropdown-item"
-                  ><span className="badge badge-pill badge-info float-right"
-                    >4</span
-                  >Settings</a
+                  >
+                    {/* <span className="badge badge-pill badge-info float-right"
+                    >4</span */}
+                  Configurações</a
                 >
               </li>
               <li>
                 <a href="#this" className="dropdown-item"
-                  >Lock screen</a
+                  >Bloquear tela</a
                 >
               </li>
               <li className="dropdown-divider"></li>
               <li>
-                <a href="#this" className="dropdown-item">Logout</a>
+                <a href="#this" className="dropdown-item">Sair</a>
               </li>
             </ul>
           </li>
