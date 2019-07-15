@@ -61,7 +61,7 @@ class CriarCampanha extends PureComponent {
                     <h4 className="page-title">Campanhas</h4>
                     <ol className="breadcrumb p-0 m-0">
                       <li>
-                        <a href="#this">PSDB</a>
+                         <span>PSDB</span>
                       </li>
                       <li>Comunicação</li>
                       <li className="active">

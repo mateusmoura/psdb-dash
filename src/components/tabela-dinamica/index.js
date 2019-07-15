@@ -5,7 +5,9 @@ import "plugins/datatables/dataTables.bootstrap4.min.css";
 
 class TabelaResponsiva extends PureComponent {
   componentDidMount() {
-    window.jQuery("#datatable-buttons").DataTable({
+    const { dados } = this.props;
+
+    const table = window.jQuery("#datatable-buttons").DataTable({
       dom: "Bfrtip",
       responsive: !0,
       language: {
@@ -14,6 +16,7 @@ class TabelaResponsiva extends PureComponent {
       buttons: [
         {
           extend: "copy",
+          text: 'Copiar',
           className: "btn-sm"
         },
         {
@@ -30,10 +33,29 @@ class TabelaResponsiva extends PureComponent {
         },
         {
           extend: "print",
+          text: 'Imprimir',
           className: "btn-sm"
         }
       ],
     });
+
+    if (dados.hasOwnProperty('extra')) {
+      window.jQuery('#datatable-buttons').on('click', 'td.details-control', function () {
+          var tr = window.jQuery(this).closest('tr');
+          var index = tr.data('index');
+          var row = table.row( tr );
+   
+          if ( row.child.isShown() ) {
+              // This row is already open - close it
+              row.child.hide();
+              tr.removeClass('shown');
+          } else {
+              // Open this row
+              row.child( dados.extra.template(dados.extra.data[index] ), 'additional-info').show();
+              tr.addClass('shown');
+          }
+      });
+    }
   }
 
   render () {
@@ -58,10 +80,10 @@ class TabelaResponsiva extends PureComponent {
             <tbody>
               {
                 dados.body.map((item, index) => (
-                  <tr key={index}>
+                  <tr key={index} data-index={index}>
                     {
                       item.map((valor, index) => (
-                        <td key={`${valor.substring(0, 20)}-${index}`} dangerouslySetInnerHTML={{ __html: valor }} />
+                        <td key={`${valor.substring(0, 20)}-${index}`} className="details-control" dangerouslySetInnerHTML={{ __html: valor }} />
                       ))
                     }
                   </tr>
@@ -74,7 +96,7 @@ class TabelaResponsiva extends PureComponent {
         <div
           id="solicitar-senha-modal"
           className="modal fade"
-          tabindex="-1"
+          tabIndex="-1"
           role="dialog"
           aria-labelledby="Solicitar Senha"
           aria-hidden="true"
@@ -98,7 +120,7 @@ class TabelaResponsiva extends PureComponent {
                 <div className="row">
                   <div className="col-md-12">
                     <div className="form-group">
-                      <label for="field-2" className="control-label">
+                      <label htmlFor="field-2" className="control-label">
                         Qual e-mail irá receber a senha?
                       </label>
                       <input

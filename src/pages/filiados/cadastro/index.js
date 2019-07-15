@@ -21,7 +21,7 @@ const FiliadosCadastro = () => (
                 <h4 className="page-title">Pedidos de filiação</h4>
                 <ol className="breadcrumb p-0 m-0">
                   <li>
-                    <a href="#this">PSDB</a>
+                     <span>PSDB</span>
                   </li>
                   <li className="active">Cadastro de Filiados</li>
                 </ol>

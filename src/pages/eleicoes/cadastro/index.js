@@ -21,7 +21,7 @@ const EleicaoCadastro = () => (
                 <h4 className="page-title">Cadastro de Pré-candidatos PSDB</h4>
                 <ol className="breadcrumb p-0 m-0">
                   <li>
-                    <a href="#this">PSDB</a>
+                     <span>PSDB</span>
                   </li>
                   <li className="active">Cadastro de Pré-candidatos</li>
                 </ol>

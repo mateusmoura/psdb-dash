@@ -57,7 +57,7 @@ class Dashboard extends Component {
                     <h4 className="page-title">Bem Vindo!</h4>
                     <ol className="breadcrumb p-0 m-0">
                       <li>
-                          <a href="#this">PSDB</a>
+                           <span>PSDB</span>
                       </li>
                       {/* <!--<li>-->
                           <!--<a href="#">Dashboard</a>-->
