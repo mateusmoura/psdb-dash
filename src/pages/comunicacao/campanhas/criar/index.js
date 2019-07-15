@@ -5,10 +5,10 @@ import { Link } from "react-router-dom";
 import Sidebar from "components/sidebar";
 import BarraTopo from "components/barra-topo";
 import Footer from "components/footer";
+import Select2 from 'components/select-2';
+import TextareaWysiwig from 'components/textarea-wysiwig';
 
 import "plugins/jquery.steps/css/jquery.steps.css";
-import "plugins/jquery.steps/js/jquery.steps.min.js";
-import "plugins/jquery-validation/js/jquery.validate.js";
 
 class CriarCampanha extends PureComponent {
   componentDidMount() {
@@ -32,6 +32,15 @@ class CriarCampanha extends PureComponent {
       },
       onFinished: function(event, currentIndex) {
         alert("Submitted!");
+      },
+      labels: {
+        cancel: "Cancelar",
+        current: "passo atual:",
+        pagination: "Paginação",
+        finish: "Finalizar",
+        next: "Próximo",
+        previous: "Anterior",
+        loading: "Carregando ..."
       }
     });
   }
@@ -78,79 +87,31 @@ class CriarCampanha extends PureComponent {
 
                       <form id="wizard-validation-form" action="#">
                         <div>
-                          <h3>Step 1</h3>
+                          <h3>Dados para Envio</h3>
                           <section>
                             <div className="form-group row">
                               <label
                                 className="col-lg-2 control-label "
                                 for="userName2"
                               >
-                                User name
+                                Para:
                               </label>
                               <div className="col-lg-10">
-                                <input
-                                  className="form-control"
-                                  id="userName2"
-                                  name="userName"
-                                  type="text"
-                                />
+                                <Select2 />
                               </div>
-                            </div>
-                            <div className="form-group row">
-                              <label
-                                className="col-lg-2 control-label "
-                                for="password2"
-                              >
-                                Password *
-                              </label>
-                              <div className="col-lg-10">
-                                <input
-                                  id="password2"
-                                  name="password"
-                                  type="text"
-                                  className="required form-control"
-                                />
-                              </div>
-                            </div>
-
-                            <div className="form-group row">
-                              <label
-                                className="col-lg-2 control-label "
-                                for="confirm2"
-                              >
-                                Confirm Password *
-                              </label>
-                              <div className="col-lg-10">
-                                <input
-                                  id="confirm2"
-                                  name="confirm"
-                                  type="text"
-                                  className="required form-control"
-                                />
-                              </div>
-                            </div>
-                            <div className="form-group row">
-                              <label className="col-lg-12 control-label ">
-                                (*) Mandatory
-                              </label>
                             </div>
                           </section>
-                          <h3>Step 2</h3>
+                          <h3>Configurações de envio</h3>
                           <section>
                             <div className="form-group row">
                               <label
                                 className="col-lg-2 control-label"
                                 for="name2"
                               >
-                                First name *
+                                Email de envio:
                               </label>
                               <div className="col-lg-10">
-                                <input
-                                  id="name2"
-                                  name="name"
-                                  type="text"
-                                  className="required form-control"
-                                />
+                                <Select2 />
                               </div>
                             </div>
                             <div className="form-group row">
@@ -158,63 +119,18 @@ class CriarCampanha extends PureComponent {
                                 className="col-lg-2 control-label "
                                 for="surname2"
                               >
-                                Last name *
+                                Tipo da mensagem:
                               </label>
                               <div className="col-lg-10">
-                                <input
-                                  id="surname2"
-                                  name="surname"
-                                  type="text"
-                                  className="required form-control"
-                                />
+                                <Select2 />
                               </div>
-                            </div>
-
-                            <div className="form-group row">
-                              <label
-                                className="col-lg-2 control-label "
-                                for="email2"
-                              >
-                                Email *
-                              </label>
-                              <div className="col-lg-10">
-                                <input
-                                  id="email2"
-                                  name="email"
-                                  type="text"
-                                  className="required email form-control"
-                                />
-                              </div>
-                            </div>
-
-                            <div className="form-group row">
-                              <label
-                                className="col-lg-2 control-label "
-                                for="address2"
-                              >
-                                Address
-                              </label>
-                              <div className="col-lg-10">
-                                <input
-                                  id="address2"
-                                  name="address"
-                                  type="text"
-                                  className="form-control"
-                                />
-                              </div>
-                            </div>
-
-                            <div className="form-group row">
-                              <label className="col-lg-12 control-label ">
-                                (*) Mandatory
-                              </label>
                             </div>
                           </section>
-                          <h3>Step 3</h3>
+                          <h3>Mensagem</h3>
                           <section>
                             <div className="form-group row">
                               <div className="col-lg-12">
-                                <ul className="list-unstyled w-list">
+                                {/* <ul className="list-unstyled w-list">
                                   <li>
                                     <b>First Name :</b> Jonathan
                                   </li>
@@ -227,7 +143,8 @@ class CriarCampanha extends PureComponent {
                                   <li>
                                     <b>Address:</b> 123 Your City, Cityname.
                                   </li>
-                                </ul>
+                                </ul> */}
+                                <TextareaWysiwig />
                               </div>
                             </div>
                           </section>
@@ -235,19 +152,20 @@ class CriarCampanha extends PureComponent {
                           <section>
                             <div className="form-group row">
                               <div className="col-lg-12">
-                                <div className="custom-control custom-checkbox">
-                                  <input
-                                    type="checkbox"
-                                    className="custom-control-input"
-                                    id="acceptTerms3"
-                                  />
-                                  <label
-                                    className="custom-control-label"
-                                    for="acceptTerms3"
-                                  >
-                                    I agree with the Terms and Conditions.
-                                  </label>
-                                </div>
+                                <ul className="list-unstyled w-list">
+                                  <li>
+                                    <b>Para :</b> Diretório ...
+                                  </li>
+                                  <li>
+                                    <b>De :</b> contato@psdb.com.br
+                                  </li>
+                                  <li>
+                                    <b>Tipo de envio:</b> Email
+                                  </li>
+                                  <li>
+                                    <b>Mensagem:</b> Mensagem que será enviada
+                                  </li>
+                                </ul>
                               </div>
                             </div>
                           </section>

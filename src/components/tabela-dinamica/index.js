@@ -5,7 +5,6 @@ import "plugins/datatables/dataTables.bootstrap4.min.css";
 
 class TabelaResponsiva extends PureComponent {
   componentDidMount() {
-    console.log('window.jQuery("#datatable-buttons")', window.jQuery("#datatable-buttons"))
     window.jQuery("#datatable-buttons").DataTable({
       dom: "Bfrtip",
       responsive: !0,

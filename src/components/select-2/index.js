@@ -5,7 +5,7 @@ import "../../plugins/select2/css/select2.min.css";
 
 const Select2 = () => (
   <select className="form-control select2">
-    <option>Select</option>
+    <option>Selecionar</option>
     <optgroup label="Alaskan/Hawaiian Time Zone">
       <option value="AK">Alaska</option>
       <option value="HI">Hawaii</option>
