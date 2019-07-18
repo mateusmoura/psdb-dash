@@ -35,7 +35,7 @@ const Cadastro = () => (
                     <label htmlFor="username">Nome</label>
                     <input
                       className="form-control input-lg"
-                      type="email"
+                      type="text"
                       id="username"
                       required=""
                       placeholder="Nome do usuário"

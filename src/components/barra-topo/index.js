@@ -1,5 +1,7 @@
 import React from 'react';
 
+import { Link } from 'react-router-dom';
+
 import logo from '../../images/logo_psdb_branca.svg';
 import '../../pages-js/metisMenu.min.js';
 
@@ -14,14 +16,17 @@ const BarraTopo = () => (
       */} {/*
       <!-- Image logo -->
       */}
-      <a href="index.html" className="logo">
+      <Link
+        className="logo"
+        to="/dashboard"
+       >
         <span>
           <img src={logo} alt="" height="40" />
         </span>
         <i>
           <img src={logo} alt="" height="30" />
         </i>
-      </a>
+      </Link>
     </div>
 
     {/*
@@ -58,7 +63,7 @@ const BarraTopo = () => (
 
         {/* <!-- Right(Notification) --> */}
         <ul className="nav navbar-right list-inline">
-          <li className="d-none d-sm-block list-inline-item">
+          {/* <li className="d-none d-sm-block list-inline-item">
             <form role="search" className="app-search">
               <input
                 type="text"
@@ -67,7 +72,7 @@ const BarraTopo = () => (
               />
               <a href="#this"><i className="fa fa-search"></i></a>
             </form>
-          </li>
+          </li> */}
           <li className="list-inline-item">
             <div className="dropdown">
               <a
@@ -84,23 +89,6 @@ const BarraTopo = () => (
               >
                 <li className="list-group notification-list m-b-0">
                   <div className="slimscroll">
-                    {/* <!-- list item--> */}
-                    <a href="#this" className="list-group-item">
-                      <div className="media">
-                        <div className="media-left p-r-10">
-                          <em className="fa fa-diamond bg-primary"></em>
-                        </div>
-                        <div className="media-body">
-                          <h5 className="media-heading">
-                            Nova mensagem
-                          </h5>
-                          <p className="m-0">
-                            Texto
-                          </p>
-                        </div>
-                      </div>
-                    </a>
-
                     {/* <!-- list item--> */}
                     <a href="#this" className="list-group-item">
                       <div className="media">

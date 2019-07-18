@@ -9,6 +9,7 @@ import Select2 from 'components/select-2';
 import TextareaWysiwig from 'components/textarea-wysiwig';
 
 import "plugins/jquery.steps/css/jquery.steps.css";
+import './index.scss';
 
 class CriarCampanha extends PureComponent {
   componentDidMount() {
@@ -87,8 +88,29 @@ class CriarCampanha extends PureComponent {
 
                       <form id="wizard-validation-form" action="#">
                         <div>
-                          <h3>Dados para Envio</h3>
+                          <h3>Destinatários</h3>
                           <section>
+                            <div className="form-group row">
+                              <label
+                                className="col-lg-2 control-label "
+                                for="surname2"
+                              >
+                                Tipo da mensagem:
+                              </label>
+                              <div className="col-lg-10">
+                                <Select2 dados={[{
+                                  value: 'WP',
+                                  title: 'Whatsapp'
+                                }, {
+                                  value: 'SMS',
+                                  title: 'SMS',
+                                }, {
+                                  value: 'MAIL',
+                                  title: 'E-mail',
+                                }]} />
+                              </div>
+                            </div>
+
                             <div className="form-group row">
                               <label
                                 className="col-lg-2 control-label "
@@ -97,11 +119,40 @@ class CriarCampanha extends PureComponent {
                                 Para:
                               </label>
                               <div className="col-lg-10">
-                                <Select2 />
+                                <Select2 dados={[{
+                                  value: 1,
+                                  title: 'Todos os filiados'
+                                }, {
+                                  value: 2,
+                                  title: 'Todos os presidentes diretórios de diretório municipal',
+                                }, {
+                                  value: 3,
+                                  title: 'Todos os membros da comissão executiva',
+                                }]} />
                               </div>
                             </div>
                           </section>
-                          <h3>Configurações de envio</h3>
+                          <h3>Mensagem</h3>
+                          <section>
+                            <div className="form-group row">
+                              <div className="col-lg-12">
+                                <ul className="list-unstyled w-list">
+                                  <li>
+                                    <b>Tipo da mensagem:</b> E-mail
+                                  </li>
+                                  <li>
+                                    <b>Para :</b> Todos os filiados
+                                  </li>
+                                </ul>
+
+                                <br />
+                                <br />
+
+                                <TextareaWysiwig />
+                              </div>
+                            </div>
+                          </section>
+                          <h3>Enviar teste</h3>
                           <section>
                             <div className="form-group row">
                               <label
@@ -111,44 +162,22 @@ class CriarCampanha extends PureComponent {
                                 Email de envio:
                               </label>
                               <div className="col-lg-10">
-                                <Select2 />
-                              </div>
-                            </div>
-                            <div className="form-group row">
-                              <label
-                                className="col-lg-2 control-label "
-                                for="surname2"
-                              >
-                                Tipo da mensagem:
-                              </label>
-                              <div className="col-lg-10">
-                                <Select2 />
-                              </div>
-                            </div>
-                          </section>
-                          <h3>Mensagem</h3>
-                          <section>
-                            <div className="form-group row">
-                              <div className="col-lg-12">
-                                {/* <ul className="list-unstyled w-list">
-                                  <li>
-                                    <b>First Name :</b> Jonathan
-                                  </li>
-                                  <li>
-                                    <b>Last Name :</b> Smith
-                                  </li>
-                                  <li>
-                                    <b>Emial:</b> jonathan@smith.com
-                                  </li>
-                                  <li>
-                                    <b>Address:</b> 123 Your City, Cityname.
-                                  </li>
-                                </ul> */}
-                                <TextareaWysiwig />
+                                <input
+                                  className="form-control input-lg"
+                                  type="email"
+                                  id="username"
+                                  required=""
+                                  placeholder="Nome do usuário"
+                                />
+
+                                <div className="text-right">
+                                  <br />
+                                  <button type="button" class="btn btn-primary btn-bordered waves-effect w-md waves-light">Enviar Teste</button>
+                                </div>
                               </div>
                             </div>
                           </section>
-                          <h3>Step Final</h3>
+                          <h3>Enviar mensagem</h3>
                           <section>
                             <div className="form-group row">
                               <div className="col-lg-12">
