@@ -88,6 +88,39 @@ class CriarCampanha extends PureComponent {
 
                       <form id="wizard-validation-form" action="#">
                         <div>
+                          <h3>Enviar mensagem</h3>
+                          <section>
+                            <div className="form-group row">
+                              <div className="col-lg-12">
+                                <ul className="list-unstyled w-list">
+                                  <li>
+                                    <b>Para :</b> Diretório ...
+                                  </li>
+                                  <li>
+                                    <b>De :</b> contato@psdb.com.br
+                                  </li>
+                                  <li>
+                                    <b>Tipo de envio:</b> Email
+                                  </li>
+                                  <li>
+                                    <b>Mensagem:</b> Mensagem que será enviada
+                                  </li>
+                                </ul>
+
+                                <div className="row">
+                                  <div className="col-12">
+                                    <button
+                                      type="button"
+                                      data-toggle="modal"
+                                      data-target="#confirmar-modal"
+                                      class="btn btn-primary waves-effect w-md waves-light"
+                                    >Enviar Agora</button>
+                                    <button type="button" class="btn btn-primary btn-bordered waves-effect w-md waves-light m-l-5">Agendar</button>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </section>
                           <h3>Destinatários</h3>
                           <section>
                             <div className="form-group row">
@@ -177,27 +210,7 @@ class CriarCampanha extends PureComponent {
                               </div>
                             </div>
                           </section>
-                          <h3>Enviar mensagem</h3>
-                          <section>
-                            <div className="form-group row">
-                              <div className="col-lg-12">
-                                <ul className="list-unstyled w-list">
-                                  <li>
-                                    <b>Para :</b> Diretório ...
-                                  </li>
-                                  <li>
-                                    <b>De :</b> contato@psdb.com.br
-                                  </li>
-                                  <li>
-                                    <b>Tipo de envio:</b> Email
-                                  </li>
-                                  <li>
-                                    <b>Mensagem:</b> Mensagem que será enviada
-                                  </li>
-                                </ul>
-                              </div>
-                            </div>
-                          </section>
+                          
                         </div>
                       </form>
                     </div>
