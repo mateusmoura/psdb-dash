@@ -5,8 +5,7 @@ import BarraTopo from "components/barra-topo";
 import Footer from "components/footer";
 
 import Select2 from "components/select-2";
-import DateRangePicker from "components/date-range-picker";
-import RedesSociaisTable from 'components/tabela-dinamica';
+import TabelaDinamica from 'components/tabela-dinamica';
 
 const dadosTabelaOld = {
   head: ['Estado/Segmento', 'Responsável', 'E-mail', 'Telefone', 'Facebook', 'Twitter', 'Instagram', 'YouTube', 'Observações'],
@@ -319,7 +318,7 @@ const RedesSociais = () => (
                     </div>
                   </div>
 
-                  <RedesSociaisTable
+                  <TabelaDinamica
                     dados={dadosTabela}
                   />
                 </div>

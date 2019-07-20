@@ -52,7 +52,7 @@ class Sidebar extends Component {
                 <ul className="nav-second-level nav" aria-expanded="false">
                   <li><Link to="/organizacao/diretorios">Todos os diretórios</Link></li>
                   <li><Link to="/organizacao/mandatos">Todos os mandatos</Link></li>
-                  <li><Link to="/organizacao/cadastro">Cadastro</Link></li>
+                  {/* <li><Link to="/organizacao/cadastro">Cadastro</Link></li> */}
                   <li><Link to="/organizacao/documentacao">Documentação</Link></li>
                 </ul>
               </li>
@@ -79,7 +79,7 @@ class Sidebar extends Component {
                 <ul className="nav-second-level nav" aria-expanded="false">
                   <li><Link to="/comunicacao/redes-sociais">Todas Redes Sociais</Link></li>
                   <li><Link to="/comunicacao/campanhas">Campanhas</Link></li>
-                  <li><Link to="/comunicacao/relatorios">Relatórios</Link></li>
+                  {/* <li><Link to="/comunicacao/relatorios">Relatórios</Link></li> */}
                 </ul>
               </li>
 
