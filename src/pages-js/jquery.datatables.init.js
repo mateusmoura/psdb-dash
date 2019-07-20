@@ -9,22 +9,22 @@ var handleDataTableButtons = function() {
       window.jQuery("#datatable-buttons").DataTable({
         dom: "Bfrtip",
         buttons: [
-          {
-            extend: "copy",
-            className: "btn-sm"
-          },
-          {
-            extend: "csv",
-            className: "btn-sm"
-          },
+          // {
+          //   extend: "copy",
+          //   className: "btn-sm"
+          // },
+          // {
+          //   extend: "csv",
+          //   className: "btn-sm"
+          // },
           {
             extend: "excel",
             className: "btn-sm"
           },
-          {
-            extend: "pdf",
-            className: "btn-sm"
-          },
+          // {
+          //   extend: "pdf",
+          //   className: "btn-sm"
+          // },
           {
             extend: "print",
             className: "btn-sm"

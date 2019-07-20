@@ -14,23 +14,23 @@ class TabelaResponsiva extends PureComponent {
         url: "//cdn.datatables.net/plug-ins/1.10.19/i18n/Portuguese-Brasil.json"
       },
       buttons: [
-        {
-          extend: "copy",
-          text: 'Copiar',
-          className: "btn-sm"
-        },
-        {
-          extend: "csv",
-          className: "btn-sm"
-        },
+        // {
+        //   extend: "copy",
+        //   text: 'Copiar',
+        //   className: "btn-sm"
+        // },
+        // {
+        //   extend: "csv",
+        //   className: "btn-sm"
+        // },
         { 
           extend: "excel",
           className: "btn-sm"
         },
-        {
-          extend: "pdf",
-          className: "btn-sm"
-        },
+        // {
+        //   extend: "pdf",
+        //   className: "btn-sm"
+        // },
         {
           extend: "print",
           text: 'Imprimir',

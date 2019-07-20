@@ -8,7 +8,7 @@ import Select2 from "components/select-2";
 import DateRangePicker from "components/date-range-picker";
 import RedesSociaisTable from 'components/tabela-dinamica';
 
-const dadosTabela = {
+const dadosTabelaOld = {
   head: ['Estado/Segmento', 'Responsável', 'E-mail', 'Telefone', 'Facebook', 'Twitter', 'Instagram', 'YouTube', 'Observações'],
   body: [
     ['DF', 'Mateus Moura', 'mateus@email.com',  '61 9999-9999',
@@ -104,6 +104,149 @@ const dadosTabela = {
             data-toggle="modal"
             data-target="#solicitar-senha-modal"
           > <i class="fa fa-unlock"></i> </button>
+        </div>
+      </div>`
+      , 'N']
+  ]
+}
+
+const dadosTabela = {
+  head: ['Estado/Segmento', 'Responsável', 'E-mail', 'Telefone', 'Redes Sociais', 'Observações'],
+  body: [
+    ['DF', 'Mateus Moura', 'mateus@email.com',  '61 9999-9999',
+      `<div class="redes-sociais">
+        <div class="row" style="display: flex; flex-wrap: wrap">
+          <div class="col-3">
+            <strong>Facebook:</strong>
+          </div>
+
+          <div class="col-9">
+            <div class="row">
+              <div class="col-12">
+                <span style="white-space: nowrap;"><i class="fa fa-external-link"></i>: <a href="www.url.com.br" target="_blank">www.url.com.br</a></span>
+              </div>
+            
+              <div class="col-12">
+                <span style="white-space: nowrap;"><i class="fa fa-user-o"></i>: @user.face</span>
+              </div>
+
+              <div class="col-12">
+                <span style="white-space: nowrap;"><i class="fa fa-chain-broken"></i>: email@email.com</span>
+              </div>
+
+              <div class="col-12">
+                <button
+                  title="Solicitar senha"
+                  type="button"
+                  class="btn btn-icon waves-effect waves-light btn-primary btn-xs"
+                  data-toggle="modal"
+                  data-target="#solicitar-senha-modal"
+                > <i class="fa fa-unlock"></i> </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <hr />
+
+        <div class="row" style="display: flex; flex-wrap: wrap">
+          <div class="col-3">
+            <strong>Twitter:</strong>
+          </div>
+
+          <div class="col-9">
+            <div class="row">
+              <div class="col-12">
+                <span style="white-space: nowrap;"><i class="fa fa-external-link"></i>: <a href="www.url.com.br" target="_blank">www.url.com.br</a></span>
+              </div>
+            
+              <div class="col-12">
+                <span style="white-space: nowrap;"><i class="fa fa-user-o"></i>: @user.face</span>
+              </div>
+
+              <div class="col-12">
+                <span style="white-space: nowrap;"><i class="fa fa-chain-broken"></i>: email@email.com</span>
+              </div>
+
+              <div class="col-12">
+                <button
+                  title="Solicitar senha"
+                  type="button"
+                  class="btn btn-icon waves-effect waves-light btn-primary btn-xs"
+                  data-toggle="modal"
+                  data-target="#solicitar-senha-modal"
+                > <i class="fa fa-unlock"></i> </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <hr />
+
+        <div class="row" style="display: flex; flex-wrap: wrap">
+          <div class="col-3">
+            <strong>Instagram:</strong>
+          </div>
+
+          <div class="col-9">
+            <div class="row">
+              <div class="col-12">
+                <span style="white-space: nowrap;"><i class="fa fa-external-link"></i>: <a href="www.url.com.br" target="_blank">www.url.com.br</a></span>
+              </div>
+            
+              <div class="col-12">
+                <span style="white-space: nowrap;"><i class="fa fa-user-o"></i>: @user.face</span>
+              </div>
+
+              <div class="col-12">
+                <span style="white-space: nowrap;"><i class="fa fa-chain-broken"></i>: email@email.com</span>
+              </div>
+
+              <div class="col-12">
+                <button
+                  title="Solicitar senha"
+                  type="button"
+                  class="btn btn-icon waves-effect waves-light btn-primary btn-xs"
+                  data-toggle="modal"
+                  data-target="#solicitar-senha-modal"
+                > <i class="fa fa-unlock"></i> </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <hr />
+
+        <div class="row" style="display: flex; flex-wrap: wrap">
+          <div class="col-3">
+            <strong>YouTube:</strong>
+          </div>
+
+          <div class="col-9">
+            <div class="row">
+              <div class="col-12">
+                <span style="white-space: nowrap;"><i class="fa fa-external-link"></i>: <a href="www.url.com.br" target="_blank">www.url.com.br</a></span>
+              </div>
+            
+              <div class="col-12">
+                <span style="white-space: nowrap;"><i class="fa fa-user-o"></i>: @user.face</span>
+              </div>
+
+              <div class="col-12">
+                <span style="white-space: nowrap;"><i class="fa fa-chain-broken"></i>: email@email.com</span>
+              </div>
+
+              <div class="col-12">
+                <button
+                  title="Solicitar senha"
+                  type="button"
+                  class="btn btn-icon waves-effect waves-light btn-primary btn-xs"
+                  data-toggle="modal"
+                  data-target="#solicitar-senha-modal"
+                > <i class="fa fa-unlock"></i> </button>
+              </div>
+            </div>
+          </div>
         </div>
       </div>`
       , 'N']

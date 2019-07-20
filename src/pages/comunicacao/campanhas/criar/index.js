@@ -7,6 +7,7 @@ import BarraTopo from "components/barra-topo";
 import Footer from "components/footer";
 import Select2 from 'components/select-2';
 import TextareaWysiwig from 'components/textarea-wysiwig';
+import DatePicker from "components/datepicker";
 
 import "plugins/jquery.steps/css/jquery.steps.css";
 import './index.scss';
@@ -88,39 +89,6 @@ class CriarCampanha extends PureComponent {
 
                       <form id="wizard-validation-form" action="#">
                         <div>
-                          <h3>Enviar mensagem</h3>
-                          <section>
-                            <div className="form-group row">
-                              <div className="col-lg-12">
-                                <ul className="list-unstyled w-list">
-                                  <li>
-                                    <b>Para :</b> Diretório ...
-                                  </li>
-                                  <li>
-                                    <b>De :</b> contato@psdb.com.br
-                                  </li>
-                                  <li>
-                                    <b>Tipo de envio:</b> Email
-                                  </li>
-                                  <li>
-                                    <b>Mensagem:</b> Mensagem que será enviada
-                                  </li>
-                                </ul>
-
-                                <div className="row">
-                                  <div className="col-12">
-                                    <button
-                                      type="button"
-                                      data-toggle="modal"
-                                      data-target="#confirmar-modal"
-                                      class="btn btn-primary waves-effect w-md waves-light"
-                                    >Enviar Agora</button>
-                                    <button type="button" class="btn btn-primary btn-bordered waves-effect w-md waves-light m-l-5">Agendar</button>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </section>
                           <h3>Destinatários</h3>
                           <section>
                             <div className="form-group row">
@@ -210,9 +178,151 @@ class CriarCampanha extends PureComponent {
                               </div>
                             </div>
                           </section>
-                          
+                          <h3>Enviar mensagem</h3>
+                          <section>
+                            <div className="form-group row">
+                              <div className="col-lg-12">
+                                <ul className="list-unstyled w-list">
+                                  <li>
+                                    <b>Para :</b> Diretório ...
+                                  </li>
+                                  <li>
+                                    <b>De :</b> contato@psdb.com.br
+                                  </li>
+                                  <li>
+                                    <b>Tipo de envio:</b> Email
+                                  </li>
+                                  <li>
+                                    <b>Mensagem:</b> Mensagem que será enviada
+                                  </li>
+                                </ul>
+
+                                <br />
+
+                                <div className="row">
+                                  <div className="col-12">
+                                    <button
+                                      type="button"
+                                      data-toggle="modal"
+                                      data-target="#confirmar-modal"
+                                      class="btn btn-primary waves-effect w-md waves-light"
+                                    >Enviar Agora</button>
+                                    <button
+                                      type="button"
+                                      data-toggle="modal"
+                                      data-target="#agendar-modal"
+                                      class="btn btn-primary btn-bordered waves-effect w-md waves-light m-l-5"
+                                    >Agendar</button>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </section>
                         </div>
                       </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                id="confirmar-modal"
+                className="modal fade"
+                tabIndex="-1"
+                role="dialog"
+                aria-labelledby="myModalLabel"
+                aria-hidden="true"
+              >
+                <div className="modal-dialog">
+                  <div className="modal-content">
+                    <div className="modal-header">
+                      <h4 className="modal-title mt-0">
+                        Confirmar?
+                      </h4>
+                      <button
+                        type="button"
+                        className="close"
+                        data-dismiss="modal"
+                        aria-label="Close"
+                      >
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div className="modal-body">
+                      <div className="row">
+                        <div className="col-12">
+                          <p className="remover-margin">Deseja enviar o email agora?</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="modal-footer">
+                      <button
+                        type="button"
+                        className="btn btn-secondary waves-effect"
+                        data-dismiss="modal"
+                      >
+                        Fechar
+                      </button>
+                      <button
+                        type="button"
+                        className="btn btn-info waves-effect waves-light"
+                      >
+                        Enviar
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                id="agendar-modal"
+                className="modal fade"
+                tabIndex="-1"
+                role="dialog"
+                aria-labelledby="myModalLabel"
+                aria-hidden="true"
+              >
+                <div className="modal-dialog">
+                  <div className="modal-content">
+                    <div className="modal-header">
+                      <h4 className="modal-title mt-0">
+                        Agendamento
+                      </h4>
+                      <button
+                        type="button"
+                        className="close"
+                        data-dismiss="modal"
+                        aria-label="Close"
+                      >
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div className="modal-body">
+                      <div className="row">
+                        <div className="col-12">
+                          <div className="form-group">
+                            <label htmlFor="field-7" className="control-label">
+                              Data do envio
+                            </label>
+                            <DatePicker />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="modal-footer">
+                      <button
+                        type="button"
+                        className="btn btn-secondary waves-effect"
+                        data-dismiss="modal"
+                      >
+                        Fechar
+                      </button>
+                      <button
+                        type="button"
+                        className="btn btn-info waves-effect waves-light"
+                      >
+                        Agendar
+                      </button>
                     </div>
                   </div>
                 </div>
