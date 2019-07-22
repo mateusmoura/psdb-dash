@@ -18,7 +18,7 @@ const FiliadosCadastro = () => (
           <div className="row">
             <div className="col-12">
               <div className="page-title-box">
-                <h4 className="page-title">Pedidos de filiação</h4>
+                <h4 className="page-title">Cadastro de Filiado</h4>
                 <ol className="breadcrumb p-0 m-0">
                   <li>
                      <span>PSDB</span>

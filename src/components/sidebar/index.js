@@ -36,10 +36,8 @@ class Sidebar extends Component {
                   <span className="menu-arrow"></span></a>
 
                 <ul className="nav-second-level nav" aria-expanded="false">
-                  <li><Link to="/filiados/todos">Todos filiados</Link></li>
-                  <li><Link to="/filiados/pedidos">Pedidos/Pendências</Link></li>
+                  <li><Link to="/filiados/todos">Todas as solicitações</Link></li>
                   <li><Link to="/filiados/cadastro">Cadastro</Link></li>
-                  <li><Link to="/filiados/relatorios">Relatórios</Link></li>
                 </ul>
               </li>
 
