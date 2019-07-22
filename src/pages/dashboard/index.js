@@ -115,7 +115,7 @@ class Dashboard extends Component {
                           </div>
                        </div>
 
-                       <div id="morris-area-with-dotted" className="morris-chart" style={{height:'320px'}}></div>
+                       <div id="morris-area-with-dotted" className="morris-chart" style={{height:'320px', maxWidth: '100%'}}></div>
                      </div>
                   </div>
                 </div>
@@ -130,28 +130,28 @@ class Dashboard extends Component {
                       </div>
 
                       <div className="row">
-                        <div class="col-lg-6">
-                          <div class="card widget-box-three">
-                              <div class="card-body">
-                                  <div class="bg-icon float-left">
-                                    <a href="./PSDB.xlsx"><i class="fi-inbox"></i></a>
+                        <div className="col-lg-6">
+                          <div className="card widget-box-three">
+                              <div className="card-body">
+                                  <div className="bg-icon float-left">
+                                    <a href="./PSDB.xlsx"><i className="fi-inbox"></i></a>
                                   </div>
-                                  <div class="text-right">
-                                      <p class="m-t-5 text-uppercase font-600">Possuem e-mail</p>
-                                      <h2 class="m-b-10"><span data-plugin="counterup">300.000</span> <br/> <span class="small-text">30,32%</span></h2>
+                                  <div className="text-right">
+                                      <p className="m-t-5 text-uppercase font-600">Possuem e-mail</p>
+                                      <h2 className="m-b-10"><span data-plugin="counterup">200.000</span> <br/> <span className="small-text">20,12%</span></h2>
                                   </div>
                               </div>
                           </div>
                         </div>
-                        <div class="col-lg-6">
-                          <div class="card widget-box-three">
-                              <div class="card-body">
-                                  <div class="bg-icon float-left">
-                                    <a href="./PSDB.xlsx"><i class="fi-inbox"></i></a>
+                        <div className="col-lg-6">
+                          <div className="card widget-box-three">
+                              <div className="card-body">
+                                  <div className="bg-icon float-left">
+                                    <a href="./PSDB.xlsx"><i className="fi-inbox"></i></a>
                                   </div>
-                                  <div class="text-right">
-                                      <p class="m-t-5 text-uppercase font-600">Possuem e-mail</p>
-                                      <h2 class="m-b-10"><span data-plugin="counterup">300.000</span> <br/> <span class="small-text">30,32%</span></h2>
+                                  <div className="text-right">
+                                      <p className="m-t-5 text-uppercase font-600">Possuem endereço</p>
+                                      <h2 className="m-b-10"><span data-plugin="counterup">300.000</span> <br/> <span className="small-text">30,32%</span></h2>
                                   </div>
                               </div>
                           </div>
@@ -159,28 +159,28 @@ class Dashboard extends Component {
                       </div>
 
                       <div className="row">
-                        <div class="col-lg-6">
-                          <div class="card widget-box-three">
-                              <div class="card-body">
-                                  <div class="bg-icon float-left">
-                                    <a href="./PSDB.xlsx"><i class="fi-inbox"></i></a>
+                        <div className="col-lg-6">
+                          <div className="card widget-box-three">
+                              <div className="card-body">
+                                  <div className="bg-icon float-left">
+                                    <a href="./PSDB.xlsx"><i className="fi-inbox"></i></a>
                                   </div>
-                                  <div class="text-right">
-                                      <p class="m-t-5 text-uppercase font-600">Possuem telefone</p>
-                                      <h2 class="m-b-10"><span data-plugin="counterup">250.000</span> <br/> <span class="small-text">25,43%</span></h2>
+                                  <div className="text-right">
+                                      <p className="m-t-5 text-uppercase font-600">Possuem telefone</p>
+                                      <h2 className="m-b-10"><span data-plugin="counterup">250.000</span> <br/> <span className="small-text">25,43%</span></h2>
                                   </div>
                               </div>
                           </div>
                         </div>
-                        <div class="col-lg-6">
-                          <div class="card widget-box-three">
-                              <div class="card-body">
-                                  <div class="bg-icon float-left">
-                                    <a href="./PSDB.xlsx"><i class="fi-inbox"></i></a>
+                        <div className="col-lg-6">
+                          <div className="card widget-box-three">
+                              <div className="card-body">
+                                  <div className="bg-icon float-left">
+                                    <a href="./PSDB.xlsx"><i className="fi-inbox"></i></a>
                                   </div>
-                                  <div class="text-right">
-                                      <p class="m-t-5 text-uppercase font-600">Possuem whatsapp</p>
-                                      <h2 class="m-b-10"><span data-plugin="counterup">100.000</span> <br/> <span class="small-text">10,00%</span></h2>
+                                  <div className="text-right">
+                                      <p className="m-t-5 text-uppercase font-600">Possuem whatsapp</p>
+                                      <h2 className="m-b-10"><span data-plugin="counterup">100.000</span> <br/> <span className="small-text">10,00%</span></h2>
                                   </div>
                               </div>
                           </div>

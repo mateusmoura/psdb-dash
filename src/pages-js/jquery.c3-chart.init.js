@@ -45,17 +45,23 @@
                 }
                 
             },
-            grid: {
-                x: {
-                    lines: [
-                        {value: 0, text: '01/2019'},
-                        {value: 1, text: '02/2019'},
-                        {value: 2, text: '03/2019'},
-                        {value: 3, text: '04/2019'},
-                        {value: 4, text: '05/2019'},
-                        {value: 5, text: '06/2019'},
-                    ]
+            axis: {
+                x : {
+                  type: 'category',
+                    categories:  ['01/2019', '02/2019', '03/2019', '04/2019', '05/2019', '06/2019']
                 },
+                tick: {
+                    x: {
+                        multiline:false,
+                        culling: {
+                        max: 1
+                    },
+                  },
+                  label : {
+                    text: 'Meses',
+                    position: 'center-bottom',
+                  },
+                }
             }
         });
 
