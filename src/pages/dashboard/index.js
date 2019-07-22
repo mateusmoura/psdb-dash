@@ -7,7 +7,7 @@ import BarraTopo from 'components/barra-topo';
 import Footer from 'components/footer';
 import Select2 from 'components/select-2';
 // import DateRangePicker from "../../../components/date-range-picker";
-
+import './index.scss';
 import '../../pages-js/jquery.dashboard.js';
 import '../../pages-js/jquery.c3-chart.init.js';
 import '../../plugins/morris/morris.css';
@@ -74,23 +74,23 @@ class Dashboard extends Component {
               <div className="row">
                 <div className="col-lg-4">
                   <CardDados
-                    titulo="Filiações"
+                    titulo="Filiados"
                     descricao="Total nacional"
                     cor="widget-two-info"
-                    valor={10530}
+                    valor={1500000}
                   />
                 </div>
                 <div className="col-lg-4">
                   <CardDados
-                    titulo="filiações concluídas"
+                    titulo="Novas Filiações 2019"
                     descricao="Total nacional"
                     cor="widget-two-success"
-                    valor={1232}
+                    valor={20000}
                   />
                 </div>
                 <div className="col-lg-4">
                   <CardDados
-                    titulo="aguardando confirmação"
+                    titulo="Filiações aguardando confirmação do TSE"
                     descricao="TSE"
                     cor="widget-two-pink"
                     valor={231}
@@ -123,21 +123,68 @@ class Dashboard extends Component {
                 <div className="col-lg-6">
                   <div className="card">
                     <div className="card-body">
-                      <div className="row">
+                      <div className="row mb-3">
                         <div className="col-lg-10 align-self-center">
-                          <h4 className="header-title m-t-0">Pendências</h4>
-                          <p className="text-muted m-b-30 text-overflow">
-                              Quantidade de pendências aguardando confirmação da secretaria
-                          </p>
-                        </div>
-
-                        <div className="col-lg-2">
-                          <button type="button" className="btn btn-primary waves-effect float-right" data-toggle="modal" data-target="#con-close-modal"> <i className="fa fa-cog"></i></button>
+                          <h4 className="header-title m-t-0">Comunicação com os filiados</h4>
                         </div>
                       </div>
 
-                      <div className="" style={{height:'320px'}}>
-                          <div id="donut-chart" className="ct-chart ct-golden-section dash-chart"></div>
+                      <div className="row">
+                        <div class="col-lg-6">
+                          <div class="card widget-box-three">
+                              <div class="card-body">
+                                  <div class="bg-icon float-left">
+                                    <a href="./PSDB.xlsx"><i class="fi-inbox"></i></a>
+                                  </div>
+                                  <div class="text-right">
+                                      <p class="m-t-5 text-uppercase font-600">Possuem e-mail</p>
+                                      <h2 class="m-b-10"><span data-plugin="counterup">300.000</span> <br/> <span class="small-text">30,32%</span></h2>
+                                  </div>
+                              </div>
+                          </div>
+                        </div>
+                        <div class="col-lg-6">
+                          <div class="card widget-box-three">
+                              <div class="card-body">
+                                  <div class="bg-icon float-left">
+                                    <a href="./PSDB.xlsx"><i class="fi-inbox"></i></a>
+                                  </div>
+                                  <div class="text-right">
+                                      <p class="m-t-5 text-uppercase font-600">Possuem e-mail</p>
+                                      <h2 class="m-b-10"><span data-plugin="counterup">300.000</span> <br/> <span class="small-text">30,32%</span></h2>
+                                  </div>
+                              </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div className="row">
+                        <div class="col-lg-6">
+                          <div class="card widget-box-three">
+                              <div class="card-body">
+                                  <div class="bg-icon float-left">
+                                    <a href="./PSDB.xlsx"><i class="fi-inbox"></i></a>
+                                  </div>
+                                  <div class="text-right">
+                                      <p class="m-t-5 text-uppercase font-600">Possuem telefone</p>
+                                      <h2 class="m-b-10"><span data-plugin="counterup">250.000</span> <br/> <span class="small-text">25,43%</span></h2>
+                                  </div>
+                              </div>
+                          </div>
+                        </div>
+                        <div class="col-lg-6">
+                          <div class="card widget-box-three">
+                              <div class="card-body">
+                                  <div class="bg-icon float-left">
+                                    <a href="./PSDB.xlsx"><i class="fi-inbox"></i></a>
+                                  </div>
+                                  <div class="text-right">
+                                      <p class="m-t-5 text-uppercase font-600">Possuem whatsapp</p>
+                                      <h2 class="m-b-10"><span data-plugin="counterup">100.000</span> <br/> <span class="small-text">10,00%</span></h2>
+                                  </div>
+                              </div>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
