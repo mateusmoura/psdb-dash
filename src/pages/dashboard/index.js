@@ -12,6 +12,9 @@ import '../../pages-js/jquery.dashboard.js';
 import '../../pages-js/jquery.c3-chart.init.js';
 import '../../plugins/morris/morris.css';
 
+import { EstadosOptions } from 'js/estados.js';
+import { MunicipiosOptions } from 'js/municipios.js';
+
 class Dashboard extends Component {
   componentDidMount() {
     window.Morris.Area({
@@ -223,13 +226,13 @@ class Dashboard extends Component {
                             <div className="col-md-6">
                                 <div className="form-group">
                                     <label htmlFor="field-5" className="control-label">UF</label>
-                                    <Select2 />
+                                    <Select2 dados={EstadosOptions} />
                                 </div>
                             </div>
                             <div className="col-md-6">
                                 <div className="form-group">
                                     <label htmlFor="field-4" className="control-label">Município</label>
-                                    <Select2 />
+                                    <Select2 dados={MunicipiosOptions} />
                                 </div>
                             </div>
                         </div>

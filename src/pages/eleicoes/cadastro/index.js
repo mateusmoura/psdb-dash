@@ -5,6 +5,9 @@ import ResponsiveTable from "../../../components/responsive-table";
 import Select2 from "../../../components/select-2";
 import DateRangePicker from "../../../components/date-range-picker";
 
+import { EstadosOptions } from 'js/estados.js';
+import { MunicipiosOptions } from 'js/municipios.js';
+
 const EleicaoCadastro = () => (
   <div id="wrapper">
     <BarraTopo />
@@ -58,18 +61,18 @@ const EleicaoCadastro = () => (
 
                       <div className="col-lg-4">
                         <div className="form-group">
-                          <label htmlFor="text" className="col-md-12 control-label">Município</label>
+                          <label htmlFor="text" className="col-md-12 control-label">Unidade Federativa (UF)</label>
                           <div className="col-md-12">
-                            <Select2 />
+                            <Select2 dados={EstadosOptions} />
                           </div>
                         </div>
                       </div>
 
                       <div className="col-lg-4">
                         <div className="form-group">
-                          <label htmlFor="text" className="col-md-12 control-label">Unidade Federativa (UF)</label>
+                          <label htmlFor="text" className="col-md-12 control-label">Município</label>
                           <div className="col-md-12">
-                            <Select2 />
+                            <Select2 dados={MunicipiosOptions} />
                           </div>
                         </div>
                       </div>
