@@ -49,7 +49,7 @@ class Sidebar extends Component {
 
                 <ul className="nav-second-level nav" aria-expanded="false">
                   <li><Link to="/organizacao/diretorios">Todos os diretórios</Link></li>
-                  <li><Link to="/organizacao/mandatos">Todos os mandatos</Link></li>
+                  {/* <li><Link to="/organizacao/mandatos">Todos os mandatos</Link></li> */}
                   {/* <li><Link to="/organizacao/cadastro">Cadastro</Link></li> */}
                   <li><Link to="/organizacao/documentacao">Documentação</Link></li>
                 </ul>
@@ -84,16 +84,10 @@ class Sidebar extends Component {
               <li className="menu-title">Administrativo</li>
 
               <li>
-                <a href={() => false}>
+                <Link to="/perfil">
                   <i className="fa fa-user"></i
                   ><span>Perfil</span>
-                  <span className="menu-arrow"></span></a>
-
-                <ul className="nav-second-level nav" aria-expanded="false">
-                  <li><Link to="/perfil/consulta">Editar dados</Link></li>
-                  <li><Link to="/perfil/campanhas">Gerenciar usuários</Link></li>
-                  <li><Link to="/perfil/relatorios">Configurações</Link></li>
-                </ul>
+                </Link>
               </li>
             </ul>
           </div>
