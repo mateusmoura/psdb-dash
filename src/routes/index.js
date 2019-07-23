@@ -21,6 +21,7 @@ import EleicoesCadastro from 'pages/eleicoes/cadastro';
 import RedesSociais from 'pages/comunicacao/redes-sociais';
 import Campanhas from 'pages/comunicacao/campanhas';
 import CriarCampanha from 'pages/comunicacao/campanhas/criar';
+import Documentacao from 'pages/organizacao/documentacao';
 
 import css from './index.scss';
 
@@ -51,7 +52,7 @@ const Routes = ({ location }) => (
             {/* TODO: Desenvolver essa tela */}
             <Route path="/organizacao/cadastro" exact component={Diretorios} />
             {/* TODO: Desenvolver essa tela */}
-            <Route path="/organizacao/documentacao" exact component={Diretorios} />
+            <Route path="/organizacao/documentacao" exact component={Documentacao} />
             <Route path="/eleicoes" exact component={EleicoesConsutarDados} />
             <Route path="/eleicoes/consultar-dados" exact component={EleicoesConsutarDados} />
             <Route path="/eleicoes/cadastro" exact component={EleicoesCadastro} />

@@ -72,6 +72,19 @@ class Diretorios extends Component {
             <div className="container-fluid">
               <div className="row">
                 <div className="col-12">
+                  <div className="page-title-box">
+                    <h4 className="page-title">Olá John !</h4>
+                    <ol className="breadcrumb p-0 m-0">
+                      <li>Organização partidária</li>
+                      <li className="active">Diretorios</li>
+                    </ol>
+                    <div className="clearfix" />
+                  </div>
+                </div>
+              </div>
+
+              <div className="row">
+                <div className="col-12">
                   <div className="card card-border card-primary">
                     <div className="card-heading">
                       <h3 className="card-title text-primary">
@@ -122,19 +135,6 @@ class Diretorios extends Component {
                         </div>
                       </div>
                     </div>
-                  </div>
-                </div>
-              </div>
-
-              <div className="row">
-                <div className="col-12">
-                  <div className="page-title-box">
-                    <h4 className="page-title">Olá John !</h4>
-                    <ol className="breadcrumb p-0 m-0">
-                      <li>Organização partidária</li>
-                      <li className="active">Diretorios</li>
-                    </ol>
-                    <div className="clearfix" />
                   </div>
                 </div>
               </div>
