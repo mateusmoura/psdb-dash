@@ -7,6 +7,10 @@ import ResponsiveTable from "components/responsive-table";
 import CheckboxSwitchery from "components/checkbox/switchery";
 import TabelaDinamica from 'components/tabela-dinamica';
 
+import Select2 from 'components/select-2';
+import { EstadosOptions } from 'js/estados.js';
+import { MunicipiosOptions } from 'js/municipios.js';
+
 import "./index.scss";
 
 const dadosTabela = {
@@ -172,13 +176,7 @@ class Diretorios extends Component {
                             <div className="form-group">
                               <label htmlFor="estado">Estado</label>
 
-                              <select id="estado" className="form-control">
-                                <option value="">Selecione</option>
-                                <option value="press">Distrito Federal</option>
-                                <option value="net">São Paulo</option>
-                                <option value="mouth">Rio de Janeiro</option>
-                                <option value="other">Acre</option>
-                              </select>
+                              <Select2 dados={EstadosOptions} />
                             </div>
                           </div>
 
@@ -186,13 +184,7 @@ class Diretorios extends Component {
                             <div className="form-group">
                               <label htmlFor="estado">Município</label>
 
-                              <select id="estado" className="form-control">
-                                <option value="">Selecione</option>
-                                <option value="press">Município 1</option>
-                                <option value="net">Município 2</option>
-                                <option value="mouth">Município 3</option>
-                                <option value="other">Município 4</option>
-                              </select>
+                              <Select2 dados={MunicipiosOptions} />
                             </div>
                           </div>
                         </div>

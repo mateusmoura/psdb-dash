@@ -5,6 +5,9 @@ import Footer from 'components/footer';
 
 import Select2 from "components/select-2";
 
+import { EstadosOptions } from 'js/estados.js';
+import { MunicipiosOptions } from 'js/municipios.js';
+
 const FiliadosCadastro = () => (
   <div id="wrapper">
     <BarraTopo />
@@ -105,16 +108,16 @@ const FiliadosCadastro = () => (
                   </div>
 
                   <div className="row">
-                    <div className="col-lg-2">
+                    <div className="col-lg-3">
                         <div className="form-group">
                           <label htmlFor="field-1" className="control-label">UF</label>
-                          <Select2 />
+                          <Select2 dados={EstadosOptions} />
                         </div>
                      </div>
-                    <div className="col-lg-6">
+                    <div className="col-lg-5">
                         <div className="form-group">
                           <label htmlFor="field-1" className="control-label">Município</label>
-                          <Select2 />
+                          <Select2 dados={MunicipiosOptions} />
                         </div>
                      </div>
                     <div className="col-lg-4">
