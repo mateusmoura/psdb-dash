@@ -7,41 +7,46 @@ import ResponsiveTable from "components/responsive-table";
 import Select2 from "components/select-2";
 import DateRangePicker from "components/date-range-picker";
 
+import { Link } from 'react-router-dom';
+
+import { EstadosOptions } from 'js/estados.js';
+import { MunicipiosOptions } from 'js/municipios.js';
+
 import FiliadosTable from 'components/tabela-dinamica';
 
 const dadosTabela = {
   head: ['Nome', 'E-mail', 'Telefone', 'UF', 'Município', 'Título', 'Situação', 'Ficha'],
   body: [
-    ['ÁLVARO JOSÉ BATISTA DA PAZ', 'alvaropaz015@outlook.com', '(82) 99108-4661', 'AL', 'Barra de Santo Antônio', '44503591783', 'Em análise pelo diretório estadual', '<button type="button" class="btn btn-primary waves-effect"> <i class="fa fa-eye"></i></button>' ],
-    ['WALLACE MAJOR DOS SANTOS', 'wlaylaelouyse@gmail.com', '(79) 3252-5308', 'BA', 'Coronel João Sá', '23455472100', 'Em análise pelo diretório municipal', '<button type="button" class="btn btn-primary waves-effect"> <i class="fa fa-eye"></i></button>' ],
-    ['JOAO PEDRO DE MOURA SOUZA', 'jpmssud@gmail.com', '(75) 99202-0319', 'BA', 'Feira de Santana', '146100180523', 'Novo', '<button type="button" class="btn btn-primary waves-effect"> <i class="fa fa-eye"></i></button>' ],
-    ['ISAAC JEREMIAS JARDIM GOUVEA', 'gouveaisaac@hotmail.com', '(71) 99200-1754', 'BA', 'Salvador', '83222540558', 'Em análise pelo diretório estadual', '<button type="button" class="btn btn-primary waves-effect"> <i class="fa fa-eye"></i></button>' ],
-    ['JOSEFA SILVANA CARVALHO SILVESTRE', 'silvaninha_vidy@hotmail.com', '(11) 2015-7056', 'BA', 'Sítio do Quinto', '206043440191', 'Em análise pelo diretório municipal', '<button type="button" class="btn btn-primary waves-effect"> <i class="fa fa-eye"></i></button>' ],
-    ['PAULA SANTOS SAMPAIO SANTANA', 'psampaiosantana@gmail.com', '(11) 93020-5981', 'DF', 'Brasília', '22130502003', 'Novo', '<button type="button" class="btn btn-primary waves-effect"> <i class="fa fa-eye"></i></button>' ],
-    ['DOMINGOS MACIEL DA SILVA LAMEGO', 'elianesilvaaalves@gmail.com', '(99) 98830-3649', 'MA', 'Aldeias Altas', '78029111120', 'Novo', '<button type="button" class="btn btn-primary waves-effect"> <i class="fa fa-eye"></i></button>' ],
-    ['ITALO HENRIQUE RODRIGUES GOMES', 'italogomesadv@hotmail.com', '(99) 3621-3879', 'MA', 'Bacabal', '43125001104', 'Novo', '<button type="button" class="btn btn-primary waves-effect"> <i class="fa fa-eye"></i></button>' ],
-    ['LUIS EDUARDO MOTA DOS SANTOS', 'luisedumota@yahoo.com', '(99) 3662-1064', 'MA', 'Dom Pedro', '73065931155', 'Em análise pelo diretório municipal', '<button type="button" class="btn btn-primary waves-effect"> <i class="fa fa-eye"></i></button>' ],
-    ['JOSÉ DA SILVA PEREIRA JUNIOR', 'juniorbatalia122@gmail.com', '(11) 4488-7087', 'MG', 'Piumhi', '40149851740', 'Novo', '<button type="button" class="btn btn-primary waves-effect"> <i class="fa fa-eye"></i></button>' ],
-    ['WAGNER ALVES LACERDA JUNIOR', 'wagner.alacerda@yahoo.com.br', '(31) 3255-6198', 'MG', 'Sete Lagoas', '155900520281', 'Novo', '<button type="button" class="btn btn-primary waves-effect"> <i class="fa fa-eye"></i></button>' ],
-    ['SANGELA RAMIRES DE SOUZA', 'ramiressangela945@gmail.com', '', 'MS', 'Jaraguari', '23940651945', 'Novo', '<button type="button" class="btn btn-primary waves-effect"> <i class="fa fa-eye"></i></button>' ],
-    ['FRANCINE GNOATTO BASSO', 'frangbasso@gmail.com', '(67) 3295-3777', 'MS', 'São Gabriel do Oeste', '18809931961', 'Em análise pelo diretório municipal', '<button type="button" class="btn btn-primary waves-effect"> <i class="fa fa-eye"></i></button>' ],
-    ['HELENO SOUZA OCAMPO', 'heleno.ocampo@hotmail.com', '', 'MS', 'São Gabriel do Oeste', '17862111961', 'Em análise pelo diretório municipal', '<button type="button" class="btn btn-primary waves-effect"> <i class="fa fa-eye"></i></button>' ],
-    ['VILMA LEDA DE ALMEIDA SANTANNA', 'ledaemiliani07@gmail.com', '(67) 3295-1763', 'MS', 'São Gabriel do Oeste', '1085201945', 'Em análise pelo diretório municipal', '<button type="button" class="btn btn-primary waves-effect"> <i class="fa fa-eye"></i></button>' ],
-    ['WENDEL GOMES DE SOUZA LEÃO', 'WEN_WENDEL@HOTMAIL.COM', '(81) 99922-5777', 'PE', 'Recife', '77537320876', 'Novo', '<button type="button" class="btn btn-primary waves-effect"> <i class="fa fa-eye"></i></button>' ],
-    ['MARCELO PEDRO DO NASCIMENTO', 'mpdn80@gmail.com', '(21) 2673-2817', 'RJ', 'Duque de Caxias', '112304740353', 'Novo', '<button type="button" class="btn btn-primary waves-effect"> <i class="fa fa-eye"></i></button>' ],
-    ['LEONARDO DA SILVA ANVERSI', 'leonardo.anversi@gmail.com', '(21) 3870-1743', 'RJ', 'Rio de Janeiro', '40464800965', 'Em análise pelo diretório municipal', '<button type="button" class="btn btn-primary waves-effect"> <i class="fa fa-eye"></i></button>' ],
-    ['IVAN DO PRADO DE SOUZA', 'Carmo.prado@yahoo.com.br', '(12) 3107-1210', 'SP', 'Areias', '365065010132', 'Em análise pelo diretório municipal', '<button type="button" class="btn btn-primary waves-effect"> <i class="fa fa-eye"></i></button>' ],
-    ['CESAR DE AMORIM GONÇALVES', 'Cesar.goncalves3443@gmail.com', '', 'SP', 'Francisco Morato', '449127060116', 'Novo', '<button type="button" class="btn btn-primary waves-effect"> <i class="fa fa-eye"></i></button>' ],
-    ['ALTAIR SANTOS IZIDORO JUNIOR', 'altairizidoro@hotmail.com', '', 'SP', 'Lins', '318498590167', 'Novo', '<button type="button" class="btn btn-primary waves-effect"> <i class="fa fa-eye"></i></button>' ],
-    ['GUILHERME MANUEL PIRES DE CASTRO', 'guilherme_manuel@yahoo.com', '(17) 99643-7448', 'SP', 'Paranapuã', '453019250116', 'Novo', '<button type="button" class="btn btn-primary waves-effect"> <i class="fa fa-eye"></i></button>' ],
-    ['RODRIGO ELTON SILVA DA CRUZ', 'rodrigocruzbgi@gmail.com', '(11) 98762-2168', 'SP', 'Penápolis', '311437330183', 'Novo', '<button type="button" class="btn btn-primary waves-effect"> <i class="fa fa-eye"></i></button>' ],
-    ['HAILTON  OLIVEIRA', 'hailtoncaxias@gmail.com', '(16) 3636-9797', 'SP', 'Ribeirão Preto', '97476950310', 'Novo', '<button type="button" class="btn btn-primary waves-effect"> <i class="fa fa-eye"></i></button>' ],
-    ['ALEXANDRE LUKAS MORRONE', 'alm089@hotmail.com', '(11) 5564-7273', 'SP', 'São Paulo', '359213510116', 'Novo', '<button type="button" class="btn btn-primary waves-effect"> <i class="fa fa-eye"></i></button>' ],
-    ['DAYANE VIEIRA COSTA VIOLA', 'dayaneviola@hotmail.com', '(11) 99182-9179', 'SP', 'São Paulo', '92094970604', 'Novo', '<button type="button" class="btn btn-primary waves-effect"> <i class="fa fa-eye"></i></button>' ],
-    ['JOSE JACKSON SILVA DE MENDONÇA', 'Acessoriavalverde@hotmail.com', '', 'SP', 'São Paulo', '42265701732', 'Novo', '<button type="button" class="btn btn-primary waves-effect"> <i class="fa fa-eye"></i></button>' ],
-    ['JUARIA BARBOZA MACIEL', 'juaria.maciel@hotmail.com', '(11) 2521-8023', 'SP', 'São Paulo', '190245030141', 'Novo', '<button type="button" class="btn btn-primary waves-effect"> <i class="fa fa-eye"></i></button>' ],
-    ['PEDRO FERREIRA DA SILVA JUNIOR', 'pfsilvajr@hotmail.com', '(11) 2283-3026', 'SP', 'São Paulo', '408061600108', 'Em análise pelo diretório municipal', '<button type="button" class="btn btn-primary waves-effect"> <i class="fa fa-eye"></i></button>' ],
-    ['ERES ALESSANDRO PORCINELI', 'eresalessandro@gmail.com', '(12) 3674-3707', 'SP', 'Tremembé', '234280510141', 'Novo', '<button type="button" class="btn btn-primary waves-effect"> <i class="fa fa-eye"></i></button>' ]
+    ['ÁLVARO JOSÉ BATISTA DA PAZ', 'alvaropaz015@outlook.com', '(82) 99108-4661', 'AL', 'Barra de Santo Antônio', '44503591783', 'Desfiliado', '<button type="button" class="btn btn-primary waves-effect"> <i class="fa fa-eye"></i></button>' ],
+    ['WALLACE MAJOR DOS SANTOS', 'wlaylaelouyse@gmail.com', '(79) 3252-5308', 'BA', 'Coronel João Sá', '23455472100', 'Desfiliado', '<button type="button" class="btn btn-primary waves-effect"> <i class="fa fa-eye"></i></button>' ],
+    ['JOAO PEDRO DE MOURA SOUZA', 'jpmssud@gmail.com', '(75) 99202-0319', 'BA', 'Feira de Santana', '146100180523', 'Regular', '<button type="button" class="btn btn-primary waves-effect"> <i class="fa fa-eye"></i></button>' ],
+    ['ISAAC JEREMIAS JARDIM GOUVEA', 'gouveaisaac@hotmail.com', '(71) 99200-1754', 'BA', 'Salvador', '83222540558', 'Desfiliado', '<button type="button" class="btn btn-primary waves-effect"> <i class="fa fa-eye"></i></button>' ],
+    ['JOSEFA SILVANA CARVALHO SILVESTRE', 'silvaninha_vidy@hotmail.com', '(11) 2015-7056', 'BA', 'Sítio do Quinto', '206043440191', 'Desfiliado', '<button type="button" class="btn btn-primary waves-effect"> <i class="fa fa-eye"></i></button>' ],
+    ['PAULA SANTOS SAMPAIO SANTANA', 'psampaiosantana@gmail.com', '(11) 93020-5981', 'DF', 'Brasília', '22130502003', 'Regular', '<button type="button" class="btn btn-primary waves-effect"> <i class="fa fa-eye"></i></button>' ],
+    ['DOMINGOS MACIEL DA SILVA LAMEGO', 'elianesilvaaalves@gmail.com', '(99) 98830-3649', 'MA', 'Aldeias Altas', '78029111120', 'Regular', '<button type="button" class="btn btn-primary waves-effect"> <i class="fa fa-eye"></i></button>' ],
+    ['ITALO HENRIQUE RODRIGUES GOMES', 'italogomesadv@hotmail.com', '(99) 3621-3879', 'MA', 'Bacabal', '43125001104', 'Regular', '<button type="button" class="btn btn-primary waves-effect"> <i class="fa fa-eye"></i></button>' ],
+    ['LUIS EDUARDO MOTA DOS SANTOS', 'luisedumota@yahoo.com', '(99) 3662-1064', 'MA', 'Dom Pedro', '73065931155', 'Desfiliado', '<button type="button" class="btn btn-primary waves-effect"> <i class="fa fa-eye"></i></button>' ],
+    ['JOSÉ DA SILVA PEREIRA JUNIOR', 'juniorbatalia122@gmail.com', '(11) 4488-7087', 'MG', 'Piumhi', '40149851740', 'Regular', '<button type="button" class="btn btn-primary waves-effect"> <i class="fa fa-eye"></i></button>' ],
+    ['WAGNER ALVES LACERDA JUNIOR', 'wagner.alacerda@yahoo.com.br', '(31) 3255-6198', 'MG', 'Sete Lagoas', '155900520281', 'Regular', '<button type="button" class="btn btn-primary waves-effect"> <i class="fa fa-eye"></i></button>' ],
+    ['SANGELA RAMIRES DE SOUZA', 'ramiressangela945@gmail.com', '', 'MS', 'Jaraguari', '23940651945', 'Regular', '<button type="button" class="btn btn-primary waves-effect"> <i class="fa fa-eye"></i></button>' ],
+    ['FRANCINE GNOATTO BASSO', 'frangbasso@gmail.com', '(67) 3295-3777', 'MS', 'São Gabriel do Oeste', '18809931961', 'Desfiliado', '<button type="button" class="btn btn-primary waves-effect"> <i class="fa fa-eye"></i></button>' ],
+    ['HELENO SOUZA OCAMPO', 'heleno.ocampo@hotmail.com', '', 'MS', 'São Gabriel do Oeste', '17862111961', 'Desfiliado', '<button type="button" class="btn btn-primary waves-effect"> <i class="fa fa-eye"></i></button>' ],
+    ['VILMA LEDA DE ALMEIDA SANTANNA', 'ledaemiliani07@gmail.com', '(67) 3295-1763', 'MS', 'São Gabriel do Oeste', '1085201945', 'Desfiliado', '<button type="button" class="btn btn-primary waves-effect"> <i class="fa fa-eye"></i></button>' ],
+    ['WENDEL GOMES DE SOUZA LEÃO', 'WEN_WENDEL@HOTMAIL.COM', '(81) 99922-5777', 'PE', 'Recife', '77537320876', 'Regular', '<button type="button" class="btn btn-primary waves-effect"> <i class="fa fa-eye"></i></button>' ],
+    ['MARCELO PEDRO DO NASCIMENTO', 'mpdn80@gmail.com', '(21) 2673-2817', 'RJ', 'Duque de Caxias', '112304740353', 'Regular', '<button type="button" class="btn btn-primary waves-effect"> <i class="fa fa-eye"></i></button>' ],
+    ['LEONARDO DA SILVA ANVERSI', 'leonardo.anversi@gmail.com', '(21) 3870-1743', 'RJ', 'Rio de Janeiro', '40464800965', 'Desfiliado', '<button type="button" class="btn btn-primary waves-effect"> <i class="fa fa-eye"></i></button>' ],
+    ['IVAN DO PRADO DE SOUZA', 'Carmo.prado@yahoo.com.br', '(12) 3107-1210', 'SP', 'Areias', '365065010132', 'Desfiliado', '<button type="button" class="btn btn-primary waves-effect"> <i class="fa fa-eye"></i></button>' ],
+    ['CESAR DE AMORIM GONÇALVES', 'Cesar.goncalves3443@gmail.com', '', 'SP', 'Francisco Morato', '449127060116', 'Regular', '<button type="button" class="btn btn-primary waves-effect"> <i class="fa fa-eye"></i></button>' ],
+    ['ALTAIR SANTOS IZIDORO JUNIOR', 'altairizidoro@hotmail.com', '', 'SP', 'Lins', '318498590167', 'Regular', '<button type="button" class="btn btn-primary waves-effect"> <i class="fa fa-eye"></i></button>' ],
+    ['GUILHERME MANUEL PIRES DE CASTRO', 'guilherme_manuel@yahoo.com', '(17) 99643-7448', 'SP', 'Paranapuã', '453019250116', 'Regular', '<button type="button" class="btn btn-primary waves-effect"> <i class="fa fa-eye"></i></button>' ],
+    ['RODRIGO ELTON SILVA DA CRUZ', 'rodrigocruzbgi@gmail.com', '(11) 98762-2168', 'SP', 'Penápolis', '311437330183', 'Regular', '<button type="button" class="btn btn-primary waves-effect"> <i class="fa fa-eye"></i></button>' ],
+    ['HAILTON  OLIVEIRA', 'hailtoncaxias@gmail.com', '(16) 3636-9797', 'SP', 'Ribeirão Preto', '97476950310', 'Regular', '<button type="button" class="btn btn-primary waves-effect"> <i class="fa fa-eye"></i></button>' ],
+    ['ALEXANDRE LUKAS MORRONE', 'alm089@hotmail.com', '(11) 5564-7273', 'SP', 'São Paulo', '359213510116', 'Regular', '<button type="button" class="btn btn-primary waves-effect"> <i class="fa fa-eye"></i></button>' ],
+    ['DAYANE VIEIRA COSTA VIOLA', 'dayaneviola@hotmail.com', '(11) 99182-9179', 'SP', 'São Paulo', '92094970604', 'Regular', '<button type="button" class="btn btn-primary waves-effect"> <i class="fa fa-eye"></i></button>' ],
+    ['JOSE JACKSON SILVA DE MENDONÇA', 'Acessoriavalverde@hotmail.com', '', 'SP', 'São Paulo', '42265701732', 'Regular', '<button type="button" class="btn btn-primary waves-effect"> <i class="fa fa-eye"></i></button>' ],
+    ['JUARIA BARBOZA MACIEL', 'juaria.maciel@hotmail.com', '(11) 2521-8023', 'SP', 'São Paulo', '190245030141', 'Regular', '<button type="button" class="btn btn-primary waves-effect"> <i class="fa fa-eye"></i></button>' ],
+    ['PEDRO FERREIRA DA SILVA JUNIOR', 'pfsilvajr@hotmail.com', '(11) 2283-3026', 'SP', 'São Paulo', '408061600108', 'Desfiliado', '<button type="button" class="btn btn-primary waves-effect"> <i class="fa fa-eye"></i></button>' ],
+    ['ERES ALESSANDRO PORCINELI', 'eresalessandro@gmail.com', '(12) 3674-3707', 'SP', 'Tremembé', '234280510141', 'Regular', '<button type="button" class="btn btn-primary waves-effect"> <i class="fa fa-eye"></i></button>' ]
   ],
   extra: {
     template: function(data) {
@@ -136,7 +141,7 @@ const FiliadosTodos = () => (
           <div className="row">
             <div className="col-12">
               <div className="page-title-box">
-                <h4 className="page-title">Pedidos de filiação</h4>
+                <h4 className="page-title">Filiados</h4>
                 <ol className="breadcrumb p-0 m-0">
                   <li>
                     <span>PSDB</span>
@@ -221,7 +226,7 @@ const FiliadosTodos = () => (
                 </div>
                 <div className="modal-body">
                   <div className="row">
-                    <div className="col-md-6">
+                    <div className="col-md-12">
                       <div className="form-group">
                         <label htmlFor="field-1" className="control-label">
                           Nome ou Título
@@ -234,6 +239,8 @@ const FiliadosTodos = () => (
                         />
                       </div>
                     </div>
+                  </div>
+                  <div className="row">
                     <div className="col-md-6">
                       <div className="form-group">
                         <label htmlFor="field-2" className="control-label">
@@ -248,6 +255,20 @@ const FiliadosTodos = () => (
                         />
                       </div>
                     </div>
+                    <div className="col-md-6">
+                      <div className="form-group">
+                        <label htmlFor="field-7" className="control-label">
+                          Situação
+                        </label>
+                        <Select2 dados={[{
+                          value: 'regular',
+                          title: 'Regular'
+                        }, {
+                          value: 'desfiliado',
+                          title: 'Desfiliado',
+                        }]} />
+                      </div>
+                    </div>
                   </div>
                   <div className="row">
                     <div className="col-md-6">
@@ -255,7 +276,7 @@ const FiliadosTodos = () => (
                         <label htmlFor="field-5" className="control-label">
                           UF
                         </label>
-                        <Select2 />
+                        <Select2 dados={EstadosOptions} />
                       </div>
                     </div>
                     <div className="col-md-6">
@@ -263,25 +284,7 @@ const FiliadosTodos = () => (
                         <label htmlFor="field-4" className="control-label">
                           Município
                         </label>
-                        <Select2 />
-                      </div>
-                    </div>
-                  </div>
-                  <div className="row">
-                    <div className="col-md-6">
-                      <div className="form-group">
-                        <label htmlFor="field-7" className="control-label">
-                          Situação
-                        </label>
-                        <Select2 />
-                      </div>
-                    </div>
-                    <div className="col-md-6">
-                      <div className="form-group">
-                        <label htmlFor="field-7" className="control-label">
-                          Data de Cadastro
-                        </label>
-                        <DateRangePicker />
+                        <Select2 dados={MunicipiosOptions} />
                       </div>
                     </div>
                   </div>
@@ -296,7 +299,7 @@ const FiliadosTodos = () => (
                           id="example-idade-inicial"
                           name="example-idade-inicial"
                           className="form-control"
-                          placeholder="Email"
+                          placeholder=""
                         />
                       </div>
                     </div>
@@ -310,7 +313,7 @@ const FiliadosTodos = () => (
                           id="example-idade-final"
                           name="example-idade-final"
                           className="form-control"
-                          placeholder="Email"
+                          placeholder=""
                         />
                       </div>
                     </div>
