@@ -14,6 +14,7 @@ import Cadastrar from '../pages/cadastro';
 import Relembrar from '../pages/relembrar';
 import Dashboard from '../pages/dashboard';
 import FiliadosTodos from '../pages/filiados/todos';
+import FiliadosPedidos from 'pages/filiados/pedidos';
 import FiliadosCadastro from '../pages/filiados/cadastro';
 import Diretorios from 'pages/organizacao/diretorios';
 import EleicoesConsutarDados from 'pages/eleicoes/consultar-dados';
@@ -44,8 +45,7 @@ const Routes = ({ location }) => (
             <Route path="/filiados/cadastro" exact component={FiliadosCadastro} />
             {/* TODO: Desenvolver essa tela */}
             <Route path="/filiados/relatorios" exact component={FiliadosTodos} />
-            {/* TODO: Desenvolver essa tela */}
-            <Route path="/filiados/pedidos" exact component={FiliadosTodos} />
+            <Route path="/filiados/pedidos" exact component={FiliadosPedidos} />
             <Route path="/organizacao/diretorios" exact component={Diretorios} />
             {/* TODO: Desenvolver essa tela */}
             <Route path="/organizacao/mandatos" exact component={Diretorios} />
