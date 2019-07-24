@@ -11,12 +11,12 @@ const Select2 = ({ dados }) => (
       dados.map((item) => {
         if (!item.options) {
           return (
-            <option value={item.value}>{item.title || item.value}</option>
+            <option key={`${item.value}-${item.title}`} value={item.value}>{item.title || item.value}</option>
           )
         }
 
         const htmlOptions = item.options.map(option => (
-          <option value={option.value}>{option.title || option.value}</option>
+          <option key={`${item.value}-${item.title}`} value={option.value}>{option.title || option.value}</option>
         ))
 
         if (item.label) {

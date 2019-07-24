@@ -94,7 +94,7 @@ class CriarCampanha extends PureComponent {
                             <div className="form-group row">
                               <label
                                 className="col-lg-2 control-label "
-                                for="surname2"
+                                htmlFor="surname2"
                               >
                                 Tipo da mensagem:
                               </label>
@@ -115,7 +115,7 @@ class CriarCampanha extends PureComponent {
                             <div className="form-group row">
                               <label
                                 className="col-lg-2 control-label "
-                                for="userName2"
+                                htmlFor="userName2"
                               >
                                 Para:
                               </label>
@@ -158,7 +158,7 @@ class CriarCampanha extends PureComponent {
                             <div className="form-group row">
                               <label
                                 className="col-lg-2 control-label"
-                                for="name2"
+                                htmlFor="name2"
                               >
                                 Email de envio:
                               </label>
@@ -173,7 +173,7 @@ class CriarCampanha extends PureComponent {
 
                                 <div className="text-right">
                                   <br />
-                                  <button type="button" class="btn btn-primary btn-bordered waves-effect w-md waves-light">Enviar Teste</button>
+                                  <button type="button" className="btn btn-primary btn-bordered waves-effect w-md waves-light">Enviar Teste</button>
                                 </div>
                               </div>
                             </div>
@@ -205,13 +205,13 @@ class CriarCampanha extends PureComponent {
                                       type="button"
                                       data-toggle="modal"
                                       data-target="#confirmar-modal"
-                                      class="btn btn-primary waves-effect w-md waves-light"
+                                      className="btn btn-primary waves-effect w-md waves-light"
                                     >Enviar Agora</button>
                                     <button
                                       type="button"
                                       data-toggle="modal"
                                       data-target="#agendar-modal"
-                                      class="btn btn-primary btn-bordered waves-effect w-md waves-light m-l-5"
+                                      className="btn btn-primary btn-bordered waves-effect w-md waves-light m-l-5"
                                     >Agendar</button>
                                   </div>
                                 </div>
