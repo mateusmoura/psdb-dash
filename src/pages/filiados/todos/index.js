@@ -3,11 +3,7 @@ import React from "react";
 import Sidebar from "components/sidebar";
 import BarraTopo from "components/barra-topo";
 import Footer from "components/footer";
-import ResponsiveTable from "components/responsive-table";
 import Select2 from "components/select-2";
-import DateRangePicker from "components/date-range-picker";
-
-import { Link } from 'react-router-dom';
 
 import { EstadosOptions } from 'js/estados.js';
 import { MunicipiosOptions } from 'js/municipios.js';
@@ -46,7 +42,7 @@ const dadosTabela = {
     ['JOSE JACKSON SILVA DE MENDONÇA', 'Acessoriavalverde@hotmail.com', '', 'SP', 'São Paulo', '42265701732', 'Regular', '<a href="/filiados/cadastro" class="btn btn-primary waves-effect"> <i class="fa fa-eye"></i></a>' ],
     ['JUARIA BARBOZA MACIEL', 'juaria.maciel@hotmail.com', '(11) 2521-8023', 'SP', 'São Paulo', '190245030141', 'Regular', '<a href="/filiados/cadastro" class="btn btn-primary waves-effect"> <i class="fa fa-eye"></i></a>' ],
     ['PEDRO FERREIRA DA SILVA JUNIOR', 'pfsilvajr@hotmail.com', '(11) 2283-3026', 'SP', 'São Paulo', '408061600108', 'Desfiliado', '<a href="/filiados/cadastro" class="btn btn-primary waves-effect"> <i class="fa fa-eye"></i></a>' ],
-    ['ERES ALESSANDRO PORCINELI', 'eresalessandro@gmail.com', '(12) 3674-3707', 'SP', 'Tremembé', '234280510141', 'Regular', '<a href="/filiados/cadastro" class="btn btn-primary waves-effect"> <i class="fa fa-eye"></i><an>' ]
+    ['ERES ALESSANDRO PORCINELI', 'eresalessandro@gmail.com', '(12) 3674-3707', 'SP', 'Tremembé', '234280510141', 'Regular', '<a href="/filiados/cadastro" class="btn btn-primary waves-effect"> <i class="fa fa-eye"></i></a>' ]
   ],
   extra: {
     template: function(data) {
