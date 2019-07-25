@@ -57,16 +57,21 @@ class Sidebar extends Component {
               </li>
 
               <li>
-                <a href={() => false}>
+                {/* <a href={() => false}>
                   <i className="fa fa-gavel"></i
                   ><span>Eleições</span>
-                  <span className="menu-arrow"></span></a>
+                  <span className="menu-arrow"></span></a> */}
 
-                <ul className="nav-second-level nav" aria-expanded="false">
+                <Link to="/eleicoes">
+                  <i className="fa fa-gavel"></i
+                  ><span>Eleições</span>
+                </Link>
+
+                {/* <ul className="nav-second-level nav" aria-expanded="false">
                   <li><Link to="/eleicoes/consultar-dados">Consulta dados</Link></li>
                   <li><Link to="/eleicoes/cadastro">Cadastro</Link></li>
                   <li><Link to="/eleicoes/relatorios">Relatórios</Link></li>
-                </ul>
+                </ul> */}
               </li>
 
               <li>

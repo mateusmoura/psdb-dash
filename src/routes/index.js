@@ -18,6 +18,7 @@ import FiliadosPedidos from 'pages/filiados/pedidos';
 import FiliadosCadastro from '../pages/filiados/cadastro';
 import Diretorios from 'pages/organizacao/diretorios';
 import EleicoesConsutarDados from 'pages/eleicoes/consultar-dados';
+import EleicoesDashboard from 'pages/eleicoes/dashboard';
 import EleicoesCadastro from 'pages/eleicoes/cadastro';
 import RedesSociais from 'pages/comunicacao/redes-sociais';
 import Campanhas from 'pages/comunicacao/campanhas';
@@ -53,7 +54,7 @@ const Routes = ({ location }) => (
             <Route path="/organizacao/cadastro" exact component={Diretorios} />
             {/* TODO: Desenvolver essa tela */}
             <Route path="/organizacao/documentacao" exact component={Documentacao} />
-            <Route path="/eleicoes" exact component={EleicoesConsutarDados} />
+            <Route path="/eleicoes" exact component={EleicoesDashboard} />
             <Route path="/eleicoes/consultar-dados" exact component={EleicoesConsutarDados} />
             <Route path="/eleicoes/cadastro" exact component={EleicoesCadastro} />
             {/* TODO: Desenvolver essa tela */}
