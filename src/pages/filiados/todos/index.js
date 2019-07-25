@@ -1,5 +1,7 @@
 import React from "react";
 
+import { Link } from 'react-router-dom';
+
 import Sidebar from "components/sidebar";
 import BarraTopo from "components/barra-topo";
 import Footer from "components/footer";
@@ -186,6 +188,15 @@ const FiliadosTodos = () => (
                           Nome: blah
                         </span> <i className="fa fa-close" />{" "}
                       </button>
+                    </div>
+                  </div>
+
+                  <div className="row">
+                    <div className="col-12 col-md-12 text-right">
+                      <Link
+                        to="/comunicacao/campanhas/criar"
+                        className="btn btn-primary m-b-20 waves-effect w-md waves-light"
+                      >Enviar comunicação</Link>
                     </div>
                   </div>
 

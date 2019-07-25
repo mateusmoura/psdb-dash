@@ -7,6 +7,8 @@ import Footer from "components/footer";
 import Select2 from "components/select-2";
 import TabelaDinamica from 'components/tabela-dinamica';
 
+import { EstadosOptions } from 'js/estados.js';
+
 const dadosTabelaOld = {
   head: ['Estado/Segmento', 'Responsável', 'E-mail', 'Telefone', 'Facebook', 'Twitter', 'Instagram', 'YouTube', 'Observações'],
   body: [
@@ -385,7 +387,7 @@ const RedesSociais = () => (
                         <label for="field-5" className="control-label">
                           UF
                         </label>
-                        <Select2 />
+                        <Select2 dados={EstadosOptions} />
                       </div>
                     </div>
                     <div className="col-md-6">
@@ -393,7 +395,19 @@ const RedesSociais = () => (
                         <label for="field-4" className="control-label">
                           Rede Social
                         </label>
-                        <Select2 />
+                        <Select2 dados={[{
+                          value: '1',
+                          title: 'Facebook'
+                        }, {
+                          value: '2',
+                          title: 'Twitter',
+                        }, {
+                          value: '3',
+                          title: 'Youtube',
+                        }, {
+                          value: '4',
+                          title: 'Instagram',
+                        }]} />
                       </div>
                     </div>
                   </div>

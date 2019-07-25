@@ -1,10 +1,12 @@
 import React, { Component } from "react";
 
+import { Link } from 'react-router-dom';
+
 import Sidebar from "components/sidebar";
 import DatePicker from "components/datepicker";
 import BarraTopo from "components/barra-topo";
-import ResponsiveTable from "components/responsive-table";
-import CheckboxSwitchery from "components/checkbox/switchery";
+// import ResponsiveTable from "components/responsive-table";
+// import CheckboxSwitchery from "components/checkbox/switchery";
 import TabelaDinamica from 'components/tabela-dinamica';
 
 import Select2 from 'components/select-2';
@@ -236,7 +238,7 @@ class Diretorios extends Component {
                           </div> */}
                         </div>
 
-                        <div className="col-12 col-md-6 text-right">
+                        <div className="col-12 col-md-6 m-b-20 text-right">
                           <button
                             type="button"
                             className="btn btn-warning waves-effect w-md waves-light"
@@ -254,6 +256,11 @@ class Diretorios extends Component {
                           >
                             Nova Convenção
                           </button>
+                          {"   "}
+                          <Link
+                            to="/comunicacao/campanhas/criar"
+                            className="btn btn-info waves-effect w-md waves-light"
+                          >Enviar comunicação</Link>
                         </div>
                       </div>
                       
