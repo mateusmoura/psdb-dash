@@ -511,7 +511,7 @@ class Dashboard extends Component {
               <div className="row">
                 <div className="col-12">
                   <div className="page-title-box">
-                    <h4 className="page-title">Bem Vindo!</h4>
+                    <h4 className="page-title">Eleições</h4>
                     <ol className="breadcrumb p-0 m-0">
                       <li>
                         <span>PSDB</span>
@@ -519,7 +519,8 @@ class Dashboard extends Component {
                       {/* <!--<li>-->
                           <!--<a href="#">Dashboard</a>-->
                       <!--</li>--> */}
-                      <li className="active">Eleições</li>
+                      <li>Eleições</li>
+                      <li className="active">Dashboard</li>
                     </ol>
                     <div className="clearfix" />
                   </div>
@@ -561,7 +562,7 @@ class Dashboard extends Component {
                   <div className="card">
                     <div className="card-body">
                       <h4 className="header-title m-t-0">
-                        Quadro de pré-candidatos por cargo
+                        Quadro de eleitos por cargo
                       </h4>
 
                       <div className="google-chart text-center">
