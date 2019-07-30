@@ -79,10 +79,10 @@ class Diretorios extends Component {
               <div className="row">
                 <div className="col-12">
                   <div className="page-title-box">
-                    <h4 className="page-title">Olá John !</h4>
+                    <h4 className="page-title">Organização partidária</h4>
                     <ol className="breadcrumb p-0 m-0">
                       <li>Organização partidária</li>
-                      <li className="active">Diretorios</li>
+                      <li className="active">Todos os diretorios</li>
                     </ol>
                     <div className="clearfix" />
                   </div>
@@ -160,7 +160,7 @@ class Diretorios extends Component {
 
                       <form action="#">
                         <div className="row">
-                          <div className="col-12 col-md-4">
+                          <div className="col-12 col-md-3">
                             <div className="form-group">
                               <label htmlFor="userName">Nome</label>
                               <input
@@ -174,7 +174,21 @@ class Diretorios extends Component {
                             </div>
                           </div>
 
-                          <div className="col-12 col-md-4">
+                          <div className="col-12 col-md-3">
+                            <div className="form-group">
+                              <label htmlFor="field-cargp">Cargo</label>
+                              <input
+                                type="text"
+                                name="nick"
+                                id="field-cargp"
+                                parsley-trigger="change"
+                                className="form-control"
+                                placeholder="Digite o cargo"
+                              />
+                            </div>
+                          </div>
+
+                          <div className="col-12 col-md-3">
                             <div className="form-group">
                               <label htmlFor="estado">Estado</label>
 
@@ -182,7 +196,7 @@ class Diretorios extends Component {
                             </div>
                           </div>
 
-                          <div className="col-12 col-md-4">
+                          <div className="col-12 col-md-3">
                             <div className="form-group">
                               <label htmlFor="estado">Município</label>
 

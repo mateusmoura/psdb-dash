@@ -348,8 +348,38 @@ const FiliadosPedidos = () => (
                       </div>
                     </div>
                   </div>
-                  
+
+                  <div className="row">
+                    <div className="col-md-6">
+                      <div className="form-group">
+                        <label htmlFor="example-idade" className="control-label">
+                          Idade
+                        </label>
+                        <input
+                          type="number"
+                          id="example-idade"
+                          name="example-idade"
+                          className="form-control"
+                        />
+                      </div>
+                    </div>
+                    <div className="col-md-6">
+                      <div className="form-group">
+                        <label htmlFor="example-sexo" className="control-label">
+                          Sexo
+                        </label>
+                        <Select2 dados={[{
+                          value: '1',
+                          title: 'Masculino'
+                        }, {
+                          value: '2',
+                          title: 'Feminino',
+                        }]} />
+                      </div>
+                    </div>
+                  </div>
                 </div>
+
                 <div className="modal-footer">
                   <button
                     type="button"

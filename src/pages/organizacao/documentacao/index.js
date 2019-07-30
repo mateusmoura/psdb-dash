@@ -55,7 +55,7 @@ class Diretorios extends Component {
               <div className="row">
                 <div className="col-12">
                   <div className="page-title-box">
-                    <h4 className="page-title">Olá John !</h4>
+                    <h4 className="page-title">Documentação</h4>
                     <ol className="breadcrumb p-0 m-0">
                       <li>Organização partidária</li>
                       <li className="active">Documentação</li>

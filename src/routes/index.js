@@ -57,6 +57,7 @@ const Routes = ({ location }) => (
             <Route path="/eleicoes" exact component={EleicoesDashboard} />
             <Route path="/eleicoes/consultar-dados" exact component={EleicoesConsutarDados} />
             <Route path="/eleicoes/cadastro" exact component={EleicoesCadastro} />
+            <Route path="/eleicoes/estatistica" exact component={EleicoesDashboard} />
             {/* TODO: Desenvolver essa tela */}
             <Route path="/eleicoes/relatorios" exact component={EleicoesConsutarDados} />
 
